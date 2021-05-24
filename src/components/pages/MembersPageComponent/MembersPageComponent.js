@@ -15,9 +15,17 @@ function MembersPageComponent(props) {
 
                     <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
                         <div class="member_card">
-                            <div class="member_card_sub_div2">
-                                <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} />
-                            </div>
+                            {member.entity_image ?
+                                <div class="member_card_sub_div2">
+                                    <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} alt='member' />
+                                </div>
+                                :
+                                <div class="member_card_sub_div2 mem_carousel_sub_elem_text">
+                                    <div class="mem_carousel_name" >
+                                        {member.name}
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </Link>
                 )

@@ -99,16 +99,6 @@
     padding: 0;
 }
 
-#main_news_img_div{
-    height:100%;
-    width: 50%;
-}
-#main_news_img{
-    height:100%;
-    width:100%;
- object-fit: cover;
-}
-
 
 .sec_news_img_div{
     height:100%;
@@ -177,7 +167,7 @@
 #main_news_img{
     height:100%;
     width:100%;
- object-fit: cover;
+ object-fit: contain;
 }
 
 
@@ -206,7 +196,7 @@
     #main_news_img{
         height:100%;
         width:100%;
-     object-fit: cover;
+     object-fit: contain;
     }
     
  }
@@ -233,7 +223,7 @@
    #main_news_img{
     height: 300px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 
 }
 

@@ -15,10 +15,19 @@ function PartnersPageComponent(props) {
 
                     <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
                         <div class="member_card">
-                            <div class="member_card_sub_div2">
-                                <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} />
-                            </div>
+                            {member.entity_image ?
+                                <div class="member_card_sub_div2">
+                                    <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} alt='member' />
+                                </div>
+                                :
+                                <div class="member_card_sub_div2 mem_carousel_sub_elem_text">
+                                    <div class="mem_carousel_name" >
+                                        {member.name}
+                                    </div>
+                                </div>
+                            }
                         </div>
+
                     </Link>
                 )
             }
@@ -32,7 +41,7 @@ function PartnersPageComponent(props) {
             <div style={{ zIndex: '0', width: "100%", height: "800px", position: "absolute", top: "0", right: "", overflow: "hidden" }}  >
                 <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
             </div>
-            <Container style={{ marginTop: "200px", zIndex: '2' }}>
+            <Container style={{ marginTop: "200px", marginBottom: "200px", zIndex: '2' }}>
                 <Row className=" justify-content-center">
                     <Col >
                         <div class="section_header">

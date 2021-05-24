@@ -1,4 +1,20 @@
 
+.mem_carousel_name
+{
+    font-size: 17px;
+    text-decoration: none;
+    color: gray ;
+    font-weight: bold;
+}
+
+.mem_carousel_sub_elem_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+
+}
+
 .slick-next:before ,.slick-prev:before  {
     color: black !important;
 

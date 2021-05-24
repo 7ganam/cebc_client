@@ -54,9 +54,16 @@ function MemebersCarouselComponent(props) {
 
                     <Link key={member.id} className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
                         <div class="mem_carousel_elem">
-                            <div class="mem_carousel_sub_elem">
-                                <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} alt="member" />
-                            </div>
+                            {member.entity_image ?
+                                <div class="mem_carousel_sub_elem">
+                                    <img class="mem_carousel_img" src={member.entity_image ? member.entity_image.url : "corprate.png"} alt="member" />
+                                </div> :
+                                <div class="mem_carousel_sub_elem mem_carousel_sub_elem_text">
+                                    <div class="mem_carousel_name" >
+                                        {member.name}
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </Link>
                 </>

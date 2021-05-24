@@ -13,7 +13,7 @@ function PodcastsPageComponent(props) {
             return (
                 <Col md={4} style={{ maxWidth: "300px", marginTop: "20px" }} >
                     <Card style={{ boxShadow: "rgb(0 0 0 / 10%) 0px 0px 9px 5px", padding: "8px" }} >
-                        <CardImg top width="100%" src={!!podcast.image && podcast.image.url} alt="Card image cap" />
+                        <CardImg top width="100%" src={!!podcast.image ? podcast.image.url : '/podcast_image_3.png'} alt="Card image cap" />
                         <CardBody>
                             <CardTitle tag="h5" style={{ marginTop: '5px' }}>{podcast.season_episode}:</CardTitle>
                             <CardSubtitle className='card_title_'>
