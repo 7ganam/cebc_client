@@ -1,0 +1,37 @@
+.event_box{
+    border-style: solid;
+    border-width: .01px;
+    border-color:  black;
+
+    padding: 0;
+}
+
+#event_title{
+font-size: 29px ;
+
+}
+
+#event_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#event_text{
+    margin: 10px 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.event_card{
+    
+}
+.past_event_card{
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 9px 5px;
+}

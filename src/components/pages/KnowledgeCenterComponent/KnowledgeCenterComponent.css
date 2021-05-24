@@ -1,0 +1,60 @@
+#header_knowledge {
+    margin-top: 60px;
+    height: 600px;
+    background-attachment: scroll, scroll, scroll;
+    /* background-image: url(images/top-1600.svg), url(images/overlay2.png), url(images/library.jpg); */
+    background-size: 1600px 230px, auto, cover;
+    padding: 6em 0 12em 0;
+    background-attachment: scroll, scroll, fixed;
+    background-image: url(images/top-3200.svg), url(images/overlay3.png), url(images/library.jpg);
+    background-position: bottom center, top left, center center;
+    background-repeat: repeat-x, repeat, no-repeat;
+    background-size: 3200px 460px, auto, cover;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10em 0 20em 0;
+    position: relative;
+    text-align: center;
+    opacity: .9;
+}
+
+#header_knowledge h1{
+    font-size: 60px;
+    line-height: 45px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-top: 100px;
+
+}
+
+
+header_knowledge:before {
+    height: calc(100% - 50px);
+    opacity: 0.15;
+    top: 0;
+}
+#header_knowledge:before, #header_knowledge:after {
+    background: rgba(224, 224, 224, 0.75);
+    content: '';
+    left: 50%;
+    position: absolute;
+    width: 1px;
+    z-index: 0;
+}
+
+#header_knowledge .logo {
+    background: #4eb98000;
+    border-radius: 100%;
+    color: #ffffff;
+    cursor: default;
+    display: inline-block;
+    font-size: 2.25em;
+    height: 2.35em;
+    line-height: 2.35em;
+    margin: 0 0 0 0;
+    text-align: center;
+    width: 2.35em;
+}

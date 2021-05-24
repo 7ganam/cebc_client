@@ -1,0 +1,7 @@
+.ck-sticky-panel__content{
+    display: none;
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+    border-color: transparent  !important;
+}

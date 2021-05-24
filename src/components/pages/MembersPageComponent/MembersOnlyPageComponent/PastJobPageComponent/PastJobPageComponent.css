@@ -1,0 +1,195 @@
+.formik-label
+{
+    text-align: left;
+}
+/* Form */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    -ms-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+    background: #fff;
+    border: solid 1px #e0e0e0;
+    border-radius: 5px;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.75em;
+    text-decoration: none;
+    width: 100%;
+}
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        border-color: #ffa600;
+    }
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    line-height: 1em;
+}
+
+label {
+    display: block;
+    color: inherit;
+    font-weight: 600;
+    line-height: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+    position: relative;
+    top: 3px;
+}
+
+:-moz-placeholder {
+    color: #999;
+}
+
+::-moz-placeholder {
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    /* -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png");
+    background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url("images/bg01.png"); */
+    background-image:  url("images/bg01.png");
+    background-color: #ffa600;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 1.5em;
+    line-height: 2.75em;
+    min-width: 9em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    input[type="button"]:hover,
+    button:hover,
+    .button:hover {
+        background-color: #50c8fc;
+        color: #fff !important;
+    }
+
+    input[type="submit"]:active,
+    input[type="reset"]:active,
+    input[type="button"]:active,
+    button:active,
+    .button:active {
+        background-color: #1eb8fb;
+        color: #fff;
+    }
+
+    input[type="submit"].alt,
+    input[type="reset"].alt,
+    input[type="button"].alt,
+    button.alt,
+    .button.alt {
+        background-color: #555555;
+        color: #fff;
+    }
+
+        input[type="submit"].alt:hover,
+        input[type="reset"].alt:hover,
+        input[type="button"].alt:hover,
+        button.alt:hover,
+        .button.alt:hover {
+            background-color: #626262;
+        }
+
+        input[type="submit"].alt:active,
+        input[type="reset"].alt:active,
+        input[type="button"].alt:active,
+        button.alt:active,
+        .button.alt:active {
+            background-color: #484848;
+        }
+
+    input[type="submit"].icon:before,
+    input[type="reset"].icon:before,
+    input[type="button"].icon:before,
+    button.icon:before,
+    .button.icon:before {
+        margin-right: 0.5em;
+    }
+
+    input[type="submit"].fit,
+    input[type="reset"].fit,
+    input[type="button"].fit,
+    button.fit,
+    .button.fit {
+        width: 100%;
+    }
+
+    input[type="submit"].small,
+    input[type="reset"].small,
+    input[type="button"].small,
+    button.small,
+    .button.small {
+        font-size: 0.8em;
+    }
+
+
+    .check_wrapper{
+        display: flex;
+        border :solid grey 1px ;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 5px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .check_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .check-label{
+        margin: 0;
+        padding-right: 5px;
+    }
+    .checks_wrapper{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }

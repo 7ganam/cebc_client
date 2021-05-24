@@ -1,0 +1,13 @@
+.consultancy_services_div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 8px 2px grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.consultancy_form{
+    box-shadow: grey 1px 1px 5px 1px;
+
+}

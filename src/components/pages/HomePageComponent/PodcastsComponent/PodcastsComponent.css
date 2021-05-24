@@ -1,0 +1,40 @@
+
+.project_card{
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 3px 1px rgb(0 0 0 / 24%);
+
+    color: #000;
+    display: block;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 35px;
+}
+
+.back_ground_div{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgb(247, 247, 247);
+}
+
+.pod_body{
+        height: 100px;
+        /* white-space: nowrap; */
+    
+        margin-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        line-height: 20px;        /* fallback */
+        max-height: 80px;       /* fallback */
+    
+}
+
+.slick-list{
+    padding: 15px;
+}

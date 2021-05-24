@@ -1,13 +1,45 @@
+
+
+.cBHahU .ck-editor__main > div {
+  min-height: 0px !important;
+}
+.cBHahU .ck-editor__main {
+  min-height:  0px !important;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1B273D;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffb600;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(33, 33, 33, .3);
+}
+
+#twitter-widget-holder { 
+  max-height:400px; 
+  max-width:320px; 
+  padding:20px; 
+  background:#fff; 
+  border-radius:3px; 
+  box-shadow:2px 2px 3px rgba(0,0,0,.1); 
 }

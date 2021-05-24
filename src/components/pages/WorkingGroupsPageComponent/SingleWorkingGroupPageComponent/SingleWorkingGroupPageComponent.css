@@ -1,0 +1,261 @@
+#group_program_background{
+    background-color: #F1F1F1;
+    min-height: 100vh;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+#group_program_box{
+    width: 85vw;
+    max-width: 1000px;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 200px;
+    /* margin-bottom: 50px; */
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 30px;
+
+}
+
+#group_program_member_box{
+    width: 85vw;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.member_container{
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    width: 170px;
+    margin: 5px;
+}
+
+.member_image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.member_text{    
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+    font-size: 11px;
+    margin-top: 5px;
+    padding: 5px;
+
+}
+#members_container{
+    /* display: flex;
+    justify-content: center; */
+}
+.member_name{
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.member_position{
+
+}
+.member_Entity{
+
+}
+
+
+.group_member_card{
+
+    /* border: red 1px solid; */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.group_member_card_sub_div{
+    width: 210px;
+    height: 120px;
+    /* border: red 1px solid; */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: -2px 2px 3px 0px #00000030;
+    background-color: white;
+    
+}
+
+
+.group_member_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.group_mem_carousel_img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0px !important;
+}
+
+
+
+
+
+
+
+#group_program_header{
+    width: 100%;
+   
+    min-height: 250px;
+    margin: 0;
+    /* padding: 20px; */
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    position: relative;
+    overflow: hidden;
+     height: 300px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Raleway', sans-serif;
+
+}
+
+
+#group_program_header_2{
+    width: 100%;
+    text-transform: uppercase;
+    min-height: 60px;
+    margin: 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3pxs;
+
+}
+
+#group_program_body{
+    padding: 25px;
+}
+
+
+
+
+
+
+#group_program_header{
+    display: flex;
+     flex-direction: column;
+    }
+
+#group_program_box_title{
+    text-align: start;
+    font-size: 100px;
+     /* position: absolute; */
+     /* top: calc(50% - 50px); */
+      text-align: center;
+      color: white;
+      width: 100%;
+      z-index: 1;
+
+}
+#group_program_body .ck.ck-editor__main a {
+color:black
+
+}
+
+#group_program_body .ck.ck-editor__main h2:before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;   
+    background-color: #ffb600;
+
+}
+
+#group_program_body .ck.ck-editor__main p , #group_program_body .ck.ck-editor__main li {
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+    font-size: 16px;
+    
+}
+
+
+#group_program_body .ck.ck-editor__main h2{
+    font-size: 30px;
+    position: relative;
+    
+}#group_program_body .ck.ck-editor__main ul{
+    list-style: none;
+
+}
+
+#group_program_body .ck.ck-editor__main ul li:before {    
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    margin:0 5px 0 -15px;
+    color: #ffb600;
+    margin-left: -25px;
+}
+
+
+.report_container{
+    min-height: 40px;
+    width: 100%;
+     background: white;
+      margin-bottom: 5px;
+      display: flex;
+      font-family: 'Roboto', sans-serif;
+    color: grey;
+    font-size: 15px;
+    margin-top: 0px;
+    padding: 5px;
+    align-items: center;
+    width: 100%;
+
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    text-decoration-color: #ffb600;
+
+}
+a.report_link{
+    text-decoration-color: #ffb600;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+   #group_program_header{
+    display: flex;
+     flex-direction: column;
+    }
+
+
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+  }
+
+
+

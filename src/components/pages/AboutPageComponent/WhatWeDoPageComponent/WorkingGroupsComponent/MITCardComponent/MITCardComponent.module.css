@@ -1,0 +1,136 @@
+.card__group {
+    overflow: hidden;
+}
+
+.card__group>a {
+    background-color: #000;
+    color: #000;
+    display: block;
+    font-family: "WhitneyPro-Book","Helvetica Neue",Helvetica,Arial,sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__group .card__image {
+    background-image: url(https://energy.mit.edu/wp-content/uploads/2019/03/lcec-eps.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .4;
+    transition: all .2s ease-in-out;
+}
+
+.card__image {
+    display: block;
+    overflow: hidden;
+}
+
+.card__group .card__image img {
+    opacity: 0;
+}
+.card__image img {
+    display: block;
+    height: auto;
+    transition: all .2s ease-in-out;
+    width: 100%;
+}
+
+img {
+    border: 0;
+}
+
+.card__group .card__content {
+    background: none;
+    color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    padding: 40px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+    top: 0;
+    width: 100%;
+}
+
+.card__content {
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.card__group .card__content h3 {
+    font-family: "WhitneyPro-Semibold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    margin: 0;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+.card__group .card__content h3, .card__group .card__content p {
+    width: 100%;
+}
+h3, .h3 {
+    font-family: "WhitneyPro-Semibold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: normal;
+    margin: 40px 0 40px 0;
+}
+
+.card__group:hover .card__content h3:after {
+    width: 40px;
+}
+.card__group .card__content h3:after {
+    border-top-color: #fff !important;
+    transition: all .2s ease-in-out;
+    width: 0;
+}
+
+.card__group .card__content h3:after {
+    border-top: 4px solid rgba(0,0,0,0.15);
+    bottom: -10px;
+    content: '';
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    /* width: 40px; */
+}
+
+.card__group .card__content:before {
+    border-color: #fff !important;
+    border-style: solid;
+    border-width: .5px;
+
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    transition: all .2s ease-in-out;
+}
+
+
+.card__group .card__content h3 {
+    color: white;
+}
+
+.card__group:hover .card__image {
+    transform: scale(1.1);
+}
+
+.card__group:hover .card__content h3 {
+    padding-bottom: 20px;
+}
+.card__group:hover .card__content h3:after {
+    width: 40px;
+}
+
