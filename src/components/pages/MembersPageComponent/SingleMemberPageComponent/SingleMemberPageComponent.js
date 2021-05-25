@@ -99,7 +99,7 @@ function SingleMemberPageComponent(props) {
 
                                     <div style={{ width: '100%', margin: "auto" }}>
                                         {member.description}
-                                        <Editor value={member.member_page} onChange={(input) => { }} />
+                                        <Editor value={member.entity_page} onChange={(input) => { }} />
                                     </div>
                                 </div>
                             </div>
