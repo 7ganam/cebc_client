@@ -6,35 +6,6 @@ import { Card, CardImg, CardBody, CardTitle, CardSubtitle, } from 'reactstrap';
 import ReactLoading from 'react-loading';
 import Slider from "react-slick";
 import pod_img from './pod_logo.png'
-const settings = {
-    dots: false,
-    infinite: true,
-    // speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    cssEase: "linear",
-    responsive: [
-        {
-            breakpoint: 900,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        },
-        {
-            breakpoint: 750,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        }
-    ]
-
-};
 
 function PodcastsComponent(props) {
 
@@ -62,15 +33,48 @@ function PodcastsComponent(props) {
                         </CardBody>
                     </Card>
                 </div>
-
-
-
             )
 
         })
         return podcasts;
     }
 
+    function calc_setting() {
+
+
+        const settings = {
+            dots: false,
+            infinite: true,
+            // speed: 500,
+            slidesToShow: props.podcasts.length >= 3 ? 3 : props.podcasts.length,
+            slidesToScroll: props.podcasts.length >= 3 ? 3 : props.podcasts.length,
+            cssEase: "linear",
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: props.podcasts.length >= 2 ? 2 : props.podcasts.length,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+            ]
+
+        };
+
+        return settings;
+
+    }
 
 
     return (
@@ -99,7 +103,7 @@ function PodcastsComponent(props) {
                         <div style={{ width: "100%", maxWidth: "1200px", margin: 'auto' }}>
                             {/* <h2> CEBC members</h2> */}
                             <div>
-                                <Slider className="main_slider" {...settings}>
+                                <Slider className="main_slider" {...calc_setting()}>
                                     {generate_podcasts_cards()}
                                 </Slider>
                             </div>

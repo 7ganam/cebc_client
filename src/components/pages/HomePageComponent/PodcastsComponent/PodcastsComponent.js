@@ -37,6 +37,44 @@ const settings = {
 
 function PodcastsComponent(props) {
 
+    function calc_setting() {
+
+
+        const settings = {
+            dots: false,
+            infinite: true,
+            // speed: 500,
+            slidesToShow: props.podcasts.length >= 3 ? 3 : props.podcasts.length,
+            slidesToScroll: props.podcasts.length >= 3 ? 3 : props.podcasts.length,
+            cssEase: "linear",
+            responsive: [
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: props.podcasts.length >= 2 ? 2 : props.podcasts.length,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+            ]
+
+        };
+
+        return settings;
+
+    }
+
+
     // console.log(`props.podcasts`, props.podcasts)
     function generate_podcasts_cards() {
         const podcasts = props.podcasts.map((podcast, index) => {
@@ -90,7 +128,7 @@ function PodcastsComponent(props) {
                         <div style={{ width: "100%", maxWidth: "1200px", margin: 'auto' }}>
                             {/* <h2> CEBC members</h2> */}
                             <div>
-                                <Slider className="main_slider" {...settings}>
+                                <Slider className="main_slider" {...calc_setting()}>
                                     {generate_podcasts_cards()}
                                 </Slider>
                             </div>
