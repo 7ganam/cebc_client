@@ -145,7 +145,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendWebinarsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/webinars`
+                    `${process.env.REACT_APP_BACKEND_URL}/webinars?_sort=created_at:DESC`
                 );
                 setLoadedWebinars(responseData);
                 // console.log('Webinars ', responseData)
