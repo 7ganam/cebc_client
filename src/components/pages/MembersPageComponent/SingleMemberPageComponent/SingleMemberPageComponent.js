@@ -165,6 +165,16 @@ function SingleMemberPageComponent(props) {
                                         {member.description}
                                         <Editor value={member.entity_page} onChange={(input) => { }} />
                                     </div>
+                                    {member.entity_website &&
+                                        <a href={member.entity_website} target="_blank" rel="noreferrer">
+
+                                            <div style={{ width: '100%', margin: "auto", border: '1px solid gray', padding: '7px' }}>
+                                                <div >{member.entity_website}</div>
+
+                                            </div>
+                                        </a>
+
+                                    }
                                 </div>
                             </div>
                         </div>

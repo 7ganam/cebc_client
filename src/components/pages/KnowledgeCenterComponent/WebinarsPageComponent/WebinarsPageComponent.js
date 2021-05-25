@@ -16,7 +16,11 @@ function WebinarsPageComponent(props) {
 
     console.log(`props.webinars`, props.webinars)
     function generate_webinars_cards() {
-        const webinars = props.webinars.map((webinar, index) => {
+        let reverse_webinars = props.webinars.slice().reverse();
+        console.log(` props.webinars`, props.webinars)
+        console.log(`reverse_webinars`, reverse_webinars)
+
+        const webinars = reverse_webinars.map((webinar, index) => {
             return (
                 <Col md={4} className="d-flex justify-content-center align-items-center">
                     <Link to={`/KNOWLEDGECENTER/WEBINARS/${webinar.id}`} style={{ width: '100%' }}>

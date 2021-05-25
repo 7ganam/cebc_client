@@ -147,7 +147,7 @@ function NewsEventSubPagesComponent(props) {
 
             if (!events_object[year]) { events_object[year] = {} }
             if (!events_object[year][month]) { events_object[year][month] = [] }
-            events_object[year][month].unshift(event)
+            events_object[year][month].push(event)
         }
 
         let render_event = []
