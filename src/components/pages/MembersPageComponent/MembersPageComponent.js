@@ -61,7 +61,7 @@ function MembersPageComponent(props) {
                     </div>
                 </Row>
                 <Row className="justify-content-center justify-content-center justify-content-md-start">
-                    <div style={{ display: "flex", maxWidth: "80%", flexWrap: "wrap", justifyContent: "center", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
+                    <div style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
                         {generate_assoicate_members_views("partner_member_entity")}
                     </div>
                 </Row>
@@ -76,34 +76,35 @@ function MembersPageComponent(props) {
                             <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
                         </div>
                     </Row>
+
                     <Row className=" justify-content-center justify-content-md-start">
-                        <div style={{ display: "flex", maxWidth: "80%", flexWrap: "wrap", justifyContent: "center", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
+                        <div style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
                             {generate_assoicate_members_views("corporate_member_entity")}
                         </div>
                     </Row>
+
                 </Container>
             </Container>
 
 
-            <Container style={{ marginTop: "" }}>
 
 
-                <Container>
+            <Container>
 
-                    <Row className="title_row">
-                        <div class="section_header" style={{ marginTop: "50px", alignItems: 'start', textAlign: 'left', fontWeight: '200' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Associate MEMBERS</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
-                        </div>
-                    </Row>
+                <Row className="title_row">
+                    <div class="section_header" style={{ marginTop: "50px", alignItems: 'start', textAlign: 'left', fontWeight: '200' }}>
+                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Associate MEMBERS</span>
+                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                    </div>
+                </Row>
 
-                    <Row className=" justify-content-center justify-content-md-start">
-                        <div style={{ display: "flex", maxWidth: "80%", flexWrap: "wrap", justifyContent: "center", marginTop: "20px", marginBottom: "40px", alignItems: "start" }}>
-                            {generate_assoicate_members_views("assoicate_member_entity")}
-                        </div>
-                    </Row>
 
-                </Container>
+                <Row className=" justify-content-center justify-content-md-start">
+                    <div style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
+                        {generate_assoicate_members_views("assoicate_member_entity")}
+                    </div>
+                </Row>
+
             </Container>
         </div>
     )
