@@ -46,7 +46,10 @@ function PodcastsComponent(props) {
                     <Card style={{ maxWidth: "280px", boxShadow: "rgb(0 0 0 / 10%) 0px 0px 9px 5px", padding: "8px", margin: 'auto' }} >
                         <CardImg top width="100%" src={!!podcast.image ? podcast.image.url : '/podcast_image_3.png'} alt="Card image cap" />
                         <CardBody>
-                            <CardTitle tag="h5" style={{ marginTop: '5px' }}>{podcast.season_episode}:</CardTitle>
+                            <CardTitle tag="h5" style={{ marginTop: '5px' }}>
+                                {`Season ${podcast.season}. Episode ${podcast.episode}`}
+
+                            </CardTitle>
                             <CardSubtitle className='card_title_'>
                                 {podcast.title}
                             </CardSubtitle>

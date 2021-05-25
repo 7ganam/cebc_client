@@ -49,37 +49,6 @@ function PodcastsPageComponent(props) {
 
     }
 
-    function generate_podcasts_cards() {
-
-        const podcasts = props.podcasts.map((podcast, index) => {
-            return (
-                <Col md={4} style={{ maxWidth: "300px", marginTop: "20px" }} >
-                    <Card style={{ boxShadow: "rgb(0 0 0 / 10%) 0px 0px 9px 5px", padding: "8px" }} >
-                        <CardImg top width="100%" src={!!podcast.image ? podcast.image.url : '/podcast_image_3.png'} alt="Card image cap" />
-                        <CardBody>
-                            <CardTitle tag="h5" style={{ marginTop: '5px' }}>{podcast.season_episode}:</CardTitle>
-                            <CardSubtitle className='card_title_'>
-                                {podcast.title}
-                            </CardSubtitle>
-                            <Link className="nav_link" to={`/ACTIVITIES/PODCASTS/${podcast.id}`}>
-                                <button type="button" class="mt-2 btn btn-warning">
-                                    Visit podcast
-                            <i class="ml-2 fas fa-headphones"></i>
-                                </button>
-                            </Link>
-                        </CardBody>
-                    </Card>
-                </Col>
-
-
-
-
-            )
-
-        })
-        return podcasts;
-    }
-
     function generate_seasons_view() {
         let seasons_array = order_podcasts(props.podcasts);
         let seasons_array_view = seasons_array.map(season_object =>
