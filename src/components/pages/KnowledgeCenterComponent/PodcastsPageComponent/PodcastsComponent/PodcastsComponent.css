@@ -1,0 +1,85 @@
+
+.season_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: start;
+    max-width: 100%;
+
+}
+.season_header_logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 9px 5px;
+    border: 5px solid white;
+    z-index: 10;
+}
+
+.season_header_logo_img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.season_header_text_container{
+    background-color: #0D502D;
+    color: white;
+    padding: 2px 20px 6px 30px ;
+    border-radius:  0px 15px 15px 0px;
+    font-size: 25px;
+    position: relative;
+    left: -20px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 9px 5px;
+    border: 5px solid white;
+    font-family: 'Raleway', sans-serif;
+    min-width: 200px;
+    text-align: left;
+}
+
+.pod_number{
+    /* color :#FCC744; */
+    /* font-weight: bold; */
+}
+
+.project_card{
+    box-shadow: 0 0 3px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 3px 1px rgb(0 0 0 / 24%);
+
+    color: #000;
+    display: block;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 35px;
+}
+
+.back_ground_div{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgb(247, 247, 247);
+}
+
+.pod_body{
+        height: 100px;
+        /* white-space: nowrap; */
+    
+        margin-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        line-height: 20px;        /* fallback */
+        max-height: 80px;       /* fallback */
+    
+}
+
+.slick-list{
+    padding: 15px;
+}
