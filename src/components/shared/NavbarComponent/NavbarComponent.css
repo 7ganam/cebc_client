@@ -20,7 +20,7 @@
 
 
 @media (max-width: 768px) {
-    #my_nav{
+    #my_nav.collapsed {
         overflow: scroll;
         max-height: 100vh;
         overflow-x: hidden;

@@ -152,12 +152,12 @@ function WhatWeDoPageComponent(props) {
                             style={{
                                 fontFamily: "'Raleway', sans-serif",
                                 textAlign: 'left',
-                                fontSize: '20px',
                                 marginBottom: '40px',
                                 fontSize: '18px',
+                                paddingTop: '0px'
                             }}
                         >
-                            <div className="mt-3">
+                            <div className="">
                                 {' '}
                                 The Clean Energy Business Council (CEBC) is a non-profit, non governmental association that brings together leading local and international organizations in the MENA clean energy sector from both the private and public spheres. It is the only clean energy industry group to cover the MENA region.
                             </div>

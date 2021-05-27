@@ -108,6 +108,7 @@ const NavbarComponent = (props) => {
                          light  py-lg-0
                         ${Scrolled ? "scrolled" : ""} 
                         ${!Scrolled && !(props.location.pathname === "/") ? "dark_bg" : ""}
+                        ${!isOpen ? "" : "collapsed"}
                         `}
                         id="my_nav"
                     >
