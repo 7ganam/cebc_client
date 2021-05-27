@@ -95,6 +95,15 @@
     {
         padding-bottom: 20px;
 
+
+    }
+    .nav-item:hover .my-sub-nav_d .sub_nav_link,
+    .nav-item:hover .my-sub-nav_d:hover .sub_nav_link,
+    .nav-item:hover .my-sub-nav_d:focus .sub_nav_link,
+    .nav-item:hover .my-sub-nav_d:active .sub_nav_link
+    {
+        padding-bottom: 20px;
+
     }
 
 
