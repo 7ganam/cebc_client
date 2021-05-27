@@ -119,7 +119,7 @@ function MembersOnlyPageComponent(props) {
 
     return (
         <div style={{
-            minHeight: "400px", paddingBottom: '300px', paddingTop: '300px'
+            minHeight: "400px", paddingBottom: '300px', paddingTop: '0px'
         }}>
 
             {
