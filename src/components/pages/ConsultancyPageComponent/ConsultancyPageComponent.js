@@ -24,7 +24,7 @@ function ConsultancyPageComponent() {
         <div style={{
             minHeight: "400px", paddingTop: '0px', paddingBottom: '300px'
         }}>
-            <div className='background_image_div' >
+            <div className='background_image_div'  >
                 <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
             <Container className='sub_page_title_container' >
