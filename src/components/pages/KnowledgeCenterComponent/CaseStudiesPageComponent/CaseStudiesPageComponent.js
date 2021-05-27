@@ -26,8 +26,6 @@ function CaseStudiesPageComponent(props) {
                         <CardBody>
                             <CardTitle className='card_title_' tag="h5"> {case_study.title}</CardTitle>
                             <CardSubtitle tag="h6" className="mb-2 text-muted">
-                                {/* <i class="fa fa-calendar mr-2" aria-hidden="true"></i> */}
-                                {/* <span class="mec-case_study-d"><span class="mec-start-date-label" itemprop="startDate">{case_study.date}</span></span> */}
                             </CardSubtitle>
                             <CardText></CardText>
                         </CardBody>
@@ -45,11 +43,22 @@ function CaseStudiesPageComponent(props) {
         return sub_objects;
     }
     return (
-        <div style={{ marginTop: '200px', marginBottom: '50px' }}>
-            <div class="section_header" style={{ marginTop: "100px", marginBottom: "100px" }}>
-                <span class="section_header_inner">   Case studies     </span>
-                <div className="section_header_under"></div>
+        <div style={{ marginTop: '0px', marginBottom: '50px' }}>
+
+
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
+            <Container className='sub_page_title_container' >
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">Case studies </span>
+                            <div className="sub_page_header_under"></div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             {props.case_studies.length > 0 &&
                 <div>
                     <Container>

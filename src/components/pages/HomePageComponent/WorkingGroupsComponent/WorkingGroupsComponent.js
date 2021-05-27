@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 function WorkingGroupsComponent(props) {
 
-    console.log('props.programmes_state.LoadedProgrammes.length', props.programmes_state.LoadedProgrammes.length)
 
     const render_groups = (groups) => {
         let filter_groups = groups.filter((group) => group.Type === props.type)
@@ -31,22 +30,32 @@ function WorkingGroupsComponent(props) {
 
     return (
         <div style={{ marginTop: '30px' }}>
-            <Container>
-                <Row className=" justify-content-center">
-                    <div class="section_header" style={{ marginTop: "30px" }}>
-                        {(props.type === "programm") ?
-                            <span class="section_header_inner">
-                                programmes
-                             </span>
-                            :
-                            <span class="section_header_inner">
-                                Working groups
-                            </span>
-                        }
-                        <div className="section_header_under"></div>
 
-                    </div>
+
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <Container className='sub_page_title_container' style={{ marginTop: '0px' }}>
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            {(props.type === "programm") ?
+                                <span class="sub_page_header_inner">
+                                    programmes
+                             </span>
+                                :
+                                <span class="sub_page_header_inner">
+                                    Working groups
+                            </span>
+                            }
+                            <div className="sub_page_header_under"></div>
+                        </div>
+                    </Col>
                 </Row>
+            </Container>
+
+            <Container>
+
                 <Row className=" justify-content-center" style={{ marginTop: "40px" }}>
                     {props.programmes_state.LoadedProgrammes.length > 0 &&
                         render_groups(props.programmes_state.LoadedProgrammes)

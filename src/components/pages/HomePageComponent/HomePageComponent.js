@@ -35,15 +35,15 @@ export default function HomePageComponent(props) {
 
 
 
-            <div id="working_groups_section" style={{ marginTop: "100px", backgroundColor: "#f7f7f7", paddingBottom: "100px " }}>
+            <div id="working_groups_section" style={{ marginTop: "0px", backgroundColor: "#f7f7f7", paddingBottom: "100px " }}>
                 <WorkingGroupsComponent programmes_state={props.programmes_state} type="working_group" />
             </div>
 
 
             <PodcastsComponent podcasts={props.LoadedPodcasts} />
 
-            <div class="section_header" style={{ marginTop: "60px" }}>
-                <span class="section_header_inner">
+            <div class="section_header" style={{ marginTop: "0px" }}>
+                <span class="section_header_inner" style={{ marginTop: "0px" }}>
                     Social FEEDS
                 </span>
                 <div className="section_header_under"></div>

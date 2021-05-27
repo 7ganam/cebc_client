@@ -58,14 +58,21 @@ function WebinarsPageComponent(props) {
 
 
     return (
-        <div style={{ marginTop: '200px', marginBottom: '100px' }}>
-
+        <div style={{ marginTop: '0px', marginBottom: '100px' }}>
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <Container className='sub_page_title_container' >
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">WEBINARS</span>
+                            <div className="sub_page_header_under"></div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <Container>
-                <div class="section_header" style={{ marginTop: "100px", marginBottom: "100px", zIndex: '444' }}>
-                    <span class="section_header_inner">  WEBINARS    </span>
-                    <div className="section_header_under"></div>
-                </div>
-                {/* <div className="back_ground_div" style={{zIndex}}>         </div> */}
                 <Row>
 
                     {generate_webinars_cards()}

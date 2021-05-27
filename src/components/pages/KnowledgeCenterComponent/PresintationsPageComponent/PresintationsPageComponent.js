@@ -3,7 +3,7 @@ import './PresintationsPageComponent.css'
 
 import { useHttpClient } from "./../../../../hooks/http-hook"
 import { useState, useEffect, useCallback } from 'react';
-import { Container, Row } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 import ReactLoading from 'react-loading';
 import { Link } from "react-router-dom";
 
@@ -94,13 +94,21 @@ function PresintationsPageComponent() {
 
 
 
-            <div style={{ backgroundColor: '#F1F1F1', paddingTop: '200px', paddingBottom: '100px' }}>
+            <div style={{ backgroundColor: '#F1F1F1', paddingTop: '10px', paddingBottom: '100px' }}>
+
+                <Container className='sub_page_title_container' >
+                    <Row className=" justify-content-center">
+                        <Col>
+                            <div class="sub_page_header">
+                                <span class="sub_page_header_inner">Presentations</span>
+                                <div className="sub_page_header_under"></div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
 
                 <Container >
-                    <div class="section_header" >
-                        <span class="section_header_inner">   Presentations    </span>
-                        <div className="section_header_under"></div>
-                    </div>
+
                     <Row style={{ backgroundColor: '' }}>
                         <div style={{ marginTop: '50px', width: '100%', padding: '10px' }}>
                             {generate_presentations_view()}

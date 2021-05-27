@@ -41,21 +41,27 @@ function AcademyPageComponent(props) {
 
     return (
         <div style={{
-            minHeight: "400px", paddingTop: '120px', paddingBottom: '300px'
+            minHeight: "400px", paddingTop: '0px', paddingBottom: '300px'
         }}>
-            <div style={{ width: "100%", height: "900px", position: "absolute", top: "-50px", right: "", overflow: "hidden" }}  >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+
+
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
+            <Container className='sub_page_title_container' >
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">CEBC COURSES</span>
+                            <div className="sub_page_header_under"></div>
+
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
             <Container>
 
-                <Row className=" justify-content-center">
-                    <div class="section_header" style={{ marginTop: "50px", marginBottom: "80px", zIndex: '3' }}>
-                        <span class="section_header_inner">
-                            CEBC courses
-                            </span>
-                        <div className="section_header_under"></div>
-                    </div>
-                </Row>
                 <Row>
                     <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left', marginBottom: '30px' }}>
                         CEBC provides courses to help empower Clean energy industries in the MENA region.

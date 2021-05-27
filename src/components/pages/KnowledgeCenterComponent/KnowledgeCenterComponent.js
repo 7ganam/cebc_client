@@ -12,13 +12,32 @@ function KnowledgeCenterComponent() {
     return (
         <div >
 
-            <div id="header_knowledge">
-                <h1>Knowledge Center.</h1>
-                <p>The archives of our 10 years experience in the industry.</p>
+
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
+            <Container className='page_title_container' fluid>
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="page_header">
+                            <span class="page_header_inner"> Knowledge Center</span>
+                            <div className="page_header_under"></div>
+                            <div id="page_header_shadow" >  </div>
 
-            <Container style={{ marginTop: "130px ", marginBottom: "130px " }}>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
 
+            <Container style={{ marginTop: "0px ", marginBottom: "130px " }}>
+                <Row className="title_row">
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            Our Latest Releases :
+                            </span>
+                        <div className="section_header_under" ></div>
+                    </div>
+                </Row>
 
                 <Row className=" justify-content-center">
                     <Col className="working_group_col" xs="12" md="7" lg="4" style={{}}>

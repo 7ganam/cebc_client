@@ -115,28 +115,33 @@ function BenifitsPageComponent() {
     return (
 
         <>
-            <div style={{ zIndex: '0', width: "100%", height: "800px", position: "absolute", top: "0", right: "", overflow: "hidden" }} >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
-            <div style={{ minHeight: "300px", paddingTop: '200px', paddingBottom: '', backgroundColor: "" }}>
-                <Container>
-                    <Row className=" justify-content-center">
-                        <Col >
-                            <div class="section_header">
-                                <span class="section_header_inner">
-                                    Membership benefits & levels
-                                </span>
-                                <div className="section_header_under"></div>
-                            </div>
-                        </Col>
-                    </Row>
+            <Container className='page_title_container' fluid>
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="page_header"
+                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/4_cb4dcfae8e.jpg")` }}
+                        >
+                            <span class="page_header_inner"> Membership Benefits & Levels</span>
+                            <div className="page_header_under"></div>
+                            <div id="page_header_shadow" >  </div>
 
-                </Container>
-                <Container style={{ zIndex: '2', position: "relative", marginTop: "20px", marginBottom: '50px' }}>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
+            <div style={{ minHeight: "300px", paddingTop: '0px', paddingBottom: '', backgroundColor: "" }}>
+
+                <Container style={{ zIndex: '2', position: "relative", marginTop: "0px", marginBottom: '50px' }}>
                     <Row className="title_row">
-                        <div class="section_header" style={{ marginLeft: '15px', marginTop: "50px", alignItems: 'start', textAlign: 'left', paddingLeft: ' 0', fontWeight: '200' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>WHY JOIN THE CEBC?</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                        <div className="section_header section_header_side" >
+                            <span className="section_header_inner"     >
+                                WHY JOIN THE CEBC?
+                            </span>
+                            <div className="section_header_under" ></div>
                         </div>
                     </Row>
                     <div className='consultancy_services_div my-3' style={{ margin: 'auto' }}>
@@ -182,9 +187,11 @@ function BenifitsPageComponent() {
 
                     <Container>
                         <Row className="title_row">
-                            <div class="section_header" style={{ marginTop: "50px", alignItems: 'start', textAlign: 'left', fontWeight: '200' }}>
-                                <span class="section_header_inner" style={{ fontSize: '34px', }}>MEMBERSHIP LEVELS</span>
-                                <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                            <div className="section_header section_header_side" >
+                                <span className="section_header_inner"     >
+                                    MEMBERSHIP LEVELS
+                            </span>
+                                <div className="section_header_under" ></div>
                             </div>
                         </Row>
                         <Row>

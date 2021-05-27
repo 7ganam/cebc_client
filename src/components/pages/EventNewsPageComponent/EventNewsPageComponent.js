@@ -56,19 +56,33 @@ function EventNewsPageComponent(props) {
 
     return (
         <div style={{
-            minHeight: "400px", paddingTop: '120px', paddingBottom: '300px'
+            minHeight: "400px", paddingTop: '0px', paddingBottom: '100px'
         }}>
-            <div style={{ width: "100%", height: "900px", position: "absolute", top: "-50px", right: "", overflow: "hidden" }}  >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
-            <Container>
-
+            <Container className='page_title_container' fluid>
                 <Row className=" justify-content-center">
-                    <div class="section_header" style={{ marginTop: "50px", marginBottom: "80px", zIndex: '3' }}>
-                        <span class="section_header_inner">
-                            NEWS & MEDIA
+                    <Col>
+                        <div class="page_header" style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/2_13a171ac76.jpg")` }}
+                        >
+                            <span class="page_header_inner"> News & Media</span>
+                            <div className="page_header_under"></div>
+                            <div id="page_header_shadow" >  </div>
+
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
+
+            <Container>
+                <Row className="title_row">
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            Latest News & media :
                             </span>
-                        <div className="section_header_under"></div>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
 

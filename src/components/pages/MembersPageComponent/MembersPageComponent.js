@@ -37,27 +37,29 @@ function MembersPageComponent(props) {
 
     return (
         <div>
-
-            <div style={{ zIndex: '0', width: "100%", height: "800px", position: "absolute", top: "0", right: "", overflow: "hidden" }}  >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
-
-            <Container style={{ marginTop: "200px" }}>
-
+            <Container className='sub_page_title_container' >
                 <Row className=" justify-content-center">
-                    <Col >
-                        <div class="section_header">
-                            <span class="section_header_inner">
-                                Members directory
-                            </span>
-                            <div className="section_header_under"></div>
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">Members directory</span>
+                            <div className="sub_page_header_under"></div>
                         </div>
                     </Col>
                 </Row>
-                <Row className="title_row ml-2 justify-content-start">
-                    <div class="section_header" style={{ marginTop: "50px", alignItems: 'start', textAlign: 'left', fontWeight: '200', zIndex: '2' }}>
-                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Partner members</span>
-                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+            </Container>
+
+            <Container style={{ marginTop: "30px" }}>
+
+
+                <Row className="title_row" >
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            PARTNER MEMBERS
+                            </span>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
                 <Row className="justify-content-center justify-content-center justify-content-md-start">
@@ -71,9 +73,11 @@ function MembersPageComponent(props) {
                 <Container>
 
                     <Row className="title_row">
-                        <div class="section_header" style={{ marginTop: "50px", alignItems: 'start', textAlign: 'left', fontWeight: '200' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Corporate MEMBERS</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                        <div className="section_header section_header_side" >
+                            <span className="section_header_inner"     >
+                                CORPORATE MEMBERS
+                            </span>
+                            <div className="section_header_under" ></div>
                         </div>
                     </Row>
 
@@ -90,11 +94,12 @@ function MembersPageComponent(props) {
 
 
             <Container>
-
                 <Row className="title_row">
-                    <div class="section_header" style={{ marginTop: "50px", alignItems: 'start', textAlign: 'left', fontWeight: '200' }}>
-                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Associate MEMBERS</span>
-                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            ASSOCIATE MEMBERS
+                            </span>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
 

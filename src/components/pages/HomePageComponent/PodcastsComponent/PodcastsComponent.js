@@ -120,7 +120,7 @@ function PodcastsComponent(props) {
 
             </div>
             { props.podcasts && props.podcasts.length > 0 ?
-                <Container style={{ marginTop: "50px ", marginBottom: "150px " }} >
+                <Container style={{ marginTop: "50px ", marginBottom: "50px " }} >
                     {/* <Row style={{ display: "flex", justifyContent: "center" }} > */}
 
                     {/* {generate_podcasts_cards()} */}

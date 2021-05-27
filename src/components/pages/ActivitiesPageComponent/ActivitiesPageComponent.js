@@ -70,26 +70,37 @@ function ActivitiesPageComponent(props) {
 
     return (
         <div style={{
-            minHeight: "400px", paddingTop: '120px', paddingBottom: '300px'
+            minHeight: "400px", paddingTop: '0px', paddingBottom: '100px'
         }}>
-            <div style={{ width: "100%", height: "900px", position: "absolute", top: "-50px", right: "", overflow: "hidden" }}  >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
+            <Container className='page_title_container' fluid>
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="page_header"
+
+                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/1_2e02b2841f.jpg")` }}
+                        >
+                            <span class="page_header_inner"> CEBC Activities</span>
+                            <div className="page_header_under"></div>
+                            <div id="page_header_shadow" >  </div>
+
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <Container>
 
-                <Row className=" justify-content-center">
-                    <div class="section_header" style={{ marginTop: "50px", marginBottom: "80px", zIndex: '3' }}>
-                        <span class="section_header_inner">
-                            CEBC activities
+                <Row className="title_row">
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            Our Activities :
                             </span>
-                        <div className="section_header_under"></div>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
-                {/* <Row>
-                    <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left', marginBottom: '30px' }}>
-                        CEBC provides activities to help empower Clean energy industries in the MENA region.
-                    </Col>
-                </Row> */}
+
                 <div className='activities_div'>
                     {
                         render_activities(activiites)

@@ -52,8 +52,6 @@
     background-color: black ;
     position: relative;
     overflow:hidden;
-    margin-top: 30px;
-    margin-bottom: 30px;
     border-radius: 33px;
     display: flex ;
     flex-direction: row;

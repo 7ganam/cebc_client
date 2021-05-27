@@ -61,22 +61,21 @@ function PodcastsPageComponent(props) {
     return (
         <div style={{ marginTop: '', marginBottom: '' }}>
 
-            <div style={{ width: "100%", height: "900px", position: "absolute", top: "-50px", right: "", overflow: "hidden", zIndex: '0' }}  >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
-
-            <Container>
-
+            <Container className='sub_page_title_container' >
                 <Row className=" justify-content-center">
-                    <div id="title_header" style={{ marginTop: "150px ", marginBottom: "50px ", zIndex: '3' }} >
-                        <div class="section_header" style={{ marginTop: "20px", zIndex: '3' }}>
-                            <span class="section_header_inner"> podcast </span>
-                            <div className="section_header_under"></div>
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">podcast</span>
+                            <div className="sub_page_header_under"></div>
                         </div>
-
-                    </div>
+                    </Col>
                 </Row>
             </Container>
+
+
 
 
 

@@ -65,14 +65,6 @@ function ReportsPageComponent(props) {
         }
 
         let render_report = []
-        render_report.push(
-            <div class="section_header" style={{ marginTop: "100px" }}>
-                <span class="section_header_inner">
-                    PUBLICATIONS
-            </span>
-                <div className="section_header_under"></div>
-            </div>
-        )
 
 
         const ordered_years = Object.keys(reports_object).sort().reverse(
@@ -108,7 +100,20 @@ function ReportsPageComponent(props) {
 
 
     return (
-        <div style={{ marginTop: '200px', marginBottom: '50px' }}>
+        <div style={{ marginTop: '0px', marginBottom: '50px' }}>
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <Container className='sub_page_title_container' >
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">PUBLICATIONS</span>
+                            <div className="sub_page_header_under"></div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             {props.reports.length > 0 &&
                 <div>
                     {render_reports(props.reports)}

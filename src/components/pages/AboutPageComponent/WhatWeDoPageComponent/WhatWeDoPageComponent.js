@@ -40,38 +40,36 @@ function WhatWeDoPageComponent(props) {
 
     return (
         <div>
-            <div
-                style={{
-                    width: '100%',
-                    height: '800px',
-                    position: 'absolute',
-                    top: '0',
-                    right: '',
-                    overflow: 'hidden',
-                }}
-            >
-                <img
-                    src="/assets/images/hero.png"
-                    alt=""
-                    style={{ width: '100%', height: 'auto', position: '' }}
-                />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
+            <Container className='page_title_container' fluid>
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div className="page_header"
+                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/6_15494e8f60.jpg")` }}
+                        >
+                            <div className="page_header_inner">
+                                <div className="page_header_inner_text"> About the CEBC</div>
+                                <div className="page_header_inner_dot">
+                                    <img src='/dot_2.png' alt='' style={{ width: '100%', height: 'auto' }} />
+                                </div>
+                            </div>
+                            <div className="page_header_under"></div>
+                            <div id="page_header_shadow" >  </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
 
             <Container
                 style={{
-                    marginTop: '170px',
+                    marginTop: '30px',
                     marginBottom: '50px',
                     overflow: 'visible',
                 }}
             >
-                <Row className=" justify-content-center">
-                    <Col>
-                        <div class="section_header">
-                            <span class="section_header_inner">About the CEBC</span>
-                            <div className="section_header_under"></div>
-                        </div>
-                    </Col>
-                </Row>
+
                 <Row>
                     <div className="quote_box">
                         <div className="quote_content" style={{}}>
@@ -130,43 +128,23 @@ function WhatWeDoPageComponent(props) {
 
             <div
                 style={{
-                    marginTop: '  120px',
+                    marginTop: '  0px',
                     width: '100%',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: '#f7f7f7',
+                    // backgroundColor: '#f7f7f7',
                     height: '',
                     paddingTop: '1px',
                 }}
             >
                 <Container>
                     <Row className="title_row">
-                        <div
-                            class="section_header"
-                            style={{
-                                marginLeft: '15px',
-                                marginTop: '60px',
-                                alignItems: 'start',
-                                textAlign: 'left',
-                                paddingLeft: ' 0',
-                                fontWeight: '400',
-                            }}
-                        >
-                            <span
-                                class="section_header_inner"
-                                style={{ fontSize: '34px', fontWeight: '300' }}
-                            >
+                        <div className="section_header section_header_side" >
+                            <span className="section_header_inner"     >
                                 What We Do
                             </span>
-                            <div
-                                className="section_header_under"
-                                style={{
-                                    fontSize: '34px',
-                                    marginBottom: '20px',
-                                    width: '250px',
-                                }}
-                            ></div>
+                            <div className="section_header_under" ></div>
                         </div>
                     </Row>
                     <Row>
@@ -204,38 +182,15 @@ function WhatWeDoPageComponent(props) {
 
             <Container>
                 <Row className="title_row">
-                    <div
-                        class="section_header"
-                        style={{
-                            marginLeft: '15px',
-                            marginTop: '10px',
-                            alignItems: 'start',
-                            textAlign: 'left',
-                            paddingLeft: ' 0',
-                            fontWeight: '400',
-                        }}
-                    >
-                        <span
-                            class="section_header_inner"
-                            style={{ fontSize: '34px', fontWeight: '300' }}
-                        >
-                            Vision and Mission
-                        </span>
-                        <div
-                            className="section_header_under"
-                            style={{ fontSize: '34px', marginBottom: '20px', width: '250px' }}
-                        ></div>
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            VISION AND MISSION
+                            </span>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
 
-                <Col sm="12">
-                    <div class="section_header" style={{ marginBottom: '20px' }}>
-                        <span
-                            class="section_header_inner"
-                            style={{ fontWeight: 'bold' }}
-                        ></span>
-                    </div>
-                </Col>
+
                 <Row style={{ position: 'relative', top: '', overflow: 'visible' }}>
                     <div class='mena_image'
                         style={{
@@ -358,7 +313,7 @@ function WhatWeDoPageComponent(props) {
 
             </Container>
 
-            <div id="working_groups_section" style={{ marginTop: "100px", backgroundColor: "#f7f7f7", paddingBottom: "100px " }}>
+            <div id="working_groups_section" style={{ marginTop: "0px", backgroundColor: "#f7f7f7", paddingBottom: "100px " }}>
                 <WorkingGroupsComponent programmes_state={props.programmes_state} type="working_group" />
 
                 <Row>

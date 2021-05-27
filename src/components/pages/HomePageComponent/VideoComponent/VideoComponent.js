@@ -8,9 +8,7 @@ function VideoComponent() {
             <div id="video_top_shadow" >
 
             </div>
-            <div id="video_bottom_shadow" >
-
-            </div>
+            <div id="video_bottom_shadow" >  </div>
             <div id="video_text">
 
                 <Row>

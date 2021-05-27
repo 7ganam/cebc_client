@@ -41,7 +41,6 @@ function MediaPageComponent(props) {
                 const responseData = await sendPastEventsRequest(
                     `${process.env.REACT_APP_BACKEND_URL}/events?_limit=${EntryPerPage}&_start=${EntryPerPage * (page_number - 1)}`
                 );
-                console.log(`past_events`, responseData)
                 setLoadedPastEvents(responseData);
 
                 const countresponseData = await sendPastEventsRequest(
@@ -69,7 +68,6 @@ function MediaPageComponent(props) {
 
 
     const render_past_events = (past_events) => {
-        console.log(`past_events`, past_events)
 
         const events_object = {}
         for (const event of past_events) {
@@ -166,14 +164,17 @@ function MediaPageComponent(props) {
         console.log(`past`, past)
         return (
             <>
-                <Container style={{ marginTop: "200px" }}>
+                <div className='background_image_div' >
+                    <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <Container className='sub_page_title_container' >
                     <Row className=" justify-content-center">
-                        <div class="section_header" style={{ marginTop: "30px" }}>
-                            <span class="section_header_inner">
-                                MEDIA
-                                </span>
-                            <div className="section_header_under"></div>
-                        </div>
+                        <Col>
+                            <div class="sub_page_header">
+                                <span class="sub_page_header_inner">MEDIA</span>
+                                <div className="sub_page_header_under"></div>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
                 { !PastEventsIsLoading ?

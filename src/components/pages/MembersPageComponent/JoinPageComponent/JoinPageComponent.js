@@ -149,21 +149,20 @@ function JoinPageComponent() {
 
     return (
         <>
-            <div style={{ zIndex: '-1', width: "100%", height: "800px", position: "absolute", top: "0", right: "", overflow: "hidden" }} >
-                <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
             </div>
-            <Container style={{ marginTop: "200px" }}>
+            <Container className='sub_page_title_container' >
                 <Row className=" justify-content-center">
-                    <Col >
-                        <div class="section_header">
-                            <span class="section_header_inner">
-                                Join CEBC
-                                </span>
-                            <div className="section_header_under"></div>
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">Join CEBC</span>
+                            <div className="sub_page_header_under"></div>
                         </div>
                     </Col>
                 </Row>
             </Container>
+
             <div id="join_form" style={{ zIndex: '33333', marginTop: "100px" }} >
                 <div
 

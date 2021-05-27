@@ -47,11 +47,8 @@ function NewsEventSubPagesComponent(props) {
 
 
 
-
     const { isLoading: UpcommingEventsIsLoading, error: UpcommingEventsError, sendRequest: sendUpcommingEventsRequest, clearError } = useHttpClient();
     const [LoadedUpcommingEvents, setLoadedUpcommingEvents] = useState([]);
-
-
 
 
 
@@ -81,6 +78,8 @@ function NewsEventSubPagesComponent(props) {
         [sendUpcommingEventsRequest],
     );
 
+
+
     const { isLoading: PastEventsIsLoading, error: PastEventsError, sendRequest: sendPastEventsRequest, clearError: clearPastError } = useHttpClient();
     const [LoadedPastEvents, setLoadedPastEvents] = useState([]);
     const fetch_past_Events = useCallback(
@@ -94,7 +93,6 @@ function NewsEventSubPagesComponent(props) {
                     `${process.env.REACT_APP_BACKEND_URL}/events?Event_date_lt=${current_date}&_limit=${EntryPerPage}&_start=${EntryPerPage * (page_number - 1)}`
                 );
 
-                console.log(`past_events`, responseData)
                 setLoadedPastEvents(responseData);
 
 
@@ -106,6 +104,8 @@ function NewsEventSubPagesComponent(props) {
         },
         [sendPastEventsRequest],
     );
+
+
 
     const [LoadedNews, setLoadedNews] = useState([]);
     const fetch_News = useCallback(
@@ -124,11 +124,15 @@ function NewsEventSubPagesComponent(props) {
         [],
     );
 
+
+
     useEffect(() => {
         fetch_upcomming_Events();
         fetch_past_Events(events_per_page, 1);
 
     }, [fetch_upcomming_Events, fetch_past_Events, fetch_News]);
+
+
 
     useEffect(() => {
         fetch_News(news_per_page, 1)
@@ -136,6 +140,8 @@ function NewsEventSubPagesComponent(props) {
         // fetch_past_Events(events_per_page, 1);
 
     }, []);
+
+
 
     const render_upcomming_events = (upcomming_events) => {
 
@@ -331,12 +337,22 @@ function NewsEventSubPagesComponent(props) {
 
         let render_news = []
         render_news.push(
-            <div class="section_header" style={{ marginTop: "200px" }}>
-                <span class="section_header_inner">
-                    latest news
-                </span>
-                <div className="section_header_under"></div>
-            </div>
+            <>
+
+                <div className='background_image_div' >
+                    <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <Container className='sub_page_title_container' >
+                    <Row className=" justify-content-center">
+                        <Col>
+                            <div class="sub_page_header">
+                                <span class="sub_page_header_inner">latest news</span>
+                                <div className="sub_page_header_under"></div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </>
         )
 
         const ordered_years = Object.keys(newss_object).sort().reverse(
@@ -374,14 +390,18 @@ function NewsEventSubPagesComponent(props) {
         if (sub_par === "All") {
             return (
                 <>
-                    <Container style={{ marginTop: "200px" }}>
+
+                    <div className='background_image_div' >
+                        <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                    </div>
+                    <Container className='sub_page_title_container' >
                         <Row className=" justify-content-center">
-                            <div class="section_header" style={{ marginTop: "30px" }}>
-                                <span class="section_header_inner">
-                                    CEBC EVENTS
-                                </span>
-                                <div className="section_header_under"></div>
-                            </div>
+                            <Col>
+                                <div class="sub_page_header">
+                                    <span class="sub_page_header_inner">CEBC EVENTS</span>
+                                    <div className="sub_page_header_under"></div>
+                                </div>
+                            </Col>
                         </Row>
                     </Container>
                     {
@@ -502,9 +522,9 @@ function NewsEventSubPagesComponent(props) {
             )
         }
     }
+
     return (
         <div style={{ marginBottom: "20px" }}>
-
             { generate_page_view(props.match.params.sub_parameter, LoadedUpcommingEvents, LoadedPastEvents)}
         </div>
     )

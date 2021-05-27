@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'reactstrap'
+import { Col, Container, Row } from 'reactstrap'
 import JobCard from './JobCard/JobCard'
 import ReactLoading from 'react-loading';
 import { Formik, Field, Form } from 'formik';
@@ -75,11 +75,26 @@ function JobPageCompoenent(props) {
 
     return (
         <div style={{
-            minHeight: "400px", paddingTop: '222px', paddingBottom: '300px'
+            minHeight: "400px", paddingTop: '0px', paddingBottom: '300px'
         }}>
+            <div className='background_image_div' >
+                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+            </div>
+            <Container className='sub_page_title_container' >
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">Careers</span>
+                            <div className="sub_page_header_under"></div>
+
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+
             { props.jobs && props.jobs.length > 0 ?
                 <div>
-                    <div class="section_header"><span class="section_header_inner">Careers</span><div class="section_header_under"></div></div>
+
                     <Container>
 
                         <div className='filter_box'>

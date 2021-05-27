@@ -34,11 +34,18 @@ function ProjectsPageComponent(props) {
 
 
     return (
-        <div style={{ marginTop: '200px', marginBottom: '100px' }}>
-            <div class="section_header" style={{ marginTop: "100px", marginBottom: "100px", zIndex: '99' }}>
-                <span class="section_header_inner" style={{ zIndex: '99' }}>  PROJECTS    </span>
-                <div className="section_header_under" style={{ zIndex: '99' }}></div>
-            </div>
+        <div style={{ marginTop: '10px', marginBottom: '100px' }}>
+
+            <Container className='sub_page_title_container' style={{ zIndex: '99', position: 'relative' }}>
+                <Row className=" justify-content-center">
+                    <Col>
+                        <div class="sub_page_header">
+                            <span class="sub_page_header_inner">Projects</span>
+                            <div className="sub_page_header_under"></div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <Container>
                 <div className="back_ground_div">         </div>
                 <Row>

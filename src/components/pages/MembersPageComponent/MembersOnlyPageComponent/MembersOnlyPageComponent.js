@@ -119,14 +119,26 @@ function MembersOnlyPageComponent(props) {
 
     return (
         <div style={{
-            minHeight: "400px", paddingTop: '222px', paddingBottom: '300px'
+            minHeight: "400px", paddingBottom: '300px', paddingTop: '300px'
         }}>
 
             {
                 IsLoggedIn
                     ?
                     <div>
-                        <div class="section_header"><span class="section_header_inner">Members only content</span><div class="section_header_under"></div></div>
+                        <div className='background_image_div' >
+                            <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                        </div>
+                        <Container className='sub_page_title_container' >
+                            <Row className=" justify-content-center">
+                                <Col>
+                                    <div class="sub_page_header">
+                                        <span class="sub_page_header_inner">MEMBERS ONLY CONTENT</span>
+                                        <div className="sub_page_header_under"></div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
                         < Container fluid style={{ padding: '50px' }}>
                             <Row>
                                 <Col className='news_col' md={3}>

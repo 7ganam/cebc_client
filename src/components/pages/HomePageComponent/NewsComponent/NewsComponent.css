@@ -89,7 +89,8 @@
 
 .end_div
 {
-    margin-top: 20px;
+    margin-top: 0px;
+    padding: 0;
 }
 
 .end_text {

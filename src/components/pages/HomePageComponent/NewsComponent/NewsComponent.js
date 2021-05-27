@@ -27,8 +27,6 @@ function NewsComponent(props) {
             return 0;
         }
         const sorted_upcomming_events = upcocmming_events2.sort(compare)
-        console.log(`events`, events)
-        console.log(`upcomming_events2`, upcocmming_events2)
         let sorted_events = []
         if (upcocmming_events2.length === 0) {
             sorted_events = events
@@ -36,7 +34,6 @@ function NewsComponent(props) {
         else if (upcocmming_events2.length < events.length) {
             let past_events = events.filter((event, index) => (event.Event_date < current_date));
             sorted_events = sorted_upcomming_events.concat(past_events)
-            console.log(`past_events`, past_events)
 
 
 
@@ -47,8 +44,6 @@ function NewsComponent(props) {
 
         }
 
-        console.log(`events`, events)
-        console.log(`sorted_events`, sorted_events)
 
         setSortedEvents(sorted_events)
 

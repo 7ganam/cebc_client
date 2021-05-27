@@ -61,12 +61,21 @@ function NewsLettersPageComponent(props) {
 
         let render_NewsLetter = []
         render_NewsLetter.push(
-            <div class="section_header" style={{ marginTop: "100px" }}>
-                <span class="section_header_inner">
-                    NEWSLETTER
-            </span>
-                <div className="section_header_under"></div>
-            </div>
+            <>
+                <div className='background_image_div' >
+                    <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <Container className='sub_page_title_container' >
+                    <Row className=" justify-content-center">
+                        <Col>
+                            <div class="sub_page_header">
+                                <span class="sub_page_header_inner">CNEWSLETTER</span>
+                                <div className="sub_page_header_under"></div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </>
         )
 
 
@@ -103,7 +112,7 @@ function NewsLettersPageComponent(props) {
 
 
     return (
-        <div style={{ marginTop: '200px', marginBottom: '50px' }}>
+        <div style={{ marginTop: '0px', marginBottom: '50px' }}>
             {props.NewsLetters.length > 0 &&
                 <div>
                     {render_NewsLetters(props.NewsLetters)}

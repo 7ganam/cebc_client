@@ -163,10 +163,10 @@ function SingleProjectPageComponent(props) {
                                 </div>
                             }
 
-                            {!!props.projects.length > 0 &&
+                            {!!props.projects.length > 0 && props.members && props.members.length > 0 &&
                                 <div>
                                     <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Member</span>
+                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Members</span>
                                         <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
                                     </div>
                                     <Row className=" justify-content-center">

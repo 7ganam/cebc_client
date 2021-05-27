@@ -18,7 +18,7 @@ function useInitLoadedData() {
                 );
 
                 setLoadedProgrammes(responseData);
-                console.log('loaded programs-groups', responseData)
+                // console.log('loaded programs-groups', responseData)
             } catch (err) {
                 console.log({ err })
             }
