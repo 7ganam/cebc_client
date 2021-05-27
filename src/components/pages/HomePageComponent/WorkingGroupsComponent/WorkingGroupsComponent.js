@@ -38,7 +38,7 @@ function WorkingGroupsComponent(props) {
             <Container className='sub_page_title_container' style={{ marginTop: '0px' }}>
                 <Row className=" justify-content-center">
                     <Col>
-                        <div class="sub_page_header">
+                        <div class="sub_page_header" style={{ marginTop: '50px' }}>
                             {(props.type === "programm") ?
                                 <span class="sub_page_header_inner">
                                     programmes

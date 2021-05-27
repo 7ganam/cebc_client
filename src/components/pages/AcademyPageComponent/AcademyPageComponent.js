@@ -63,7 +63,7 @@ function AcademyPageComponent(props) {
             <Container>
 
                 <Row>
-                    <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left', marginBottom: '30px' }}>
+                    <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left', marginBottom: '30px', marginTop: '90px' }}>
                         CEBC provides courses to help empower Clean energy industries in the MENA region.
                         </Col>
                 </Row>

@@ -61,7 +61,7 @@ function CaseStudiesPageComponent(props) {
             </Container>
             {props.case_studies.length > 0 &&
                 <div>
-                    <Container>
+                    <Container style={{ marginTop: '60px' }}>
                         <Row>
                             {render_case_studies2()}
                         </Row>

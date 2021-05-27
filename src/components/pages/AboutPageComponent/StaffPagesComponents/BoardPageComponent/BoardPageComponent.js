@@ -88,7 +88,7 @@ function BoardPageComponent(props) {
 
 
 
-                <Container id="board_content" >
+                <Container id="board_content" style={{ marginTop: '70px' }}>
 
                     <Row className=" justify-content-center align-items-stretch">
                         {create_staff_view(props.staff, "board_member")}

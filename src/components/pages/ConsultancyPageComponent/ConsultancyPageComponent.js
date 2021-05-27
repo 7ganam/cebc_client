@@ -41,20 +41,27 @@ function ConsultancyPageComponent() {
 
 
             <Container>
+
+
                 <Row className="title_row">
-                    <div class="section_header" style={{ marginLeft: '15px', marginTop: "50px", alignItems: 'start', textAlign: 'left', paddingLeft: ' 0', fontWeight: '400' }}>
-                        <span class="section_header_inner" style={{ fontSize: '34px', zIndex: '1' }}>Our services:</span>
-                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            Our services:
+                            </span>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
                 <div className='consultancy_services_div'>
                     <img src="/services2.png" alt="" style={{ width: "100%", height: "auto" }} />
                 </div>
 
-                <Row className="title_row">
-                    <div class="section_header" style={{ marginLeft: '15px', marginTop: "50px", alignItems: 'start', textAlign: 'left', paddingLeft: ' 0', fontWeight: '400' }}>
-                        <span class="section_header_inner" style={{ fontSize: '34px', }}>We cover:</span>
-                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+
+                <Row className="title_row" style={{ marginTop: '30px' }}>
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            We cover:
+                            </span>
+                        <div className="section_header_under" ></div>
                     </div>
                 </Row>
                 <div className='consultancy_services_div'>

@@ -19,7 +19,9 @@ function KnowledgeCenterComponent() {
             <Container className='page_title_container' fluid>
                 <Row className=" justify-content-center">
                     <Col>
-                        <div class="page_header">
+                        <div class="page_header"
+                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/library_f05e806a21.jpg")` }}
+                        >
                             <span class="page_header_inner"> Knowledge Center</span>
                             <div className="page_header_under"></div>
                             <div id="page_header_shadow" >  </div>

@@ -90,15 +90,18 @@ function DoubleExtendedNavItemComponent2(props) {
     function close_nav_bar(event) {
         if (x < 768) {
 
-            var clickOver = $(event.target)
+            var delayInMilliseconds = 250; //1 second
 
+            setTimeout(function () {
+                var clickOver = $(event.target)
+                // console.log(`clickOver`, $('.navbar .navbar-toggler').attr('aria-expanded'))
+                if ($('.navbar-collapse').hasClass("show")) {
+                    console.log(`clickOver`, clickOver)
+                    // Click on navbar toggler button
+                    $('.navbar-toggler').click();
+                }
+            }, delayInMilliseconds);
 
-            // console.log(`clickOver`, $('.navbar .navbar-toggler').attr('aria-expanded'))
-            if ($('.navbar-collapse').hasClass("show")) {
-                console.log(`clickOver`, clickOver)
-                // Click on navbar toggler button
-                $('.navbar-toggler').click();
-            }
         }
     }
     const show_sub_nav = () => {

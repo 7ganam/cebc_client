@@ -73,20 +73,23 @@ function TeamPageComponent(props) {
                 <div style={{ width: "100%", height: "800px", position: "absolute", top: "0", right: "", overflow: "hidden" }}  >
                     <img src="/assets/images/hero.png" alt="" style={{ width: "100%", height: "auto", position: "", }} />
                 </div>
-
-
-
-                <Container id="board_content" >
-                    <Row className=" justify-content-center" style={{ margin: "170px 0 30px 0px", zIndex: "333" }}>
-                        <Col >
-                            <div class="section_header">
-                                <span class="section_header_inner">
-                                    Team
-                            </span>
-                                <div className="section_header_under"></div>
+                <div className='background_image_div' >
+                    <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
+                </div>
+                <Container className='sub_page_title_container' >
+                    <Row className=" justify-content-center">
+                        <Col>
+                            <div class="sub_page_header">
+                                <span class="sub_page_header_inner">TEAM</span>
+                                <div className="sub_page_header_under"></div>
                             </div>
                         </Col>
                     </Row>
+                </Container>
+
+
+                <Container id="board_content" style={{ marginTop: '70px' }}>
+
                     <Row className=" justify-content-center align-items-stretch">
                         {create_staff_view(props.staff, "team_member")}
                     </Row>

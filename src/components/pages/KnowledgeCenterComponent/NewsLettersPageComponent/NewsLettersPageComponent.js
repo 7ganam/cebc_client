@@ -69,7 +69,7 @@ function NewsLettersPageComponent(props) {
                     <Row className=" justify-content-center">
                         <Col>
                             <div class="sub_page_header">
-                                <span class="sub_page_header_inner">CNEWSLETTER</span>
+                                <span class="sub_page_header_inner">NEWSLETTER</span>
                                 <div className="sub_page_header_under"></div>
                             </div>
                         </Col>

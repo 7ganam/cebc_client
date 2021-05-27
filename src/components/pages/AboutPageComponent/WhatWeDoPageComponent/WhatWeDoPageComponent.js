@@ -65,7 +65,7 @@ function WhatWeDoPageComponent(props) {
             <Container
                 style={{
                     marginTop: '30px',
-                    marginBottom: '50px',
+                    marginBottom: '30px',
                     overflow: 'visible',
                 }}
             >

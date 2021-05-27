@@ -37,10 +37,12 @@
         
     }
 
+
     ul.sub_subs{
         padding-left: 0px;
         list-style: none;
     }
+
 
     ul.sub_subs li{
         padding-left: 0px;
@@ -177,3 +179,14 @@ ul.sub_subs li::first-letter {
 
     /* color: #8A2BE2; */
   }
+
+
+  @media (max-width: 768px) {
+    ul.sub_subs {
+        margin-left: 30px !important;
+    }
+    .sub_subs_entry  {
+        margin-top: 7px !important;
+    }
+
+}

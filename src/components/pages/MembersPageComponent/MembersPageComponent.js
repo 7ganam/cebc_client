@@ -63,7 +63,8 @@ function MembersPageComponent(props) {
                     </div>
                 </Row>
                 <Row className="justify-content-center justify-content-center justify-content-md-start">
-                    <div style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
+                    <div className="justify-content-center justify-content-center justify-content-md-start"
+                        style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
                         {generate_assoicate_members_views("partner_member_entity")}
                     </div>
                 </Row>
@@ -82,7 +83,8 @@ function MembersPageComponent(props) {
                     </Row>
 
                     <Row className=" justify-content-center justify-content-md-start">
-                        <div style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
+                        <div className="justify-content-center justify-content-center justify-content-md-start"
+                            style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
                             {generate_assoicate_members_views("corporate_member_entity")}
                         </div>
                     </Row>
@@ -105,7 +107,8 @@ function MembersPageComponent(props) {
 
 
                 <Row className=" justify-content-center justify-content-md-start">
-                    <div style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
+                    <div className="justify-content-center justify-content-center justify-content-md-start"
+                        style={{ display: "flex", maxWidth: "100%", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px", zIndex: '2' }}>
                         {generate_assoicate_members_views("assoicate_member_entity")}
                     </div>
                 </Row>

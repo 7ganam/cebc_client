@@ -37,6 +37,8 @@
 #main_news_title_div{
     font-weight: 700;
     margin-top: 10px;
+    color: rgb(105, 102, 102);
+
 }
 
 #main_news_body_div{
@@ -132,6 +134,7 @@
     line-height: 20px;        /* fallback */
     max-height: 140px;       /* fallback */
     font-weight: 600;
+    color: grey;
 
 }
 .sec_news_body_div{

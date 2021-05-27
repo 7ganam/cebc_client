@@ -77,7 +77,13 @@ padding: 0;
   display: flex;
   position: relative;
   /* font-weight: lighter; */
-  background-image: url("assets/pages_headers/library.jpg");
+  background-image: url("assets/pages_headers/library.jpg")  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      background-repeat: no-repeat;
+
   /* background-attachment: fixed; */
   background-position: center;
   background-size: 100% auto;
@@ -94,9 +100,18 @@ padding: 0;
   justify-content: flex-end;
   align-items: start;
   flex-direction: column;
-
-
 }
+@media (max-width: 576px) { 
+  .page_header{
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    margin: -10px auto 15px auto;
+    width: 95%;
+
+
+  }
+ }
 
 .page_header_inner{
   font-size: 40px;
@@ -108,8 +123,14 @@ padding: 0;
   padding: 0px 20px 0px 20px ;
   overflow: hidden;
   display: flex ;
-
 }
+@media (max-width: 576px) { 
+  .page_header_inner{
+    font-size: 20px;
+  }
+ }
+
+
 .page_header_inner_dot{
 
   height: 15px;
@@ -176,7 +197,7 @@ display: none;
 
 
 .sub_page_title_container{
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 
@@ -240,6 +261,12 @@ display: none;
   height: 5px;
   background-color: #f5d20d;
 }
+@media (max-width: 576px) { 
+  .sub_page_header::before{
+display: none;
+  }
+ }
+  
 
 
 
@@ -310,6 +337,11 @@ display: none;
   height: 5px;
   background-color: #f5d20d;
 }
+@media (max-width: 576px) { 
+  .section_header::before{
+display: none;
+  }
+ }
   
 
 
@@ -328,14 +360,22 @@ display: none;
   font-size: 34px;
    font-weight: 300;
 }
+@media (max-width: 576px) { 
+  .section_header_side .section_header_inner{
+    font-size: 27px;
+
+  }
+}
 
 .section_header_side .section_header_under{
   font-size: 34px;
+
   margin-bottom: 0px;
   width: 250px;
   position: relative;
   top:-4px;
 }
+
 .section_header_side::before {
   display: inline-block;
   position: relative;
@@ -351,6 +391,11 @@ display: none;
   top:-25px;
 
 }
+@media (max-width: 576px) { 
+  .section_header_side::before{
+display: none;
+  }
+ }
 
 
 
