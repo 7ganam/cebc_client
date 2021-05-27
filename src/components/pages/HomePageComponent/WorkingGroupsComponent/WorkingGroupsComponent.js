@@ -32,9 +32,7 @@ function WorkingGroupsComponent(props) {
         <div style={{ marginTop: '30px' }}>
 
 
-            <div className='background_image_div' >
-                <img src="/assets/images/hero.png" alt="" style={{ width: '100%', height: 'auto' }} />
-            </div>
+
             <Container className='sub_page_title_container' style={{ marginTop: '0px' }}>
                 <Row className=" justify-content-center">
                     <Col>
