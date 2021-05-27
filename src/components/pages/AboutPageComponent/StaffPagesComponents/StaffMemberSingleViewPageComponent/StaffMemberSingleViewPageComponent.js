@@ -154,10 +154,7 @@ function StaffMemberSingleViewPageComponent(props) {
 
                             {!!the_member &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'center', textAlign: '' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}></span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+
                                     <Row className=" justify-content-center">
                                         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px" }}>
                                             {generate_entity_views()}
@@ -168,13 +165,14 @@ function StaffMemberSingleViewPageComponent(props) {
                             {!!the_member && the_member.programmes_and_groups.length > 0 &&
                                 <>
 
-                                    <div id="groups_members_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Groups</span>
-                                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '10px' }}></div>
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Groups
+                                            </span>
+                                            <div className="section_header_under" ></div>
                                         </div>
-
-                                    </div>
+                                    </Row>
                                     <Row style={{ marginBottom: '20px', }}>
                                         {generate_groups_cards(the_member.programmes_and_groups)}
                                     </Row>

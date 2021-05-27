@@ -155,12 +155,17 @@ function SingleWorkingGroupPageComponent(props) {
                         <>
                             {the_group.entities.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "20px", alignItems: 'start', textAlign: 'left', width: '85vw', maxWidth: '1000px', margin: 'auto' }}>
-                                        <span class="section_header_inner" style={{ marginTop: "20px", fontSize: '34px', }}>Partners</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '0px' }}></div>
-                                    </div>
+
+                                    <Row className="title_row" style={{ maxWidth: '1000px', margin: 'auto' }}>
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Partners
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row className=" justify-content-center ml-5">
-                                        <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px" }}>
+                                        <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
                                             {generate_entity_views()}
                                         </div>
                                     </Row>
@@ -168,12 +173,17 @@ function SingleWorkingGroupPageComponent(props) {
                             }
                             {the_group.users.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "20px", alignItems: 'start', textAlign: 'left', width: '85vw', maxWidth: '1000px', margin: 'auto' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Board champions </span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '0px' }}></div>
-                                    </div>
+
+                                    <Row className="title_row" style={{ maxWidth: '1000px', margin: 'auto' }}>
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Board champions
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row className=" justify-content-center ml-5">
-                                        <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px" }}>
+                                        <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
                                             {generate_members_view()}
 
                                         </div>
@@ -182,21 +192,25 @@ function SingleWorkingGroupPageComponent(props) {
                             }
 
                             {the_group.report_puplications.length > 0 &&
-                                <div>
-                                    <div class="section_header" style={{ marginTop: "20px", alignItems: 'start', textAlign: 'left', width: '85vw', maxWidth: '1000px', margin: 'auto' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Reports & Publications</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '0px' }}></div>
-                                    </div>
-                                    <Container>
-                                        <Row className=" justify-content-center">
-                                            <div style={{ padding: '0', margin: '20px auto 40px auto', maxWidth: '85vw', width: '100%', display: "flex", flexWrap: "wrap", justifyContent: "start", flexDirection: 'column' }}>
-                                                {generate_reports_views()}
+                                <>
 
 
+                                    <>
+                                        <Row className="title_row" style={{ maxWidth: '1000px', margin: 'auto' }}>
+                                            <div className="section_header section_header_side" >
+                                                <span className="section_header_inner"     >
+                                                    Reports & Publications
+                                            </span>
+                                                <div className="section_header_under" ></div>
                                             </div>
                                         </Row>
-                                    </Container>
-                                </div>
+                                        <Row className=" justify-content-center" style={{ maxWidth: '900px', margin: 'auto' }}>
+                                            <div style={{ padding: '0', margin: '20px auto 40px auto', maxWidth: '85vw', width: '100%', display: "flex", flexWrap: "wrap", justifyContent: "start", flexDirection: 'column' }}>
+                                                {generate_reports_views()}
+                                            </div>
+                                        </Row>
+                                    </>
+                                </>
                             }
                         </>
 

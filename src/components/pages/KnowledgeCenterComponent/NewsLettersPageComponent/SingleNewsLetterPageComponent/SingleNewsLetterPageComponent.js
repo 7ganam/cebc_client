@@ -148,10 +148,15 @@ function SingleNewsLetterPageComponent(props) {
 
                             {!!props.NewsLetters.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>NewsLetter details </span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+
+                                    <Row className="title_row">
+                                        <div className="section_header " >
+                                            <span className="section_header_inner"     >
+                                                NEWSLETTER DETAILS
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <div className="NewsLetter_details_box">
                                         <Row style={{ minHeight: "30px" }}>
                                             <Col className="details_title" xs={6} md={3} >
@@ -182,6 +187,15 @@ function SingleNewsLetterPageComponent(props) {
                                         <span class="section_header_inner" style={{ fontSize: '34px', }}>Member</span>
                                         <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
                                     </div>
+
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Members
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row className=" justify-content-center">
                                         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px" }}>
                                             {generate_entity_views()}
@@ -192,13 +206,14 @@ function SingleNewsLetterPageComponent(props) {
                             {!!the_NewsLetter && the_NewsLetter.programmes_and_groups.length > 0 &&
                                 <>
 
-                                    <div id="groups_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Groups</span>
-                                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '10px' }}></div>
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Groups
+                                            </span>
+                                            <div className="section_header_under" ></div>
                                         </div>
-
-                                    </div>
+                                    </Row>
                                     <Row style={{ marginBottom: '20px', }}>
                                         {generate_groups_cards(the_NewsLetter.programmes_and_groups)}
                                     </Row>

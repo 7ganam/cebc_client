@@ -128,10 +128,15 @@ function SingleProjectPageComponent(props) {
 
                             {!!props.projects.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>project details </span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+
+                                    <Row className="title_row">
+                                        <div className="section_header " >
+                                            <span className="section_header_inner"     >
+                                                project details
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <div className="project_details_box">
                                         <Row style={{ minHeight: "30px" }}>
                                             <Col className="details_title" xs={6} md={3} >
@@ -163,12 +168,17 @@ function SingleProjectPageComponent(props) {
                                 </div>
                             }
 
-                            {!!props.projects.length > 0 && props.members && props.members.length > 0 &&
+                            {!!the_project && the_project.entities && the_project.entities.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Members</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Members
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row className=" justify-content-center">
                                         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px" }}>
                                             {generate_entity_views()}
@@ -179,13 +189,15 @@ function SingleProjectPageComponent(props) {
                             {!!the_project && the_project.programmes_and_groups.length > 0 &&
                                 <>
 
-                                    <div id="groups_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Groups</span>
-                                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '10px' }}></div>
-                                        </div>
 
-                                    </div>
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Groups
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row style={{ marginBottom: '20px', }}>
                                         {generate_groups_cards(the_project.programmes_and_groups)}
                                     </Row>

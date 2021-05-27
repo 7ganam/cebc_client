@@ -191,7 +191,7 @@ function MembersOnlyPageComponent(props) {
                         </Container >
                     </div >
                     :
-                    <div>
+                    <div style={{ marginTop: '300px' }}>
                         <div class="section_header"><span class="section_header_inner">Members only content</span><div class="section_header_under"></div></div>
 
                         <div>

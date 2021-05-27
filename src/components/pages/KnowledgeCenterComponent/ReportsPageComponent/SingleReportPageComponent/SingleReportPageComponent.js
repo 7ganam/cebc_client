@@ -148,10 +148,16 @@ function SingleProjectPageComponent(props) {
 
                             {!!props.reports.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>report details </span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+                                    <Row className=" justify-content-center">
+                                        <Col style={{ paddingTop: "0px" }}>
+                                            <div class="section_header">
+                                                <span class="section_header_inner">
+                                                    REPORT DETAILS
+                            </span>
+                                                <div className="section_header_under"></div>
+                                            </div>
+                                        </Col>
+                                    </Row>
                                     <div className="report_details_box">
                                         <Row style={{ minHeight: "30px" }}>
                                             <Col className="details_title " xs={6} md={3} >
@@ -178,10 +184,15 @@ function SingleProjectPageComponent(props) {
 
                             {!!props.reports.length > 0 && the_report && the_report.entities.length > 0 &&
                                 <div>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Member</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Members
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row className=" justify-content-center">
                                         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "20px", marginBottom: "40px" }}>
                                             {generate_entity_views()}
@@ -192,13 +203,15 @@ function SingleProjectPageComponent(props) {
                             {!!the_report && the_report.programmes_and_groups.length > 0 &&
                                 <>
 
-                                    <div id="groups_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Groups</span>
-                                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '10px' }}></div>
-                                        </div>
 
-                                    </div>
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Groups
+                                            </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row style={{ marginBottom: '20px', }}>
                                         {generate_groups_cards(the_report.programmes_and_groups)}
                                     </Row>

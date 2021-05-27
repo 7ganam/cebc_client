@@ -37,7 +37,7 @@ const PaginationComponent = (props) => {
 
 
             return (
-                <div style={{ margin: "auto", width: "100%", display: 'flex', justifyContent: 'center' }}>
+                <div style={{ margin: "auto", width: "100%", display: 'flex', justifyContent: 'center', marginTop: '70px' }}>
                     <Pagination aria-label="Page navigation example">
                         {pagination_entries}
                     </Pagination>
