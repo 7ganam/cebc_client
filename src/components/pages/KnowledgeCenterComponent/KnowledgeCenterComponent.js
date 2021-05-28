@@ -3,10 +3,8 @@ import "./KnowledgeCenterComponent.css"
 import KnowledgeCardComponent from "./KnowledgeCardComponent/KnowledgeCardComponent"
 import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom'
-// import casestudy from "./images/case.jpg"
-// import blog from "./images/blog.jpg"
-// import reports from "./images/reports.png"
-// import web from "./images/web.png"
+// import MapComponent from './utils/MapComponent'
+
 
 function KnowledgeCenterComponent() {
     return (
@@ -120,10 +118,13 @@ function KnowledgeCenterComponent() {
                     <Col className="working_group_col" xs="12" md="7" lg="4" style={{}}>
                         <Link to="/KNOWLEDGECENTER/NEWSLETTER">
                             <div className="working_group_col_div" >
-                                <KnowledgeCardComponent image="/newsletter.png" title="NEWSLETTER" />
+                                <KnowledgeCardComponent image="./assets/images/newsletter.png" title="NEWSLETTER" />
                             </div>
                         </Link>
                     </Col>
+                </Row>
+                <Row>
+                    {/* <MapComponent /> */}
                 </Row>
             </Container>
         </div>

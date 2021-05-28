@@ -21,12 +21,12 @@ const activiites = [
     //     path: '#'
     // },
     {
-        image: '/Academy.jpg',
+        image: '/assets/images/Academy.jpg',
         title: 'ACADEMY',
         path: '/ACTIVITIES/ACADEMY'
     },
     {
-        image: '/consul.jpg',
+        image: '/assets/images/consul.jpg',
         title: 'CONSULTANCY',
         path: '/ACTIVITIES/CONSULTANCY'
     },

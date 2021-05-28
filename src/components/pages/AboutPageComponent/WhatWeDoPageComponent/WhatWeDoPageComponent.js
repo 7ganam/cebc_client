@@ -52,7 +52,7 @@ function WhatWeDoPageComponent(props) {
                             <div className="page_header_inner">
                                 <div className="page_header_inner_text"> About the CEBC</div>
                                 <div className="page_header_inner_dot">
-                                    <img src='/dot_2.png' alt='' style={{ width: '100%', height: 'auto' }} />
+
                                 </div>
                             </div>
                             <div className="page_header_under"></div>

@@ -228,7 +228,7 @@ const NavbarComponent = (props) => {
                                                 display: 'flex', justifyContent: 'center', alignItems: 'center'
                                             }} >
                                                 <img style={{ width: "50px", height: "50px", borderRadius: "100%", }}
-                                                    src={User.image.url || '/user.png'} alt="profile"
+                                                    src={User.image.url || '/assets/images/user.png'} alt="profile"
                                                 />
                                             </div>
                                         </NavItem>

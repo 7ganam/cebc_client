@@ -11,7 +11,7 @@ import ReactLoading from 'react-loading';
 
 const activiites = [
     {
-        image: '/Business-News.jpg',
+        image: '/assets/images/Business-News.jpg',
         title: 'NEWS',
         path: '/EVENTS_NEWS/News/'
     },

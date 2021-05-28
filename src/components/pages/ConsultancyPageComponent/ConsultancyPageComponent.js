@@ -8,8 +8,8 @@ import Consultancyform from './Consultancyform/Consultancyform'
 import Consultantform from './Consultantform/Consultantform'
 
 
-
-
+import services2 from './images/services2.png'
+import wecover2 from './images/wecover2.png'
 
 
 function ConsultancyPageComponent() {
@@ -52,7 +52,7 @@ function ConsultancyPageComponent() {
                     </div>
                 </Row>
                 <div className='consultancy_services_div'>
-                    <img src="/services2.png" alt="" style={{ width: "100%", height: "auto" }} />
+                    <img src={services2} alt="" style={{ width: "100%", height: "auto" }} />
                 </div>
 
 
@@ -65,7 +65,7 @@ function ConsultancyPageComponent() {
                     </div>
                 </Row>
                 <div className='consultancy_services_div'>
-                    <img src="/wecover2.png" alt="" style={{ width: "100%", height: "auto" }} />
+                    <img src={wecover2} alt="" style={{ width: "100%", height: "auto" }} />
                 </div>
                 <div>
 
