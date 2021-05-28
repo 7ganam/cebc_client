@@ -43,7 +43,7 @@ function ConsultancyPageComponent() {
             <Container>
 
 
-                <Row className="title_row">
+                <Row className="title_row mt-5">
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
                             Our services:
@@ -69,10 +69,12 @@ function ConsultancyPageComponent() {
                 </div>
                 <div>
 
-                    <Row className="title_row">
-                        <div class="section_header" style={{ marginLeft: '15px', marginTop: "50px", alignItems: 'start', textAlign: 'left', paddingLeft: ' 0', fontWeight: '400' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>apply for consultancy:</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                    <Row className="title_row" style={{ marginTop: '50px' }}>
+                        <div className="section_header section_header_side" >
+                            <span className="section_header_inner"     >
+                                apply for consultancy:
+                                            </span>
+                            <div className="section_header_under" ></div>
                         </div>
                     </Row>
 
@@ -88,10 +90,12 @@ function ConsultancyPageComponent() {
 
 
 
-                    <Row className="title_row">
-                        <div class="section_header" style={{ marginLeft: '15px', marginTop: "50px", alignItems: 'start', textAlign: 'left', paddingLeft: ' 0', fontWeight: '400' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Apply to be a consultant :</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px', width: "250px" }}></div>
+                    <Row className="title_row" style={{ marginTop: '50px' }}>
+                        <div className="section_header section_header_side" >
+                            <span className="section_header_inner"     >
+                                Apply to be a consultant:
+                                            </span>
+                            <div className="section_header_under" ></div>
                         </div>
                     </Row>
 

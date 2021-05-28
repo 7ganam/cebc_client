@@ -97,7 +97,7 @@ function JobPageCompoenent(props) {
 
                     <Container>
 
-                        <div className='filter_box'>
+                        <div className='filter_box' style={{ zIndex: '3', position: 'relative' }}>
 
                             <div className='filter_title'> Filter jobs</div>
                             <div className='filter_box_entries'>

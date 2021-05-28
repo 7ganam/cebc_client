@@ -159,12 +159,11 @@ function Consultancyform() {
                         <div className='consultancy_form application_form_box p-3 p-md-0'>
                             <Row style={{ padding: "10px 10px 10px 0px ", }} >
                                 <Col md={4} >
-                                    <div className='su_left_col' style={{}}>
+                                    <div className='su_left_col' style={{ marginLeft: "0" }}>
 
 
-                                        <div class="section_header" style={{ textAlign: 'left', marginTop: "30px", alignItems: 'start', width: '100%', maxWidth: '100%', margin: 'auto', }}>
-                                            <span class="section_header_inner" style={{ marginTop: "20px", fontSize: '30px', fontWeight: 'bold' }}>APPLY FOR CONSULTANCY</span>
-                                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '0px' }}></div>
+                                        <div class="" style={{ textAlign: 'left', marginTop: "30px", alignItems: 'start', width: '100%', maxWidth: '100%', margin: 'auto', }}>
+                                            <span class="" style={{ marginTop: "20px", fontSize: '30px', fontWeight: 'bold' }}>APPLY FOR CONSULTANCY</span>
                                         </div>
 
 
