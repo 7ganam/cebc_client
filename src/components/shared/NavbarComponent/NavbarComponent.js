@@ -120,125 +120,128 @@ const NavbarComponent = (props) => {
                         <NavbarToggler onClick={toggle} className="ml-auto" />
 
                         <Collapse isOpen={isOpen} navbar className="justify-content-end" >
-                            <Nav className="ml-auto d-flex nav_list" navbar style={{}}>
+                            <div style={{ height: $(window).width() > 768 ? '100%' : 'auto' }}>
+
+                                <Nav className="ml-auto d-flex nav_list" navbar style={{}}>
 
 
 
-                                <NavItem className={`${props.location.pathname !== "/" ? '' : 'nav-link-selected'} `}>
-                                    <Link className="nav_link" to="/">
-                                        Home
-                                    </Link>
-                                </NavItem>
+                                    <NavItem className={`${props.location.pathname !== "/" ? '' : 'nav-link-selected'} `}>
+                                        <Link className="nav_link" to="/">
+                                            Home
+                                        </Link>
+                                    </NavItem>
 
 
-                                <DoubleExtendedNavItemComponent2
-                                    location={props.location} main_nav={{ base_path: "/ABOUTUS", path: "/ABOUTUS/WHATWEDO", text: "ABOUT" }}
-                                    sub_navs={[
-                                        {
-                                            path: "/ABOUTUS/WHATWEDO", text: "about",
-                                        },
-                                        {
-                                            path: "/ABOUTUS/STAFF/BOARD", text: "people",
-                                            sub_subs: [
-                                                { path: "/ABOUTUS/STAFF/BOARD", text: "Board of Directors" },
-                                                { path: "/ABOUTUS/STAFF/ADVISORY", text: "Adivsory Board" },
-                                                { path: "/ABOUTUS/STAFF/TEAM", text: "Team" },
-                                            ]
-                                        },
-                                        {
-                                            path: "/ABOUTUS/working_groups", text: "working groups",
-                                            sub_subs: [
-                                                { path: "/ABOUTUS/working_groups/7", text: "Future Mobility Club" },
-                                                { path: "/ABOUTUS/working_groups/12", text: "Climate Finance" },
-                                                { path: "/ABOUTUS/working_groups/13", text: "Energy Efficiency " },
-                                                { path: "/ABOUTUS/working_groups/10", text: "Hydrogen and Energy Storage" },
-                                                { path: "/ABOUTUS/working_groups/11", text: "Women in Clean Energy" },
-                                            ]
-                                        }, {
-                                            path: "/ABOUTUS/programms", text: "programmes",
-                                            sub_subs: [
-                                                { path: "/ABOUTUS/working_groups/1", text: "CEBC Schools" },
-                                            ]
-                                        },
-                                        { path: "/ABOUTUS/JOBS", text: "careers" },
-                                    ]}
-                                />
+                                    <DoubleExtendedNavItemComponent2
+                                        location={props.location} main_nav={{ base_path: "/ABOUTUS", path: "/ABOUTUS/WHATWEDO", text: "ABOUT" }}
+                                        sub_navs={[
+                                            {
+                                                path: "/ABOUTUS/WHATWEDO", text: "about",
+                                            },
+                                            {
+                                                path: "/ABOUTUS/STAFF/BOARD", text: "people",
+                                                sub_subs: [
+                                                    { path: "/ABOUTUS/STAFF/BOARD", text: "Board of Directors" },
+                                                    { path: "/ABOUTUS/STAFF/ADVISORY", text: "Adivsory Board" },
+                                                    { path: "/ABOUTUS/STAFF/TEAM", text: "Team" },
+                                                ]
+                                            },
+                                            {
+                                                path: "/ABOUTUS/working_groups", text: "working groups",
+                                                sub_subs: [
+                                                    { path: "/ABOUTUS/working_groups/7", text: "Future Mobility Club" },
+                                                    { path: "/ABOUTUS/working_groups/12", text: "Climate Finance" },
+                                                    { path: "/ABOUTUS/working_groups/13", text: "Energy Efficiency " },
+                                                    { path: "/ABOUTUS/working_groups/10", text: "Hydrogen and Energy Storage" },
+                                                    { path: "/ABOUTUS/working_groups/11", text: "Women in Clean Energy" },
+                                                ]
+                                            }, {
+                                                path: "/ABOUTUS/programms", text: "programmes",
+                                                sub_subs: [
+                                                    { path: "/ABOUTUS/working_groups/1", text: "CEBC Schools" },
+                                                ]
+                                            },
+                                            { path: "/ABOUTUS/JOBS", text: "careers" },
+                                        ]}
+                                    />
 
-                                <ExtendedNavItemComponent2
-                                    location={props.location} main_nav={{ base_path: "/MEMBERSHIP", path: "/MEMBERSHIP/BENIFITS", text: "MEMBERSHIP" }}
-                                    sub_navs={[
-                                        { path: "/MEMBERSHIP/BENIFITS", text: "benefits & levels" },
-                                        // { path: "/MEMBERSHIP/LEVELS", text: "levels" },
-                                        { path: "/MEMBERSHIP/MEMBERS", text: "members" },
-                                        { path: "/MEMBERSHIP/PARTNERS", text: "partners" },
-                                        { path: "/MEMBERSHIP/JOIN", text: "join the cebc" },
-                                        { path: "/MEMBERSHIP/MEMBERSONLY", text: "Members only content" },
-                                    ]}
-                                />
+                                    <ExtendedNavItemComponent2
+                                        location={props.location} main_nav={{ base_path: "/MEMBERSHIP", path: "/MEMBERSHIP/BENIFITS", text: "MEMBERSHIP" }}
+                                        sub_navs={[
+                                            { path: "/MEMBERSHIP/BENIFITS", text: "benefits & levels" },
+                                            // { path: "/MEMBERSHIP/LEVELS", text: "levels" },
+                                            { path: "/MEMBERSHIP/MEMBERS", text: "members" },
+                                            { path: "/MEMBERSHIP/PARTNERS", text: "partners" },
+                                            { path: "/MEMBERSHIP/JOIN", text: "join the cebc" },
+                                            { path: "/MEMBERSHIP/MEMBERSONLY", text: "Members only content" },
+                                        ]}
+                                    />
 
-                                <ExtendedNavItemComponent2
-                                    location={props.location} main_nav={{ base_path: "/ACTIVITIES", path: "/ACTIVITIES", text: "Activities" }}
-                                    sub_navs={[
-                                        { path: "/ACTIVITIES/EVENTS/All", text: "EVENTS" },
-                                        { path: "/ACTIVITIES/ACADEMY", text: "ACADEMY" },
-                                        { path: "/ACTIVITIES/CONSULTANCY", text: "CONSULTANCY" },
-                                        { path: "/ACTIVITIES/PODCASTS", text: "PODCAST" },
+                                    <ExtendedNavItemComponent2
+                                        location={props.location} main_nav={{ base_path: "/ACTIVITIES", path: "/ACTIVITIES", text: "Activities" }}
+                                        sub_navs={[
+                                            { path: "/ACTIVITIES/EVENTS/All", text: "EVENTS" },
+                                            { path: "/ACTIVITIES/ACADEMY", text: "ACADEMY" },
+                                            { path: "/ACTIVITIES/CONSULTANCY", text: "CONSULTANCY" },
+                                            { path: "/ACTIVITIES/PODCASTS", text: "PODCAST" },
 
-                                    ]}
-                                />
+                                        ]}
+                                    />
 
-                                <ExtendedNavItemComponent2
-                                    location={props.location} main_nav={{ base_path: "/EVENTS_NEWS", path: "/EVENTS_NEWS", text: "NEWS & MEDIA" }}
-                                    sub_navs={[
-                                        { path: "/EVENTS_NEWS/News/", text: "NEWS" },
-                                        { path: "/EVENTS_NEWS/MEDIA/", text: "MEDIA" },
-
-
-                                    ]}
-                                />
+                                    <ExtendedNavItemComponent2
+                                        location={props.location} main_nav={{ base_path: "/EVENTS_NEWS", path: "/EVENTS_NEWS", text: "NEWS & MEDIA" }}
+                                        sub_navs={[
+                                            { path: "/EVENTS_NEWS/News/", text: "NEWS" },
+                                            { path: "/EVENTS_NEWS/MEDIA/", text: "MEDIA" },
 
 
-
+                                        ]}
+                                    />
 
 
 
-                                <ExtendedNavItemComponent
-                                    location={props.location} main_nav={{ path: "/KNOWLEDGECENTER", text: "KNOWLEDGE CENTER" }}
-                                    sub_navs={[
-                                        { path: "/REPORTS", text: "publications" },
-                                        { path: "/WEBINARS", text: "webinars" },
-                                        // { path: "/PODCASTS", text: "podcast" },
-                                        { path: "/PRESENTATIONS", text: "presentations" },
-                                        { path: "/PROJECTS", text: "projects" },
-                                        { path: "/CASE_STUDIES", text: "case studies" },
-                                        // { path: "/BLOGS", text: "blogs" },
-                                        // { path: "/PAPERS", text: "NEWSLETTER" },
-                                        { path: "/NEWSLETTER", text: "NEWSLETTER" },
-                                        // { path: "/LINKS", text: "useful links" }
-                                    ]}
-                                />
-
-
-                                {IsLoggedIn &&
-                                    <>
-
-                                        <NavItem >
-                                            <div style={{
-                                                width: "70px", height: "100%", borderRadius: "100%",
-                                                display: 'flex', justifyContent: 'center', alignItems: 'center'
-                                            }} >
-                                                <img style={{ width: "50px", height: "50px", borderRadius: "100%", }}
-                                                    src={User.image.url || '/assets/images/user.png'} alt="profile"
-                                                />
-                                            </div>
-                                        </NavItem>
 
 
 
-                                    </>
-                                }
-                            </Nav>
+                                    <ExtendedNavItemComponent
+                                        location={props.location} main_nav={{ path: "/KNOWLEDGECENTER", text: "KNOWLEDGE CENTER" }}
+                                        sub_navs={[
+                                            { path: "/REPORTS", text: "publications" },
+                                            { path: "/WEBINARS", text: "webinars" },
+                                            // { path: "/PODCASTS", text: "podcast" },
+                                            { path: "/PRESENTATIONS", text: "presentations" },
+                                            { path: "/PROJECTS", text: "projects" },
+                                            { path: "/CASE_STUDIES", text: "case studies" },
+                                            // { path: "/BLOGS", text: "blogs" },
+                                            // { path: "/PAPERS", text: "NEWSLETTER" },
+                                            { path: "/NEWSLETTER", text: "NEWSLETTER" },
+                                            // { path: "/LINKS", text: "useful links" }
+                                        ]}
+                                    />
 
+
+                                    {IsLoggedIn &&
+                                        <>
+
+                                            <NavItem >
+                                                <div style={{
+                                                    width: "70px", height: "100%", borderRadius: "100%",
+                                                    display: 'flex', justifyContent: 'center', alignItems: 'center'
+                                                }} >
+                                                    <img style={{ width: "50px", height: "50px", borderRadius: "100%", }}
+                                                        src={User.image.url || '/assets/images/user.png'} alt="profile"
+                                                    />
+                                                </div>
+                                            </NavItem>
+
+
+
+                                        </>
+                                    }
+                                </Nav>
+
+                            </div>
                         </Collapse>
 
                     </Navbar>
