@@ -85,12 +85,23 @@ function SingleCaseStudyPageComponent(props) {
                     <Row className='justify-content-start align-items-stretch'>
                         <Col className='p-0' md={4} style={{ background: '', }}>
                             {!!props.case_studies.length > 0 &&
-                                <div className="case_study_image_box">
+                                <div className="report_image_box">
                                     {the_case_study.image ?
-                                        <img src={`${the_case_study.image && the_case_study.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
+                                        <img className="side_report_image" src={`${the_case_study.image && the_case_study.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
                                         :
-                                        <img src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
+                                        <img className="side_report_image" src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
                                     }
+                                    {!!the_case_study && !!the_case_study.file &&
+                                        <div className="open_report_button">
+                                            <a target="_blank" href={!!the_case_study.file && the_case_study.file.url} style={{ textDecoration: 'none' }} rel="noreferrer">
+                                                <div className="report_publication_button">
+                                                    <div>open </div>
+                                                    <i className="fas fa-external-link-alt ml-3"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+
                                 </div>
                             }
 
@@ -109,17 +120,7 @@ function SingleCaseStudyPageComponent(props) {
                                                 </div>
 
                                             </div>
-                                            <div class="open_case_study_button">
-                                                <a target="_blank" href={the_case_study.file && the_case_study.file.url} >
-                                                    <div class="report_button action-button shadow animate blue">
 
-                                                        <div>Download</div>
-
-                                                        <i class="fas fa-external-link-alt"></i>
-
-                                                    </div>
-                                                </a>
-                                            </div>
 
                                         </div>
                                         <div id="case_study_header_2">
