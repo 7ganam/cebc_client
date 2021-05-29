@@ -3,7 +3,7 @@ import "./KnowledgeCenterComponent.css"
 import KnowledgeCardComponent from "./KnowledgeCardComponent/KnowledgeCardComponent"
 import { Container, Row, Col } from 'reactstrap'
 import { Link } from 'react-router-dom'
-// import MapComponent from './utils/MapComponent'
+import MapComponent from './utils/MapComponent/MapComponent'
 
 
 function KnowledgeCenterComponent() {
@@ -33,7 +33,7 @@ function KnowledgeCenterComponent() {
                 <Row className="title_row">
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
-                            Our Latest Releases :
+                            Our Latest Releases
                             </span>
                         <div className="section_header_under" ></div>
                     </div>
@@ -123,8 +123,16 @@ function KnowledgeCenterComponent() {
                         </Link>
                     </Col>
                 </Row>
+                <Row className="title_row" style={{ marginTop: "40px" }}>
+                    <div className="section_header " >
+                        <span className="section_header_inner"     >
+                            Browse by country
+                            </span>
+                        <div className="section_header_under" ></div>
+                    </div>
+                </Row>
                 <Row>
-                    {/* <MapComponent /> */}
+                    <MapComponent />
                 </Row>
             </Container>
         </div>

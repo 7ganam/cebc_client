@@ -141,9 +141,6 @@ export default function MainComponent() {
                             />
                         </Route>
 
-
-
-
                         <Route exact path="/CONSULTANCY">
                             <ConsultancyPageComponent className="academyPage" />
                         </Route>

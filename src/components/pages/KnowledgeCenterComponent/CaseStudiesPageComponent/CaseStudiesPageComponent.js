@@ -21,7 +21,7 @@ function CaseStudiesPageComponent(props) {
 
                             <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${case_study.image && case_study.image.url}`} alt="Card image cap" />
                             :
-                            <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/logo_black.png"} alt="Card image cap" />
+                            <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                         }
                         <CardBody>
                             <CardTitle className='card_title_' tag="h5"> {case_study.title}</CardTitle>

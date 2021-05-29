@@ -6,7 +6,6 @@ import moment from 'moment';
 
 function useInitLoadedData() {
 
-
     const { isLoading: ProgrammesIsLoading, error: ProgrammesError, sendRequest: sendProgrammesRequest, clearError } = useHttpClient();
     const [LoadedProgrammes, setLoadedProgrammes] = useState([]);
     const fetch_Programmes = useCallback(

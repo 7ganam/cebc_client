@@ -16,7 +16,7 @@ const activiites = [
         path: '/EVENTS_NEWS/News/'
     },
     {
-        image: '/Academy.jpg',
+        image: '/assets/images/Academy.jpg',
         title: 'MEDIA',
         path: '/EVENTS_NEWS/media/'
     },

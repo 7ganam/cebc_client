@@ -35,7 +35,7 @@ function NewsLettersPageComponent(props) {
 
                                     <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${NewsLetter.image && NewsLetter.image.url}`} alt="Card image cap" />
                                     :
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/logo_black.png"} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                                 }
                                 <CardBody>
                                     <CardTitle className='card_title_' tag="h5"> {NewsLetter.title}</CardTitle>
