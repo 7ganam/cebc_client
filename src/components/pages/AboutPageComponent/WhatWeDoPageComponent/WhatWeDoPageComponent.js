@@ -47,7 +47,7 @@ function WhatWeDoPageComponent(props) {
                 <Row className=" justify-content-center">
                     <Col>
                         <div className="page_header"
-                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/6_15494e8f60.jpg")` }}
+                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/sheikh_zayed_road_4k_1547938105_c01a610c75.jpg")` }}
                         >
                             <div className="page_header_inner">
                                 <div className="page_header_inner_text"> About the CEBC</div>
@@ -64,8 +64,8 @@ function WhatWeDoPageComponent(props) {
 
             <Container
                 style={{
-                    marginTop: '30px',
-                    marginBottom: '30px',
+                    marginTop: '10px',
+                    marginBottom: '10px',
                     overflow: 'visible',
                 }}
             >

@@ -20,6 +20,8 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+
 }
 .country_data_item{
     border: 1px solid rgb(163, 160, 160); 
