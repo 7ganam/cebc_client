@@ -1,0 +1,12 @@
+.knowledge_center_map .jvectormap-zoomin{
+    top:auto !important;
+    bottom: 100px !important;
+    right: 100px !important;
+    left:auto !important;
+}
+.knowledge_center_map .jvectormap-zoomout{
+    top:auto !important;
+    bottom: 100px !important;
+    right: 120px !important;
+    left:auto !important;
+}

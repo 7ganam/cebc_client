@@ -7,7 +7,7 @@ import { useCallback } from 'react';
 import { useHttpClient } from "../../../../../hooks/http-hook"
 
 import CountriesDataComponent from './CountriesDataComponent/CountriesDataComponent'
-
+import './MapComponent.css'
 
 
 function MapComponent() {
@@ -130,7 +130,10 @@ function MapComponent() {
     }, [])
     return (
         <>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: "100%" }}>
+            <div
+                className='knowledge_center_map'
+                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: "100%", marginBottom: '10px' }}
+            >
                 <div id="world-map" style={{ width: "100%", height: '400px', margin: 'auto' }}></div>
             </div>
             {!!Loadedcountrys && Loadedcountrys.length > 0 &&
