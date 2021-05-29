@@ -81,8 +81,8 @@ function MapComponent() {
 
                         focusOn: {
                             x: 0.54,
-                            y: 0.5,
-                            scale: 3
+                            y: 0.52,
+                            scale: 4
                         },
                         zoomOnScroll: false,
                         regionsSelectable: true,
