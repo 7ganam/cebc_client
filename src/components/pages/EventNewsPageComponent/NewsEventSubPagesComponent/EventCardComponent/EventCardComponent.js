@@ -19,7 +19,7 @@ function EventCardComponent(props) {
                         </div>
                         :
                         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
-                            <img src={"/logo_black.png"}
+                            <img src={"/assets/images/logo_black.png"}
                                 style={{ width: "100%", height: "auto", }} alt="" />
                         </div>
 

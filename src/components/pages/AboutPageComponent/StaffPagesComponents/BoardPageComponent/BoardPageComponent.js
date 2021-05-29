@@ -26,7 +26,7 @@ function BoardPageComponent(props) {
                                 </Link>
                                 <div className="card_image_container" style={{ height: '200px', }}>
 
-                                    <img src={member.image ? member.image.url : "logo_black.png"} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="" />
+                                    <img src={member.image ? member.image.url : "/assets/images/logo_black.png"} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="" />
 
                                 </div>
                                 <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5px' }}>

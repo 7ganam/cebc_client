@@ -89,7 +89,7 @@ function SingleCaseStudyPageComponent(props) {
                                     {the_case_study.image ?
                                         <img src={`${the_case_study.image && the_case_study.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
                                         :
-                                        <img src={"/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
+                                        <img src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
                                     }
                                 </div>
                             }

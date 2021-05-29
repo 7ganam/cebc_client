@@ -1,3 +1,6 @@
+.eJrvuJ .ck-editor__main > div , .eJrvuJ .ck-editor__main {
+  min-height: 0px !important;
+}
 .row{
   margin-top: auto;
     margin-bottom: auto;

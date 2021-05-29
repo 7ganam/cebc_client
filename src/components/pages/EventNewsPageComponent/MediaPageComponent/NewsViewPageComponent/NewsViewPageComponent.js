@@ -68,7 +68,7 @@ function NewsViewPageComponent(props) {
                                             style={{ width: "300px", height: "auto", }} alt="" />
                                     </div>
                                     :
-                                    <img src={`/logo_black.png`}
+                                    <img src={`/assets/images/logo_black.png`}
                                         style={{ width: "300px", height: "auto", position: "relative", top: "50px" }} alt="" />
                                 }
                             </div>

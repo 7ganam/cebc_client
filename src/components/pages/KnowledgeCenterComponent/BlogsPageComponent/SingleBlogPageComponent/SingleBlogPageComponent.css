@@ -64,16 +64,7 @@
 }
 
 
-.details_title{
-     text-align: right;
-     font-family: 'Raleway', sans-serif;
-      font-size: 20px;
-      min-height: 50px;
-      vertical-align: middle;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-}
+
 .details_value{
      /* font-family: 'Roboto', cursive; */
       font-size: 17px;

@@ -91,7 +91,7 @@ function SingleNewsLetterPageComponent(props) {
                                     {the_NewsLetter.image ?
                                         <img src={`${the_NewsLetter.image && the_NewsLetter.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
                                         :
-                                        <img src={"/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
+                                        <img src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
                                     }
                                 </div>
                             }

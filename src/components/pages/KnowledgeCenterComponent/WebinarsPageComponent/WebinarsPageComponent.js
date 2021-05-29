@@ -26,7 +26,7 @@ function WebinarsPageComponent(props) {
                     <Link to={`/KNOWLEDGECENTER/WEBINARS/${webinar.id}`} style={{ width: '100%' }}>
                         <div className="webinar_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
-                                {/* <img src="/logo_black.png" alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+
                                 <div className="video-" style={{ width: "100%", height: "100%", objectFit: "cover" }}>
                                     <iframe
                                         width="100%"

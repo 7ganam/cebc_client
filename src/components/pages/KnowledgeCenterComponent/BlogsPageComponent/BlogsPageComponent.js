@@ -36,7 +36,7 @@ function BlogsPageComponent(props) {
 
                                     <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${blog.image && blog.image.url}`} alt="Card image cap" />
                                     :
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/logo_black.png"} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                                 }
                                 <CardBody>
                                     <CardTitle tag="h5"> {blog.title}</CardTitle>

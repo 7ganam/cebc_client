@@ -123,12 +123,10 @@ function SingleMemberPageComponent(props) {
                                 <div id="header_img" style={{ backgroundColor: "", padding: "0px", height: "210px", width: "300px", maxWidth: '100%' }}>
 
                                     {member.entity_image ?
-                                        // <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
                                         <img src={`${member.entity_image && member.entity_image.url}`}
                                             style={{ width: "100%", height: "100%", objectFit: 'contain' }} alt="" />
-                                        // </div>
                                         :
-                                        <img src={`/logo_black.png`}
+                                        <img src={`/assets/images/logo_black.png`}
                                             style={{ width: "300px", height: "auto", position: "relative", top: "50px" }} alt="" />
                                     }
                                 </div>
@@ -140,13 +138,9 @@ function SingleMemberPageComponent(props) {
                                     <div id="member_box_title" style={{ textAlign: "start", fontSize: '50px' }}>
                                         <h1>
                                             {member.name}
-                                            {/* add title here */}
                                         </h1>
                                     </div>
                                     <div id="member_box_date" style={{ textAlign: "start", fontSize: '30px', color: "#56c7ec" }}>
-
-
-
                                     </div>
                                 </div>
 

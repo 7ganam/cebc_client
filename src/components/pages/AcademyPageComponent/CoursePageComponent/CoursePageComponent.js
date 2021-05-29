@@ -223,7 +223,7 @@ function CoursePageComponent(props) {
                                             <img src={`${the_course.image && the_course.image.url}`} style={{ width: "100%", height: "100%", objectFit: 'cover', filter: 'brightness(40%)' }} alt="" />
                                         </div>
                                         :
-                                        <img src={`/logo_black.png`}
+                                        <img src={`/assets/images/logo_black.png`}
                                             style={{ width: "100%", height: "auto", position: "relative", top: "50px" }} alt="" />
                                     }
 

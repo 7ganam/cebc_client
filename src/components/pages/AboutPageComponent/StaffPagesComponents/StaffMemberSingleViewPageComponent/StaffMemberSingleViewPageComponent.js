@@ -30,7 +30,7 @@ function StaffMemberSingleViewPageComponent(props) {
                     <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
                         <div class="member_card">
                             <div class="member_card_sub_div">
-                                <img class="mem_carousel_img" src={member.entity_image ? member.entity_image.url : "logo_black.png"} />
+                                <img class="mem_carousel_img" src={member.entity_image ? member.entity_image.url : "/assets/images/logo_black.png"} />
                             </div>
                         </div>
                     </Link>
@@ -83,7 +83,7 @@ function StaffMemberSingleViewPageComponent(props) {
                         <Col className='p-0' md={4} style={{ background: '', }}>
                             {!!the_member &&
                                 <div className="member_image_box">
-                                    <img src={`${the_member.image && the_member.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
+                                    <img src={`${the_member.image ? the_member.image.url : '/assets/images/logo_black.png'}`} style={{ width: "100%", height: "auto", }} alt="" />
                                 </div>
                             }
 
@@ -125,9 +125,6 @@ function StaffMemberSingleViewPageComponent(props) {
                                                     </a>
                                                 </div>
                                             }
-
-
-
                                         </div>
 
 

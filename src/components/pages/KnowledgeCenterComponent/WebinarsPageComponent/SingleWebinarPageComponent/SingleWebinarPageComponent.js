@@ -49,7 +49,7 @@ function SingleWebinarPageComponent(props) {
                         <Col className='p-0' md={4} style={{ background: '', }}>
                             {!!props.webinars.length > 0 &&
                                 <div className="webinar_image_box">
-                                    <img src={`/logo_black.png`} style={{ width: "100%", height: "auto", }} alt="" />
+                                    <img src={`/assets/images/logo_black.png`} style={{ width: "100%", height: "auto", }} alt="" />
                                 </div>
                             }
 

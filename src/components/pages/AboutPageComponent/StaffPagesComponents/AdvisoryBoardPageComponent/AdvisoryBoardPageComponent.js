@@ -25,7 +25,7 @@ function AdvisoryBoardPageComponent(props) {
                                 </Link>
                                 <div className="card_image_container" style={{ height: '200px', }}>
 
-                                    <img src={member.image ? member.image.url : "/logo_black.png"} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="" />
+                                    <img src={member.image ? member.image.url : "/assets/images/logo_black.png"} style={{ height: "100%", width: "100%", objectFit: "contain" }} alt="" />
 
                                 </div>
                                 <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5px' }}>
@@ -83,7 +83,6 @@ function AdvisoryBoardPageComponent(props) {
 
 
                 <Container id="board_content" style={{ marginTop: '70px' }}>
-
                     <Row className=" justify-content-center align-items-stretch">
                         {create_staff_view(props.staff, "advisory_board_member")}
                     </Row>
