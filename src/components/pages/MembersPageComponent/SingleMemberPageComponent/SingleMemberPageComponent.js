@@ -118,15 +118,15 @@ function SingleMemberPageComponent(props) {
                 <Container>
                     <Row className='justify-content-start align-items-stretch'>
                         <Col className='p-0' md={4} style={{ background: '', }}>
-
-                            <div className="report_image_box">
-                                {member.entity_image ?
-                                    <img className="side_report_image" src={`${member.entity_image && member.entity_image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
-                                    :
-                                    <img className="side_report_image" src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
-                                }
-                            </div>
-
+                            {!!member &&
+                                <div className="report_image_box">
+                                    {member.entity_image ?
+                                        <img className="side_report_image" src={`${member.entity_image && member.entity_image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
+                                        :
+                                        <img className="side_report_image" src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
+                                    }
+                                </div>
+                            }
 
                         </Col>
 
@@ -134,7 +134,7 @@ function SingleMemberPageComponent(props) {
                         <Col className='p-0' md={7}>
 
 
-                            <div id="member_box">
+                            <div id="member_box" style={{ width: '100%' }} >
                                 {!!member ?
                                     <div style={{ zIndex: '1000' }}>
                                         <div id="member_header" style={{ zIndex: '100' }} >
