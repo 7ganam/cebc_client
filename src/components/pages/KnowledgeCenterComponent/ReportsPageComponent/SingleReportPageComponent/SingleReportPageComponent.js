@@ -85,7 +85,7 @@ function SingleProjectPageComponent(props) {
 
                 <Container style={{ maxWidth: '90%', marginTop: '200px', display: '' }}>
                     <Row className='justify-content-start align-items-stretch'>
-                        <Col className='p-0' md={4} style={{ background: '', }}>
+                        <Col className='p-0' md={3} style={{ background: '', }}>
                             {!!props.reports.length > 0 &&
                                 <div className="report_image_box">
                                     {the_report.image ?
