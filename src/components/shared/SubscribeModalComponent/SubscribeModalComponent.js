@@ -19,6 +19,7 @@ const validationSchema = Yup.object({
         .email('Invalid email format')
         .required('Required'),
     company: Yup.string(),
+    title: Yup.string(),
 })
 
 const initialValues = {
@@ -46,17 +47,18 @@ function SubscribeModalComponent(props) {
         console.log('submitProps', submitProps)
         const request_data = {
 
-            "name": values.name,
+            "first_name": values.first_name,
+            "last_name": values.last_name,
+            "title": values.title,
+            "email": values.email,
             "company": values.company,
-            "title": values.company,
 
-            "email": values.email
         }
         console.log('request_data', request_data)
 
         try {
             setSending_data(true)
-            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/application-for-contacts`, {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/applicatoin-for-newsletter-subscriptions`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
