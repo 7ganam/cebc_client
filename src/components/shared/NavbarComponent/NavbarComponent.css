@@ -59,12 +59,14 @@ margin: 15px 0 5px 0px;
 
     .fixed-top #nav_brand {
         height: 80px;
+        width: 165px;
         transition: height .5s;
         margin: 5px;
     }
 
     .fixed-top.scrolled #nav_brand {
         height: 50px;
+        width: 120px;
         padding: 10px;
     }
 

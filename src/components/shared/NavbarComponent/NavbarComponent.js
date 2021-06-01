@@ -114,7 +114,8 @@ const NavbarComponent = (props) => {
                     >
 
                         <NavbarBrand id="nav_brand" href="/" className="p-0">
-                            <img id="nav_img" style={{ height: "100%", width: "auto" }} src={!Scrolled && $(window).width() > 768 ? logo_white : logo_black} alt="oval" />
+                            <img id="nav_img"
+                                style={{ height: "100%", width: "100%", objectFit: "contain" }} src={!Scrolled && $(window).width() > 768 ? logo_white : logo_black} alt="oval" />
                         </NavbarBrand>
 
                         <NavbarToggler onClick={toggle} className="ml-auto" />
