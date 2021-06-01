@@ -91,6 +91,8 @@ margin: 15px 0 5px 0px;
        border-width:  0 0 7px 0;
        border-color: white;
        border-style: solid;
+       /* background-image: linear-gradient(to left bottom,#ffbf1e,#e2d558);
+       text-shadow: 2px 2px 4px #38383859; */
     }
     .dark_bg .nav-item.not_scrolled.nav-link-selected .my-sub-nav{
         border-top-width: 1px;

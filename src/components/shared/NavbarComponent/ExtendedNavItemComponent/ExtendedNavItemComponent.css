@@ -195,6 +195,8 @@
         transform: scaleY(1);    
         transform-origin: top;
         z-index: 3333333;
+        /* background-image: linear-gradient(to left bottom,#c99000,#e2d558); */
+        /* text-shadow: 2px 2px 4px #38383859; */
 
     }
     

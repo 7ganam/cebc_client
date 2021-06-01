@@ -1,5 +1,7 @@
 import React from 'react'
 import "./FooterComponent.css"
+import footerLogo from './smaller.png'
+
 const $ = require("jquery");
 
 function FooterComponent() {
@@ -33,7 +35,7 @@ function FooterComponent() {
                                     <div className="textwidget custom-html-widget">
                                         <br /><br /><br />
                                         <center>
-                                            <img id='footer_image' src="https://cebcmena.com/wp-content/uploads/2017/12/smaller.png" alt="CEBC logo" width="220" height="150" />
+                                            <img id='footer_image' src={footerLogo} alt="CEBC logo" width="220" height="150" />
                                         </center>
                                         <br /><br />
                                     </div>
@@ -117,7 +119,7 @@ function FooterComponent() {
                 </footer>
                 <div className="copyright">
                     <div className="container">
-                        Copyright 20 17 Clean Energy Business Council MENA. Contact the
+                        Copyright 2021 Clean Energy Business Council MENA. Contact the
                         <a href=""> info@cebcmena.com</a>
                         for more details.
                     </div>
