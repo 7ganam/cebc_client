@@ -143,7 +143,7 @@ const NavbarComponent = (props) => {
                                                 path: "/ABOUTUS/STAFF/BOARD", text: "people",
                                                 sub_subs: [
                                                     { path: "/ABOUTUS/STAFF/BOARD", text: "Board of Directors" },
-                                                    { path: "/ABOUTUS/STAFF/ADVISORY", text: "Adivsory Board" },
+                                                    { path: "/ABOUTUS/STAFF/ADVISORY", text: "Advisory Board" },
                                                     { path: "/ABOUTUS/STAFF/TEAM", text: "Team" },
                                                 ]
                                             },

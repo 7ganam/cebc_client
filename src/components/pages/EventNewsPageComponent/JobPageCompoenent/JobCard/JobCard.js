@@ -41,7 +41,7 @@ const JobCard = (props) => {
                                 </div>
                                 <div style={{ marginTop: '10px' }}>
                                     <span style={{ fontWeight: "bold ", marginRight: '5px', fontSize: "19px" }}>
-                                        for applicationa contact:
+                                        for application contact:
                                     </span>
                                     <span>
 

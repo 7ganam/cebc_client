@@ -74,7 +74,7 @@ function AdvisoryBoardPageComponent(props) {
                     <Row className=" justify-content-center">
                         <Col>
                             <div class="sub_page_header">
-                                <span class="sub_page_header_inner">ADIVSORY BOARD</span>
+                                <span class="sub_page_header_inner">ADVISORY BOARD</span>
                                 <div className="sub_page_header_under"></div>
                             </div>
                         </Col>

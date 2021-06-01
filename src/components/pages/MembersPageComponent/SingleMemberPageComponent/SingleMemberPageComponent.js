@@ -112,131 +112,144 @@ function SingleMemberPageComponent(props) {
 
     return (
         <>
-            {/* <div className="back_ground_div" style={{ zIndex: '-1' }}>    </div> */}
+
 
             <div id="member_background">
-                <div id="member_box">
-                    {!!member ?
-                        <div style={{ zIndex: '1000' }}>
-                            <div id="member_header" style={{ zIndex: '100' }} >
+                <Container>
+                    <Row className='justify-content-start align-items-stretch'>
+                        <Col className='p-0' md={4} style={{ background: '', }}>
 
-                                <div id="header_img" style={{ backgroundColor: "", padding: "0px", height: "210px", width: "300px", maxWidth: '100%' }}>
-
-                                    {member.entity_image ?
-                                        <img src={`${member.entity_image && member.entity_image.url}`}
-                                            style={{ width: "100%", height: "100%", objectFit: 'contain' }} alt="" />
-                                        :
-                                        <img src={`/assets/images/logo_black.png`}
-                                            style={{ width: "300px", height: "auto", position: "relative", top: "50px" }} alt="" />
-                                    }
-                                </div>
-
-
-
-                                <div id="header_text"
-                                    style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210px", justifyContent: "center" }}>
-                                    <div id="member_box_title" style={{ textAlign: "start", fontSize: '50px' }}>
-                                        <h1>
-                                            {member.name}
-                                        </h1>
-                                    </div>
-                                    <div id="member_box_date" style={{ textAlign: "start", fontSize: '30px', color: "#56c7ec" }}>
-                                    </div>
-                                </div>
-
-
+                            <div className="report_image_box">
+                                {member.entity_image ?
+                                    <img className="side_report_image" src={`${member.entity_image && member.entity_image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
+                                    :
+                                    <img className="side_report_image" src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
+                                }
                             </div>
-                            <div id="member_header_2">
-                                <i class="fas fa-award  mr-2"></i>
-                                <span>
-                                    {member.membership_type.replaceAll("_", " ")}
-                                </span>
-                            </div>
-                            <div id="member_body">
-                                <div style={{}}>
 
-                                    <div style={{ width: '100%', margin: "auto" }}>
-                                        {member.description}
-                                        <Editor value={member.entity_page} onChange={(input) => { }} />
-                                    </div>
-                                    {member.entity_website &&
-                                        <a href={member.entity_website} target="_blank" rel="noreferrer">
 
-                                            <div style={{ width: '100%', margin: "auto", border: '1px solid gray', padding: '7px' }}>
-                                                <div >{member.entity_website}</div>
+                        </Col>
 
+
+                        <Col className='p-0' md={7}>
+
+
+                            <div id="member_box">
+                                {!!member ?
+                                    <div style={{ zIndex: '1000' }}>
+                                        <div id="member_header" style={{ zIndex: '100' }} >
+
+
+                                            <div id="header_text"
+                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210px", justifyContent: "center" }}>
+                                                <div id="member_box_title" style={{ textAlign: "center", fontSize: '70px' }}>
+                                                    <h1>
+                                                        {member.name}
+                                                    </h1>
+                                                </div>
+                                                <div id="member_box_date" style={{ textAlign: "start", fontSize: '30px', color: "#56c7ec" }}>
+                                                </div>
                                             </div>
-                                        </a>
 
-                                    }
+
+                                        </div>
+                                        <div id="member_header_2">
+                                            <i class="fas fa-award  mr-2"></i>
+                                            {/* <span>
+                                                {member.membership_type.replaceAll("_", " ")}
+                                            </span> */}
+                                        </div>
+                                        <div id="member_body">
+                                            <div style={{}}>
+
+                                                <div style={{ width: '100%', margin: "auto" }}>
+                                                    {member.description}
+                                                    <Editor value={member.entity_page} onChange={(input) => { }} />
+                                                </div>
+                                                {member.entity_website &&
+                                                    <a href={member.entity_website} target="_blank" rel="noreferrer">
+
+                                                        <div style={{ width: '100%', margin: "auto", border: '1px solid gray', padding: '7px' }}>
+                                                            <div >{member.entity_website}</div>
+
+                                                        </div>
+                                                    </a>
+
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    :
+                                    <div id="loading_spinner" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "150px" }} >
+                                        <div style={{ marginTop: "100px" }}>
+                                            <ReactLoading type={"spin"} color={"#00D2F9"} width={"20vw"} />
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </div>
+
+                            {!!member && !!member.projects && !!member.projects.length > 0 &&
+                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
+                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
+                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Projects</span>
+                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
+                                    </div>
+                                    <Row>
+
+                                        {generate_projects_cards(member.projects)}
+
+                                    </Row>
                                 </div>
-                            </div>
-                        </div>
+                            }
+                            {!!member && !!member.users && !!member.users.length > 0 &&
+                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
+                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
+                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Members</span>
+                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
+                                    </div>
+                                    <Row>
 
-                        :
-                        <div id="loading_spinner" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "150px" }} >
-                            <div style={{ marginTop: "100px" }}>
-                                <ReactLoading type={"spin"} color={"#00D2F9"} width={"20vw"} />
-                            </div>
-                        </div>
+                                        {generate_members_view(member.users)}
 
-                    }
+                                    </Row>
+                                </div>
+                            }
+                            {!!member && !!member.reports_publications && !!member.reports_publications.length > 0 &&
+                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
+                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
+                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Publications</span>
+                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
+                                    </div>
+                                    <Row>
 
-                </div>
+                                        {generate_reports_views(member.reports_publications)}
+
+                                    </Row>
+                                </div>
+                            }
+                            {!!member && !!member.case_studies && !!member.case_studies.length > 0 &&
+                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
+                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
+                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Case Studies</span>
+                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
+                                    </div>
+                                    <Row>
+
+                                        {generate_reports_views(member.case_studies)}
+
+                                    </Row>
+                                </div>
+                            }
 
 
-                {!!member && !!member.projects && !!member.projects.length > 0 &&
-                    <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Projects</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                        </div>
-                        <Row>
+                        </Col>
+                    </Row>
+                </Container>
 
-                            {generate_projects_cards(member.projects)}
 
-                        </Row>
-                    </div>
-                }
-                {!!member && !!member.users && !!member.users.length > 0 &&
-                    <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Members</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                        </div>
-                        <Row>
-
-                            {generate_members_view(member.users)}
-
-                        </Row>
-                    </div>
-                }
-                {!!member && !!member.reports_publications && !!member.reports_publications.length > 0 &&
-                    <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Publications</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                        </div>
-                        <Row>
-
-                            {generate_reports_views(member.reports_publications)}
-
-                        </Row>
-                    </div>
-                }
-                {!!member && !!member.case_studies && !!member.case_studies.length > 0 &&
-                    <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                        <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                            <span class="section_header_inner" style={{ fontSize: '34px', }}>Case Studies</span>
-                            <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                        </div>
-                        <Row>
-
-                            {generate_reports_views(member.case_studies)}
-
-                        </Row>
-                    </div>
-                }
             </div>
 
 

@@ -81,8 +81,6 @@ function SingleProjectPageComponent(props) {
             <div className="back_ground_div">    </div>
 
             <div id="report_background">
-
-
                 <Container style={{ maxWidth: '90%', marginTop: '200px', display: '' }}>
                     <Row className='justify-content-start align-items-stretch'>
                         <Col className='p-0' md={3} style={{ background: '', }}>
@@ -108,6 +106,7 @@ function SingleProjectPageComponent(props) {
 
 
                         </Col>
+
                         <Col className='p-0' md={7}>
                             <div className="report_box">
                                 {!!props.reports.length > 0 ?
@@ -223,9 +222,6 @@ function SingleProjectPageComponent(props) {
                         </Col>
                     </Row>
                 </Container>
-
-
-
 
             </div >
 
