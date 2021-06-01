@@ -16,15 +16,15 @@ import { Link } from 'react-router-dom';
 
 
 
-function SingleProjectPageComponent(props) {
+function SingleReportPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
-    // console.log(`singeprops.reports`, props.reports)
+    console.log(`singeprops.reports`, props.reports)
     const report_id = props.match.params.report_id;
 
     const the_report = props.reports.filter((report) => report.id == report_id)[0] //leave this as two ==
 
-    // console.log(`the_report`, the_report)
+    console.log(`the_report`, the_report)
 
     function generate_entity_views(type) {
 
@@ -74,6 +74,7 @@ function SingleProjectPageComponent(props) {
     }
 
 
+    console.log(`the_report`, the_report)
     return (
 
         <>
@@ -86,12 +87,12 @@ function SingleProjectPageComponent(props) {
                         <Col className='p-0' md={3} style={{ background: '', }}>
                             {!!props.reports.length > 0 &&
                                 <div className="report_image_box">
-                                    {the_report.image ?
+                                    {!!the_report && the_report.image ?
                                         <img className="side_report_image" src={`${the_report.image && the_report.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
                                         :
                                         <img className="side_report_image" src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
                                     }
-                                    {!!props.reports.length > 0 &&
+                                    {!!the_report && !!props.reports.length > 0 &&
                                         <div className="open_report_button">
                                             <a target="_blank" href={the_report.file && the_report.file.url} style={{ textDecoration: 'none' }} rel="noreferrer">
                                                 <div className="report_publication_button">
@@ -109,12 +110,12 @@ function SingleProjectPageComponent(props) {
 
                         <Col className='p-0' md={7}>
                             <div className="report_box">
-                                {!!props.reports.length > 0 ?
+                                {!!the_report && !!props.reports.length > 0 ?
                                     <div>
                                         <Row id="report_header" >
 
                                             <Col id="header_text"
-                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210px", justifyContent: "center" }}
+                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}
                                             >
                                                 <div id="report_box_title" style={{ textAlign: "start", fontSize: '50px' }}>
                                                     <h1> {the_report.title}</h1>
@@ -146,7 +147,7 @@ function SingleProjectPageComponent(props) {
 
                             </div>
 
-                            {!!props.reports.length > 0 &&
+                            {!!the_report && !!props.reports.length > 0 &&
                                 <div>
                                     <Row className=" justify-content-center">
                                         <Col style={{ paddingTop: "0px" }}>
@@ -229,4 +230,4 @@ function SingleProjectPageComponent(props) {
     )
 }
 
-export default SingleProjectPageComponent
+export default SingleReportPageComponent

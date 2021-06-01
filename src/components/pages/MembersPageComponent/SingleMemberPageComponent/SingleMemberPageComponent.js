@@ -141,7 +141,7 @@ function SingleMemberPageComponent(props) {
 
 
                                             <div id="header_text"
-                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210px", justifyContent: "center" }}>
+                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}>
                                                 <div id="member_box_title" style={{ textAlign: "center", fontSize: '70px' }}>
                                                     <h1>
                                                         {member.name}
@@ -192,56 +192,81 @@ function SingleMemberPageComponent(props) {
                             </div>
 
                             {!!member && !!member.projects && !!member.projects.length > 0 &&
-                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Projects</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+                                <>
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Projects
+                                                    </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
+
                                     <Row>
 
                                         {generate_projects_cards(member.projects)}
 
                                     </Row>
-                                </div>
+                                </>
                             }
                             {!!member && !!member.users && !!member.users.length > 0 &&
-                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Members</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+                                <Container>
+
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Members
+                                                    </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row>
 
                                         {generate_members_view(member.users)}
 
                                     </Row>
-                                </div>
+
+                                </Container>
                             }
                             {!!member && !!member.reports_publications && !!member.reports_publications.length > 0 &&
-                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Publications</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
+                                <Container>
+
+                                    <Row className="title_row">
+                                        <div className="section_header section_header_side" >
+                                            <span className="section_header_inner"     >
+                                                Publications
+                                                    </span>
+                                            <div className="section_header_under" ></div>
+                                        </div>
+                                    </Row>
                                     <Row>
 
                                         {generate_reports_views(member.reports_publications)}
 
                                     </Row>
-                                </div>
+
+                                </Container>
                             }
                             {!!member && !!member.case_studies && !!member.case_studies.length > 0 &&
-                                <div id="member_projects_box" style={{ backgroundColor: 'transparent', border: '0' }}>
-                                    <div class="section_header" style={{ marginTop: "10px", alignItems: 'start', textAlign: 'left' }}>
-                                        <span class="section_header_inner" style={{ fontSize: '34px', }}>Case Studies</span>
-                                        <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '20px' }}></div>
-                                    </div>
-                                    <Row>
+                                <>
+                                    <Container>
 
-                                        {generate_reports_views(member.case_studies)}
+                                        <Row className="title_row">
+                                            <div className="section_header section_header_side" >
+                                                <span className="section_header_inner"     >
+                                                    Case Studies
+                                                    </span>
+                                                <div className="section_header_under" ></div>
+                                            </div>
+                                        </Row>
+                                        <Row>
 
-                                    </Row>
-                                </div>
+                                            {generate_case_studies_views(member.case_studies)}
+
+                                        </Row>
+
+                                    </Container>
+                                </>
                             }
 
 

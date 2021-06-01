@@ -87,7 +87,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendReportsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/reports-publications`
+                    `${process.env.REACT_APP_BACKEND_URL}/reports-publications?_limit=1000`
                 );
                 setLoadedReports(responseData);
                 // console.log('Reports', responseData)

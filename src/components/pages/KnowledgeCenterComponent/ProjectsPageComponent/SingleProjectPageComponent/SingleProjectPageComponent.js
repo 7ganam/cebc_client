@@ -95,7 +95,7 @@ function SingleProjectPageComponent(props) {
                                         <div id="project_header" >
 
                                             <div id="header_text"
-                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210px", justifyContent: "center" }}
+                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}
                                             >
                                                 <div id="project_box_title" style={{ textAlign: "start", fontSize: '50px' }}>
                                                     <h1> {the_project.title}</h1>
