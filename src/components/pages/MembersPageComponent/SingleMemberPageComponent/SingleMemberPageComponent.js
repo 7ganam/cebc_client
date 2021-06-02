@@ -133,7 +133,7 @@ function SingleMemberPageComponent(props) {
 
                         <Col className='p-0' md={7}>
 
-                            <div id="member_box" style={{ width: '100%' }} >
+                            <div id="member_box" className="member_box" style={{ width: '100%' }} >
                                 {!!member ?
                                     <div style={{ zIndex: '1000' }}>
                                         <div id="member_header" style={{ zIndex: '100' }} >
