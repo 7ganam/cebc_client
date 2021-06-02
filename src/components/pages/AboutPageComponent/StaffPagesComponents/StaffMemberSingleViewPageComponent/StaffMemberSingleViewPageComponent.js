@@ -109,7 +109,6 @@ function StaffMemberSingleViewPageComponent(props) {
                                         </div>
 
 
-
                                         <div id="member_header_2">
                                             {!!the_member.linkedin_url &&
                                                 <div className="linkedin mx-1" style={{ fontSize: "20px", justifySelf: "end", border: "solid 1px gray", padding: ' 0 7px 0 7px', borderRadius: '3px' }}>

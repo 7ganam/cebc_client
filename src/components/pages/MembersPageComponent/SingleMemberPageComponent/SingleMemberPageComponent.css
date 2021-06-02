@@ -7,13 +7,17 @@
 }
 
 #member_box{
+
+  
+
+
+}
+.member_box{
     min-height: 300px;
     margin: auto;
     margin-bottom: 10px;
     background: #ffffff;
     border: 1px solid #d7d7d7;
-
-
 }
 
 #member_projects_box{
