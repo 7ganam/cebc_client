@@ -150,16 +150,16 @@ function Consultancyform() {
         <div>
 
 
-            <div className='consultancy_form_wrapper' style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
+            <div className='consultancy_form_wrapper' style={{ margin: 'auto', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
 
                 <Row style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
 
 
                     <Col md={12} style={{ height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
-                        <div className='consultancy_form application_form_box p-3 p-md-0'>
+                        <div className='consultancy_form application_form_box p-3 p-md-0' style={{ width: '90%' }}>
                             <Row style={{ padding: "10px 10px 10px 0px ", }} >
                                 <Col md={4} >
-                                    <div className='su_left_col' style={{ marginLeft: "0" }}>
+                                    <div className='su_left_col' style={{}}>
                                         <div class="" style={{ textAlign: 'left', marginTop: "30px", alignItems: 'start', width: '100%', maxWidth: '100%', margin: 'auto', }}>
                                             <span class="" style={{ marginTop: "20px", fontSize: '30px', fontWeight: 'bold' }}>APPLY FOR CONSULTANCY</span>
                                         </div>

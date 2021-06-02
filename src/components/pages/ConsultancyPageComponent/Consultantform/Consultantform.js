@@ -147,7 +147,7 @@ function Consultantform() {
         <div>
 
 
-            <div className='consultancy_form_wrapper' style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
+            <div className='consultancy_form_wrapper' style={{ margin: 'auto', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
 
                 <Row style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
 
@@ -289,7 +289,7 @@ function Consultantform() {
                 </Row>
             </div>
 
-        </div>
+        </div >
     )
 }
 
