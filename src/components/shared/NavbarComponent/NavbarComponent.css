@@ -13,6 +13,7 @@
     box-shadow: inset 0px -1px 1px 0px #8080801f;
     height: 24px;
     line-height: 24px;
+    overflow:hidden ;
     
 }
 
@@ -54,6 +55,7 @@
 height:50px;
 transition: height .5s;
 margin: 15px 0 5px 0px;
+max-width: 50%;
 }
 @media (min-width: 768px) {
 

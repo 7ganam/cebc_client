@@ -127,7 +127,7 @@ function SubscribeModalComponent(props) {
                         disabled={!fomik_object.isValid}
                         style={{ backgroundColor: (!fomik_object.isValid) ? "grey" : "" }}
                     >
-                        {(!fomik_object.isValid) ? "data not valid" : "Submit"}
+                        {(!fomik_object.isValid) ? "Data not valid" : "Submit"}
                     </button>
                     <Alert color="danger" style={{ marginTop: "30px", color: '' }}>
                         something went wrong please try again later
@@ -144,7 +144,7 @@ function SubscribeModalComponent(props) {
                     disabled={!fomik_object.isValid || fomik_object.isSubmitting}
                     style={{ backgroundColor: (!fomik_object.isValid || fomik_object.isSubmitting) ? "grey" : "" }}
                 >
-                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "data not valid" : "Submit"}
+                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "Data not valid" : "Submit"}
                 </button>
             )
 
@@ -178,7 +178,7 @@ function SubscribeModalComponent(props) {
                                     <div style={{ width: '100%', display: "flex", justifyContent: 'left', alignItems: 'center' }}>
                                         <img id="" style={{ height: "auto", width: "90%" }} src={logo_black} alt="oval" />
                                     </div>
-                                    <div style={{ color: 'grey', textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '20px', padding: '10px' }}>
+                                    <div style={{ color: 'grey', textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '20px', padding: '20px' }}>
                                         Receive latest updates from the CEBC
                                     </div>
                                 </div>

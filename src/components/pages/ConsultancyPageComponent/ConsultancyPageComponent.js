@@ -79,7 +79,8 @@ function ConsultancyPageComponent() {
                     </Row>
 
 
-                    <Button color="warning" onClick={toggleConsultancyform} style={{ marginBottom: '1rem' }}>
+                    <Button color="warning" className='application_button'
+                        onClick={toggleConsultancyform} style={{ marginBottom: '1rem', fontSize: '22px' }}>
                         Show application form
                         <i class="fas fa-caret-down ml-2"></i>
                     </Button>
@@ -99,7 +100,8 @@ function ConsultancyPageComponent() {
                         </div>
                     </Row>
 
-                    <Button color="warning" onClick={toggleConsultantform} style={{ marginBottom: '1rem' }}>
+                    <Button className='application_button'
+                        color="warning" onClick={toggleConsultantform} style={{ marginBottom: '1rem', fontSize: '22px' }}>
                         Show application form
                         <i class="fas fa-caret-down ml-2"></i>
                     </Button>

@@ -35,7 +35,7 @@ function MapComponent() {
 
     const mena_countries = ["Algeria", "Egypt", "Bahrain", "Iran", "Iraq", "Jordan", "Kuwait", "Lebanon", "Libyan Arab Jamahiriya", "Morocco", 'Oman', 'Qatar', "Saudi Arabia", "Syrian Arab Republic", 'Tunisia', "United Arab Emirates", "Yemen", "Mauritania"]
 
-    const mena_countries_alpha2 = ["DZ", "EG", "BH", 'IR', "IQ", "JO", "KW", "LB", "LY", "MA", 'OM', 'QA', "SA", "SY", 'TN', "AE", "YE", "SD", 'TR']
+    const mena_countries_alpha2 = ["DZ", "EG", "BH", "IQ", "JO", "KW", "LB", "LY", "MA", 'OM', 'QA', "SA", "SY", 'TN', "AE", "YE", 'PS']
 
     const [ClickedCountries, setClickedCountries] = useState([])
 

@@ -115,7 +115,7 @@ function SingleMemberPageComponent(props) {
 
 
             <div id="member_background">
-                <Container>
+                <Container style={{ marginTop: '200px' }}>
                     <Row className='justify-content-start align-items-stretch'>
                         <Col className='p-0' md={4} style={{ background: '', }}>
                             {!!member &&
@@ -182,7 +182,7 @@ function SingleMemberPageComponent(props) {
 
                                     :
                                     <div id="loading_spinner" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "150px" }} >
-                                        <div style={{ marginTop: "100px" }}>
+                                        <div style={{ marginTop: "0px" }}>
                                             <ReactLoading type={"spin"} color={"#00D2F9"} width={"20vw"} />
                                         </div>
                                     </div>

@@ -119,7 +119,7 @@ function JoinPageComponent() {
                         disabled={!fomik_object.isValid}
                         style={{ backgroundColor: (!fomik_object.isValid) ? "grey" : "" }}
                     >
-                        {(!fomik_object.isValid) ? "data not valid" : "Submit"}
+                        {(!fomik_object.isValid) ? "Data not valid" : "Submit"}
                     </button>
                     <Alert color="danger" style={{ marginTop: "30px", color: '' }}>
 
@@ -138,7 +138,7 @@ function JoinPageComponent() {
                     disabled={!fomik_object.isValid || fomik_object.isSubmitting}
                     style={{ backgroundColor: (!fomik_object.isValid || fomik_object.isSubmitting) ? "grey" : "" }}
                 >
-                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "data not valid" : "Submit"}
+                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "Data not valid" : "Submit"}
                 </button>
             )
 

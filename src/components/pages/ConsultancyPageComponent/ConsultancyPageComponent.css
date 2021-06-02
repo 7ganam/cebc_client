@@ -11,3 +11,31 @@
     box-shadow: grey 1px 1px 5px 1px;
 
 }
+
+.application_button{
+
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        background-image:  url("images/bg01.png");
+        background-color: #ffa600;
+        border-radius: 5px;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 1.5em;
+        line-height: 2.75em;
+        min-width: 9em;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: -0.025em;
+    
+}
+
+.application_button:hover {
+    background-color: #50c8fc;
+    color: #fff !important;
+}

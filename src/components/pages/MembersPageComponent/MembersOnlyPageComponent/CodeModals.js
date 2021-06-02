@@ -14,7 +14,6 @@ const CodeModals = (props) => {
 
     return (
         <div>
-            {/* <Button color="danger" onClick={toggle}> {buttonLabel}</Button> */}
 
             <Button onClick={toggle} style={{ marginTop: '5px', width: '90%' }} color="warning">members discount code</Button>
 
@@ -27,7 +26,6 @@ const CodeModals = (props) => {
                     </Alert>
                 </ModalBody>
                 <ModalFooter>
-                    {/* <Button color="primary" onClick={toggle}>Do Something</Button>{' '} */}
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
                 </ModalFooter>
             </Modal>

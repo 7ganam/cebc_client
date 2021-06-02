@@ -30,9 +30,9 @@ function EventCardComponent(props) {
                         <div id="event_title">
                             {props.event.Title}
                         </div>
-                        <div id="event_text">
+                        {/* <div id="event_text">
                             ....
-                            </div>
+                         </div> */}
                     </div>
                 </Col>
                 <Col className="event_box d-flex justify-align-content-start align-items-center p-0" md={3}>
@@ -60,14 +60,14 @@ function EventCardComponent(props) {
             <Row style={{ minHeight: "57px ", width: "100%", marginTop: "0px", margin: 'auto' }}>
                 <Col className="event_box" md={12} style={{ backgroundColor: "black", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", }}>
                     <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
-                        share event
+                        Share event
                         </div>
                     <div style={{ flexGrow: "1" }}>
 
                     </div>
                     <Link to={`/ACTIVITIES/EVENTS/UPCOMMMING/${props.event.id}`}>
                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
-                            <div style={{}}>know more</div>
+                            <div style={{}}>Know more</div>
                         </div>
                     </Link >
                 </Col>

@@ -50,7 +50,7 @@ function SingleBlogPageComponent(props) {
                                             <div id="header_text"
                                                 style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}
                                             >
-                                                <div id="blog_box_title" style={{ textAlign: "start", fontSize: '50px' }}>
+                                                <div id="blog_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
                                                     <h1> {the_blog.title}</h1>
                                                 </div>
 

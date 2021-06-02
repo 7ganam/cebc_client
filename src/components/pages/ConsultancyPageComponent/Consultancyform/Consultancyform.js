@@ -117,7 +117,7 @@ function Consultancyform() {
                         disabled={!fomik_object.isValid}
                         style={{ backgroundColor: (!fomik_object.isValid) ? "grey" : "" }}
                     >
-                        {(!fomik_object.isValid) ? "data not valid" : "Submit"}
+                        {(!fomik_object.isValid) ? "Data not valid" : "Submit"}
                     </button>
                     <Alert color="danger" style={{ marginTop: "30px", color: '' }}>
 
@@ -136,7 +136,7 @@ function Consultancyform() {
                     disabled={!fomik_object.isValid || fomik_object.isSubmitting}
                     style={{ backgroundColor: (!fomik_object.isValid || fomik_object.isSubmitting) ? "grey" : "" }}
                 >
-                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "data not valid" : "Submit"}
+                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "Data not valid" : "Submit"}
                 </button>
             )
 
@@ -160,17 +160,16 @@ function Consultancyform() {
                             <Row style={{ padding: "10px 10px 10px 0px ", }} >
                                 <Col md={4} >
                                     <div className='su_left_col' style={{ marginLeft: "0" }}>
-
-
                                         <div class="" style={{ textAlign: 'left', marginTop: "30px", alignItems: 'start', width: '100%', maxWidth: '100%', margin: 'auto', }}>
                                             <span class="" style={{ marginTop: "20px", fontSize: '30px', fontWeight: 'bold' }}>APPLY FOR CONSULTANCY</span>
                                         </div>
 
 
-                                        <div className='justify-content-md-left justify-content-center' style={{ marginTop: "20px", width: '100%', display: "flex", alignItems: 'center' }}>
-                                            <img id="" style={{ height: "auto", width: "90%" }} src={logo_black} alt="oval" />
+                                        <div className='justify-content-md-left justify-content-center' style={{ marginTop: "20px", width: '100%', display: "flex", alignItems: 'start' }}>
+                                            <img id="" style={{ height: "auto", width: "70%", marginRight: 'auto' }} src={logo_black} alt="oval" />
                                         </div>
-                                        <div style={{ color: 'grey', textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '20px', padding: '10px' }}>
+
+                                        <div style={{ color: 'grey', textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '20px', paddingRight: '20px' }}>
                                             Send us a message  and we will contact you back soon
                         </div>
                                         <div style={{ color: "grey", textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '5px', padding: '10px' }}>
@@ -276,7 +275,7 @@ function Consultancyform() {
 
                                                     <Row className='formik-control'>
                                                         <Col md={12} style={{ padding: '0px 10px 0px 0px ' }}>
-                                                            <label className='formik-label' htmlFor='project_start_date'> Project Dtart Date </label>
+                                                            <label className='formik-label' htmlFor='project_start_date'> Project Start Date </label>
                                                         </Col>
                                                         <Col style={{ padding: '0px' }}>
                                                             <Field

@@ -128,8 +128,8 @@ function SingleWorkingGroupPageComponent(props) {
                             <div id="group_program_header_2">
                                 <i class="fas fa-chalkboard-teacher mr-2"></i>
 
-                                {`CEBC `}
-                                {the_group.Type}
+                                {/* {`CEBC `} */}
+                                {/* {the_group.Type} */}
                             </div>
                             <div id="group_program_body">
                                 <div style={{}}>

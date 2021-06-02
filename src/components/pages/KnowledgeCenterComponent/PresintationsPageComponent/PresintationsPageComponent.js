@@ -21,7 +21,7 @@ function PresintationsPageComponent() {
             try {
 
                 const responseData = await sendPresentationsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/presentation-groups`
+                    `${process.env.REACT_APP_BACKEND_URL}/presentation-groups?_limit=500`
                 );
 
                 setLoadedPresentations(responseData);

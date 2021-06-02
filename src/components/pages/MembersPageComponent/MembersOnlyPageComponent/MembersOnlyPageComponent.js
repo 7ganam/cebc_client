@@ -40,7 +40,7 @@ function MembersOnlyPageComponent(props) {
                     <CardText>{ }</CardText>
                     <Link to={"/EVENTS_NEWS/UPCOMMMING/" + event.id}>
 
-                        <Button style={{ marginTop: '', width: '90%' }} >know more</Button>
+                        <Button style={{ marginTop: '', width: '90%' }} >Know more</Button>
 
                     </Link>
                     {event.discount_code &&
@@ -61,7 +61,7 @@ function MembersOnlyPageComponent(props) {
                         <CardSubtitle tag="h6" className="mb-2 text-muted"> {news_post.date}</CardSubtitle>
                         <CardText>{news_post.thumb_nail_text}</CardText>
                         <Link to={"/EVENTS_NEWS/News/" + news_post.id}>
-                            <Button style={{ marginTop: '', width: '90%' }} >know more</Button>
+                            <Button style={{ marginTop: '', width: '90%' }} >Know more</Button>
                         </Link>
 
 
@@ -155,7 +155,7 @@ function MembersOnlyPageComponent(props) {
                                     </div>
                                     <Link to="/MEMBERSHIP/MEMBERSONLY/POSTJOB">
                                         <Button color="warning" className='job_post_button'>
-                                            post a job
+                                            Post a Job
                                         </Button>
                                     </Link>
 

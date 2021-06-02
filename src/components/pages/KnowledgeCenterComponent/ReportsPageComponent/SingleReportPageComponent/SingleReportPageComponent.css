@@ -21,7 +21,6 @@
 .report_image_box{
     position: -webkit-sticky;
     position: sticky;
-    top: 200px;
     width: 85%;
     margin: auto;
     background: #ffffff;

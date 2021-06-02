@@ -116,7 +116,7 @@ function SignInModalComponenet() {
                         disabled={!fomik_object.isValid}
                         style={{ backgroundColor: (!fomik_object.isValid) ? "grey" : "" }}
                     >
-                        {(!fomik_object.isValid) ? "data not valid" : "Login"}
+                        {(!fomik_object.isValid) ? "Data not valid" : "Login"}
                     </button>
                     <Alert color="danger" style={{ marginTop: "30px", color: '' }}>
                         something went wrong. email password mismatch
@@ -133,7 +133,7 @@ function SignInModalComponenet() {
                     disabled={!fomik_object.isValid || fomik_object.isSubmitting}
                     style={{ backgroundColor: (!fomik_object.isValid || fomik_object.isSubmitting) ? "grey" : "" }}
                 >
-                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "data not valid" : "Login"}
+                    {(!fomik_object.isValid || fomik_object.isSubmitting) ? "Data not valid" : "Login"}
                 </button>
             )
 

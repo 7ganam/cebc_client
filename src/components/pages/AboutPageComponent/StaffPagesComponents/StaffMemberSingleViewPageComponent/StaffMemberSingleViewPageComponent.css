@@ -6,17 +6,6 @@
     /* overflow: hidden; */
 }
 
-.member_box{
-    max-width: 80%;
-    width: 100%;
-    max-width: 1000px;
-    min-height: 500px;
-    margin: auto;
-    margin-bottom: 20px;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-
-}
 
 .member_image_box{
     position: -webkit-sticky;

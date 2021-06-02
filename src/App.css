@@ -427,11 +427,16 @@ input[type=checkbox]
 @media (max-width: 576px) { 
 
   #header_text h1{
-    font-size: 30px !important;
+    font-size:22px !important;
     text-align: center !important;
     
   }
   #header_text{
     margin:auto !important;
+
   }
  }
+ #header_text h1{
+  font-size:25px !important;
+
+}

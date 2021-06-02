@@ -52,7 +52,7 @@ function ReportsPageComponent(props) {
                                 <CardFooter className="text-muted">
                                     <Link to={`/KNOWLEDGECENTER/REPORTS/${report.id}`}>
                                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
-                                            <div style={{}}>know more</div>
+                                            <div style={{}}>Know more</div>
                                         </div>
                                     </Link >
                                 </CardFooter>

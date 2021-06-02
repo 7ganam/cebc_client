@@ -21,7 +21,7 @@ function AcademyPageComponent(props) {
                     <CardBody style={{ display: 'flex', flexDirection: "column", paddingTop: '3px' }}>
                         <div style={{ flexGrow: '1' }}></div>
                         <CardTitle tag="h5"
-                            style={{ textAlign: 'left', textOverflow: "ellipsis", margin: '10px', maxHeight: '48px', overflow: 'hidden', }}>
+                            style={{ textAlign: 'center', textOverflow: "ellipsis", margin: '10px', maxHeight: '48px', overflow: 'hidden', }}>
                             {course.title}
                         </CardTitle>
                         <div style={{ flexGrow: '1' }}></div>
@@ -65,7 +65,7 @@ function AcademyPageComponent(props) {
                 <Row>
                     <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left', marginBottom: '30px', marginTop: '90px' }}>
                         CEBC provides courses to help empower Clean energy industries in the MENA region.
-                        </Col>
+                    </Col>
                 </Row>
                 <div className='courses_div'>
                     {props.courses && props.courses.length > 0 ?

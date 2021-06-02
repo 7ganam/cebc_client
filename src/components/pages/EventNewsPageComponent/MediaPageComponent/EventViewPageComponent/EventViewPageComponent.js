@@ -90,7 +90,7 @@ function EventViewPageComponent(props) {
 
                             <div id="header_text"
                                 style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}>
-                                <div id="event_box_title" style={{ textAlign: "start", fontSize: '50px' }}>
+                                <div id="event_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
                                     <h1> {LoadedEvent.Title}</h1>
                                 </div>
                                 <div id="event_box_date" style={{ textAlign: "start", fontSize: '30px', color: "#56c7ec" }}>
