@@ -335,9 +335,9 @@ function CoursePageComponent(props) {
 
                             {the_course &&
                                 <div>
-                                    <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
+                                    <div style={{ maxWidth: '1000px', minWidth: '300px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
 
-                                        <Row style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                                        <Row style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex', margin: 'auto' }}>
 
 
                                             <Col md={12} style={{ height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
@@ -348,9 +348,9 @@ function CoursePageComponent(props) {
                                                             <div className='su_left_col' style={{}}>
 
 
-                                                                <div class="section_header" style={{ textAlign: 'left', marginTop: "30px", alignItems: 'start', width: '100%', maxWidth: '100%', margin: 'auto', }}>
-                                                                    <span class="section_header_inner" style={{ marginTop: "20px", fontSize: '40px', fontWeight: 'bold' }}>APPLY NOW</span>
-                                                                    <div className="section_header_under" style={{ fontSize: '34px', marginBottom: '0px' }}></div>
+                                                                <div class="form_section_header" style={{}}>
+                                                                    <span class="" style={{ marginTop: "20px", fontSize: '27px', fontWeight: 'bold' }}>APPLY NOW</span>
+
                                                                 </div>
 
 

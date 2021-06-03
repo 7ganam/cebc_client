@@ -53,6 +53,7 @@
   }
 .fixed-top #nav_brand {
 height:50px;
+width: 120px;
 transition: height .5s;
 margin: 15px 0 5px 0px;
 max-width: 50%;

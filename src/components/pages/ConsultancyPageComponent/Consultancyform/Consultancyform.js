@@ -152,7 +152,7 @@ function Consultancyform() {
 
             <div className='consultancy_form_wrapper' style={{ margin: 'auto', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
 
-                <Row style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
+                <Row style={{ margin: 'auto', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
 
 
                     <Col md={12} style={{ height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
