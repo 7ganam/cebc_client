@@ -21,7 +21,7 @@ function PresintationsPageComponent() {
             try {
 
                 const responseData = await sendPresentationsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/presentation-groups?_limit=500`
+                    `${process.env.REACT_APP_BACKEND_URL}/presentation-groups?_limit=500&_sort=published_at:DESC`
                 );
 
                 setLoadedPresentations(responseData);
@@ -61,7 +61,7 @@ function PresintationsPageComponent() {
                 presentation_container.push(
 
                     <div className='presentation_box'   >
-                        <a className="presentation_link" target="_blank" href={presentation.file && presentation.file.url}>
+                        <a className="presentation_link" target="_blank" href={presentation.file && presentation.file.url} rel="noreferrer">
                             <i class="fas fa-external-link-alt mr-2 ml-1"></i>
                             {` ${presentation.title}`}
                         </a>
