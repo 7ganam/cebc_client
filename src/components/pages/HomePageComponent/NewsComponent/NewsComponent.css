@@ -31,6 +31,14 @@
     border-width: 1px;
     border-style: solid;
     border-color: rgba(128, 128, 128, 0.419);
+
+}
+@media (max-width: 768px) { 
+
+    #main_news_div{
+        max-width: 90%;
+        margin:auto;
+    }
 }
 
 
@@ -63,6 +71,15 @@
     min-height: 200px;
     display: flex;
     align-items: center;
+
+}
+@media (max-width: 768px) {
+    .sec_news_div{
+
+        max-width: 90%;
+        margin: 10px auto 0 auto;
+    } 
+
 }
 
 .panel__title{
