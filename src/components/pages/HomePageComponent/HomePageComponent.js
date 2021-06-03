@@ -22,7 +22,7 @@ export default function HomePageComponent(props) {
             <VideoComponent />
 
             {props.members.length > 0 &&
-                <div style={{ marginTop: "50px" }}>
+                <div style={{ marginTop: "20px" }}>
 
                     <MemebersCarouselComponent members={props.members} />
 

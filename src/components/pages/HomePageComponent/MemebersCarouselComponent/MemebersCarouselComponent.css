@@ -1,3 +1,14 @@
+.Carousel_section_header{
+    text-align: left;
+    position: relative;
+    bottom: -25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #9e91918a;
+}
+
+
+
 
 .mem_carousel_name
 {

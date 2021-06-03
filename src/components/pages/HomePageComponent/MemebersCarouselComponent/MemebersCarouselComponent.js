@@ -81,16 +81,14 @@ function MemebersCarouselComponent(props) {
 
     return (
         <div id="Carousel_section">
-            <Row className=" justify-content-center">
-                <Col style={{ paddingTop: "0px" }}>
-                    <div class="section_header">
-                        <span class="section_header_inner">
-                            Members & partners
+            <div className=" justify-content-center" style={{ width: "80%", margin: 'auto' }}>
+                <div class="Carousel_section_header">
+                    <span class="Carousel_section_header_inner">
+                        Members & Partners
                             </span>
-                        <div className="section_header_under"></div>
-                    </div>
-                </Col>
-            </Row>
+                    <div className="Carousel_section_header_under"></div>
+                </div>
+            </div>
             <div style={{ width: "80%", maxWidth: "1200px", margin: 'auto' }}>
                 {/* <h2> CEBC members</h2> */}
                 <div>
