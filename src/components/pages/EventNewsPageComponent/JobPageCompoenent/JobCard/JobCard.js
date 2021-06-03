@@ -28,9 +28,9 @@ const JobCard = (props) => {
                                     {props.job.description}
                                 </div>
                                 <div style={{ marginTop: '10px' }}>
-                                    <span style={{ fontWeight: "bold ", marginRight: '5px', fontSize: "19px" }}>
+                                    <div style={{ fontWeight: "bold ", marginRight: '5px', fontSize: "19px", textAlign: 'left' }}>
                                         Location:
-                                    </span>
+                                    </div>
                                     <span>
 
                                         <Alert color="info" style={{ marginTop: '10px' }}>
@@ -40,9 +40,9 @@ const JobCard = (props) => {
                                     </span>
                                 </div>
                                 <div style={{ marginTop: '10px' }}>
-                                    <span style={{ fontWeight: "bold ", marginRight: '5px', fontSize: "19px" }}>
-                                        for application contact:
-                                    </span>
+                                    <div style={{ fontWeight: "bold ", marginRight: '5px', fontSize: "19px", textAlign: 'left' }}>
+                                        For application contact:
+                                    </div>
                                     <span>
 
                                         <Alert color="info" style={{ marginTop: '10px' }}>
