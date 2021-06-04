@@ -61,9 +61,9 @@ function SingleWebinarPageComponent(props) {
                                         <div id="webinar_header" >
 
                                             <div id="header_text"
-                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}
+                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "110", justifyContent: "center" }}
                                             >
-                                                <div id="webinar_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
+                                                <div id="webinar_box_title" style={{ textAlign: "center", fontSize: '20px' }}>
                                                     <h1> {the_webinar.title}</h1>
                                                 </div>
                                             </div>
@@ -75,8 +75,14 @@ function SingleWebinarPageComponent(props) {
                                         </div>
 
 
-                                        <div className="video-responsive" style={{ marginTop: "20px" }}>
-
+                                        <div className="video-responsive" style={{ marginTop: "20px", position: '' }}>
+                                            <div style={{ width: '100%', height: "300px", position: 'absolute' }}>
+                                                <div style={{ margin: 'auto', position: '', width: '10vw' }}>
+                                                    <div style={{ margin: "100px auto 0 auto" }}>
+                                                        <ReactLoading type={"spin"} color={"#00D2F9"} width={"10vw"} />
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <iframe
                                                 width="90%"
                                                 height="350px"
@@ -85,6 +91,7 @@ function SingleWebinarPageComponent(props) {
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                 allowFullScreen
                                                 title="Embedded youtube"
+                                                style={{ zIndex: '2', position: 'relative' }}
                                             />
                                         </div>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap'
 import "./WebinarsPageComponent.css"
+import ReactLoading from 'react-loading';
 
 function WebinarsPageComponent(props) {
 
@@ -28,7 +29,7 @@ function WebinarsPageComponent(props) {
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
 
                                 <div className="video-" style={{ width: "100%", height: "100%", objectFit: "cover" }}>
-                                    <iframe
+                                    {/* <iframe
                                         width="100%"
                                         height="100%"
                                         src={`https://www.youtube.com/embed/${extract_yt_id(webinar.youtube_link)}`}
@@ -36,7 +37,9 @@ function WebinarsPageComponent(props) {
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
                                         title="Embedded youtube"
-                                    />
+                                    /> */}
+
+                                    <img src={`http://img.youtube.com/vi/${extract_yt_id(webinar.youtube_link)}/0.jpg`} alt='ytb_img' style={{ width: "100%", height: '100%' }} />
                                 </div>
                             </div>
 
