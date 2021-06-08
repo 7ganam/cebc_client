@@ -144,7 +144,7 @@ function MembersOnlyPageComponent(props) {
                                 <Col className='news_col' md={3}>
                                     <div className='id_card'>
                                         <div className='user_image_wrapper'>
-                                            <img className='user_image' src={User.image && User.image.url} alt='user'></img>
+                                            <img className='user_image' src={(User.image && User.image.url) ? User.image.url : '/assets/images/user.jpg'} alt='user'></img>
                                         </div>
                                         <div className='user_name' style={{ fontWeight: '700' }}>
                                             {User.username}

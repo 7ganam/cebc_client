@@ -71,7 +71,7 @@ function SingleWebinarPageComponent(props) {
 
                                         </div>
                                         <div id="webinar_header_2">
-
+                                            <i class="fab fa-youtube"></i>
                                         </div>
 
 

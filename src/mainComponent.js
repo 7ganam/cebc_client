@@ -54,7 +54,9 @@ import NewsEventSubPagesComponent from './components/pages/EventNewsPageComponen
 import EventViewPageComponent from './components/pages/EventNewsPageComponent/NewsEventSubPagesComponent/EventViewPageComponent/EventViewPageComponent'
 import NewsViewPageComponent from './components/pages/EventNewsPageComponent/NewsEventSubPagesComponent/NewsViewPageComponent/NewsViewPageComponent'
 import MediaPageComponent from './components/pages/EventNewsPageComponent/MediaPageComponent/MediaPageComponent'
-import JobPageCompoenent from './components/pages/EventNewsPageComponent/JobPageCompoenent/JobPageCompoenent'
+import JobPageCompoenent from './components/pages/JobPageCompoenent/JobPageCompoenent'
+import SingleJobViewComponent from './components/pages/JobPageCompoenent/SingleJobViewComponent/SingleJobViewComponent'
+
 
 
 import WorkingGroupsPageComponent from './components/pages/WorkingGroupsPageComponent/WorkingGroupsPageComponent'
@@ -143,6 +145,12 @@ export default function MainComponent() {
 
                         <Route exact path="/CONSULTANCY">
                             <ConsultancyPageComponent className="academyPage" />
+                        </Route>
+
+
+
+                        <Route path="/ABOUTUS/JOBS/:job_id">
+                            {(props) => <SingleJobViewComponent {...props} jobs={LoadedJobs} />}
                         </Route>
 
                         <Route path="/ABOUTUS/JOBS">
