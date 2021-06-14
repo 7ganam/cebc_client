@@ -144,7 +144,9 @@ function EventViewPageComponent(props) {
 
 
                                 <div style={{ maxWidth: '100%' }}>
-                                    <div style={{ width: '100%', margin: "auto" }}><Editor value={LoadedEvent.event_post} onChange={(input) => { }} /></div>
+                                    <div style={{ width: '100%', margin: "auto" }} >
+                                        <Editor value={LoadedEvent.event_post} onChange={(input) => { }} />
+                                    </div>
                                 </div>
                             </div>
                         </div>

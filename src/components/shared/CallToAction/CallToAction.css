@@ -42,9 +42,16 @@
     .cto-blue
     {
         background-color: #FCC744;
-        border-bottom: 5px solid #b18e35;
-        text-shadow: 0px -2px #99782496;
+        /* border-bottom: 5px solid #b18e35;
+        text-shadow: 0px -2px #99782496; */
+padding-bottom: 13px;
         text-decoration: none;	
+
+    }
+    .cto-blue:hover
+    {
+        background-color: #9c7d2f;
+
 
     }
     .cto-blue a{
@@ -65,7 +72,7 @@
 
     .cto-action-button:hover
     {
-
+        background-color: #9c7d2f;
         text-decoration: none;	
 
     }

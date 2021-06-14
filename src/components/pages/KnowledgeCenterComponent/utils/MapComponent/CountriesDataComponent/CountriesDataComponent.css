@@ -68,7 +68,7 @@ border-radius: 6px 6px 0 0;
 
       display: flex;
       font-family: 'Roboto', sans-serif;
-    color: grey;
+    color: black;
     font-size: 15px;
     margin-top: 0px;
     padding: 0px 5px 0px 5px;
@@ -89,7 +89,6 @@ border-radius: 6px 6px 0 0;
 .data_box a{
     color:black;
     font-family: 'Roboto', sans-serif;
-    color: grey;
     font-size: 12px;
     text-decoration-color: #ffb600;
 

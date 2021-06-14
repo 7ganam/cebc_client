@@ -130,8 +130,9 @@
         height: 100%;
         cursor: pointer;	
         background-color: #FCC744;
-        border-bottom: 5px solid #b18e35;
-        text-shadow: 0px -2px #99782496;
+        /* border-bottom: 5px solid #b18e35;
+        text-shadow: 0px -2px #99782496; */
+padding-bottom: 13px;
         text-decoration: none;
         transition: all 0.1s;
         -webkit-transition: all 0.1s;
@@ -163,17 +164,6 @@
         cursor: pointer;
     }
     
-    .blue
-    {
-        background-color: #FCC744;
-        border-bottom: 5px solid #b18e35;
-        text-shadow: 0px -2px #99782496;
-        text-decoration: none;	
-
-    }
-    .blue a{
-        color:white;
-    }
 
     
     .action-button:active 

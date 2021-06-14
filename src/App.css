@@ -1,3 +1,12 @@
+.ck p{
+  font-family: 'Roboto', sans-serif;
+  color: grey;
+  font-size: 16px;
+  text-align: left;
+}
+
+
+
 .header_text{
   font-family: 'Raleway', sans-serif;
   font-size: 40px;

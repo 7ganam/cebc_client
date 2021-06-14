@@ -147,7 +147,7 @@ function SingleReportPageComponent(props) {
 
 
                             </div>
-
+                            {/* 
                             {!!the_report && !!props.reports.length > 0 &&
                                 <div>
                                     <Row className=" justify-content-center">
@@ -182,7 +182,7 @@ function SingleReportPageComponent(props) {
 
                                     </div>
                                 </div>
-                            }
+                            } */}
 
                             {!!props.reports.length > 0 && the_report && the_report.entities.length > 0 &&
                                 <div>
