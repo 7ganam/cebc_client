@@ -149,35 +149,48 @@ function BenifitsPageComponent() {
                     </div>
                     <Row>
                         <Col md={6}>
-                            <div className='join_card' >
-                                <div style={{ fontWeight: 'bold' }}> We know the MENA clean energy sector. </div>
+                            <div className='join_card ' >
+                                <div className='header_text' style={{ fontWeight: 'bold', fontSize: "22px" }}> We know the MENA clean energy sector. </div>
+                                <div className='content_text'>
                                     We can connect you with likeminded individuals also looking to promote change and innovation in the region.
                                 </div>
+                            </div>
                         </Col>
                         <Col md={6}>
                             <div className='join_card' >
-                                <div style={{ fontWeight: 'bold' }}>We are on the pulse. </div>
+                                <div className='header_text' style={{ fontWeight: 'bold', fontSize: "22px" }}>We are on the pulse. </div>
+                                <div className='content_text'>
                                     We know the latest news and updates in the MENA region, and share these with our members.
                                 </div>
+                            </div>
                         </Col>
 
                         <Col md={6}>
                             <div className='join_card' >
-                                <div style={{ fontWeight: 'bold' }}>We create opportunities for our members. </div>
+                                <div className='header_text' style={{ fontWeight: 'bold', fontSize: "22px" }}>We create opportunities for our members. </div>
+                                <div className='content_text'>
                                     Whether these be speaking at our events, promoting your project or advertising tenders, we ensure of members receive ample opportunity to share their news, achievements and work.
                                 </div>
+                            </div>
                         </Col>
                         <Col md={6}>
                             <div className='join_card' >
-                                <div style={{ fontWeight: 'bold' }}>We believe in what we do.</div>
+                                <div className='header_text' style={{ fontWeight: 'bold', fontSize: "22px" }}>We believe in what we do.</div>
+
+                                <div className='content_text'>
                                     We are all advocates for the renewable energy sector, and believe in the importance of renewables and clean energy for our future – and yours.
                                 </div>
+
+                            </div>
+
                         </Col>
                         <Col md={6}>
                             <div className='join_card' >
-                                <div style={{ fontWeight: 'bold' }}>We run quality events, </div>
+                                <div className='header_text' style={{ fontWeight: 'bold', fontSize: "22px" }}>We run quality events, </div>
+                                <div className='content_text'>
                                     which members can attend free of charge.
                                 </div>
+                            </div>
                         </Col>
 
                     </Row>
@@ -190,14 +203,14 @@ function BenifitsPageComponent() {
                             <div className="section_header section_header_side" >
                                 <span className="section_header_inner"     >
                                     MEMBERSHIP LEVELS
-                            </span>
+                                </span>
                                 <div className="section_header_under" ></div>
                             </div>
                         </Row>
                         <Row>
                             <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left' }}>
                                 Information on our three different levels of membership is available below. If you have any questions on membership, or would like to know more, please email info@cebcmena.com.
-                        </Col>
+                            </Col>
                         </Row>
                     </Container>
 
@@ -213,14 +226,14 @@ function BenifitsPageComponent() {
                                         <div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 PARTNER MEMBER
-                                        </div>
+                                            </div>
 
                                             <div style={{ fontSize: "30px", fontWeight: "bolder", color: "white" }}>
                                                 $5,000 USD
-                                        </div>
+                                            </div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 per annum
-                                        </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>
@@ -229,13 +242,13 @@ function BenifitsPageComponent() {
                                         <div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 CORPORATE MEMBER
-                                        </div>
+                                            </div>
                                             <div style={{ fontSize: "30px", fontWeight: "bolder", color: "white" }}>
                                                 $2,500 USD
-                                        </div>
+                                            </div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 per annum
-                                        </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>
@@ -244,13 +257,13 @@ function BenifitsPageComponent() {
                                         <div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 ASSOCIATE MEMBER
-                                        </div>
+                                            </div>
                                             <div style={{ fontSize: "30px", fontWeight: "bolder", color: "white" }}>
                                                 $500 USD
-                                        </div>
+                                            </div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 per annum
-                                        </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>

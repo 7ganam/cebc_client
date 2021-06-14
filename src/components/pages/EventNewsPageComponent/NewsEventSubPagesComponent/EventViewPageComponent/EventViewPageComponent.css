@@ -1,3 +1,26 @@
+.downloads_container{
+        min-height: 40px;
+
+
+          margin-bottom: 5px;
+          display: flex;
+          font-family: 'Roboto', sans-serif;
+        color: grey;
+        font-size: 15px;
+        margin-top: 0px;
+        padding: 5px;
+        align-items: center;
+        width: 90%;
+    
+        background: #ebebeb;
+        border: 1px solid #d7d7d7;
+        text-decoration-color: #ffb600;
+        margin: 5px auto;
+    
+   
+}
+
+
 #event_background{
     background-color: #F1F1F1;
     min-height: 100vh;
@@ -60,6 +83,23 @@
     margin-top: 20px !important; 
     margin-bottom: 130px;
     width: 100%;
+}
+
+
+.downloads_header{
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px #80808069;
+    
+
+    
+    border-radius: 5px;
+    padding: 14px 25px 14px 25px;
+    width: 300px;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    
+    
 }
 
 /* // Small devices (landscape phones, 576px and up) */

@@ -1,3 +1,17 @@
+.header_text{
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  color:black
+}
+.content_text{
+  font-family: 'Roboto', sans-serif;
+  color: grey;
+  font-size: 16px;
+  text-align: left;
+}
+
+
+
 .ck-editor__main > div ,  .ck-editor__main {
   min-height: 0px !important;
 }

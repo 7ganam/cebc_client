@@ -20,14 +20,15 @@ function NewsLettersPageComponent(props) {
             if (!NewsLetters_object[year]) { NewsLetters_object[year] = {} }
             if (!NewsLetters_object[year][month]) { NewsLetters_object[year][month] = [] }
 
-            NewsLetters_object[year][month].push(NewsLetter)
+            NewsLetters_object[year][month].unshift(NewsLetter)
+            NewsLetters_object[year][month].sort((a, b) => (moment(a.date) > moment(b.date)) ? 1 : -1)
         }
 
         const reander_sub_elements = (NewsLetters_object, year) => {
             const sub_objects = []
             for (const month in NewsLetters_object[year]) {
                 for (const NewsLetter of NewsLetters_object[year][month]) {
-                    sub_objects.push(
+                    sub_objects.unshift(
 
                         <Col md={4} lg={3}>
                             <Card className="past_NewsLetter_card">

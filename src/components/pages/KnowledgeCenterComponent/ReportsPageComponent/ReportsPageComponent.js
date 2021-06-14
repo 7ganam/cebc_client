@@ -25,7 +25,8 @@ function ReportsPageComponent(props) {
             if (!reports_object[year]) { reports_object[year] = {} }
             if (!reports_object[year][month]) { reports_object[year][month] = [] }
 
-            reports_object[year][month].push(report)
+            reports_object[year][month].unshift(report)
+            reports_object[year][month].sort((a, b) => (moment(a.date) > moment(b.date)) ? 1 : -1)
         }
 
         const reander_sub_elements = (reports_object, year) => {
@@ -34,7 +35,7 @@ function ReportsPageComponent(props) {
                 for (const report of reports_object[year][month]) {
                     console.log(` report.slug`, report.slug)
 
-                    sub_objects.push(
+                    sub_objects.unshift(
 
                         <Col md={4} lg={3}>
                             <Card className="past_report_card">

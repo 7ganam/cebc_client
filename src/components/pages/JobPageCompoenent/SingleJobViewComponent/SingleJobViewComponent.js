@@ -48,7 +48,6 @@ function SingleJobViewComponent(props) {
                                             >
                                                 <div id="job_box_title" style={{ textAlign: "center", fontSize: '20px' }}>
                                                     <h1>
-                                                        <span style={{ fontWeight: 'bold' }}>Job title:  </span>
                                                         {the_job.title}
                                                     </h1>
                                                 </div>
@@ -58,7 +57,7 @@ function SingleJobViewComponent(props) {
 
                                         </Row>
                                         <div id="job_header_2">
-                                            <div style={{ display: 'flex', flexWrap: "wrap", justifyContent: 'center' }}>
+                                            {/* <div style={{ display: 'flex', flexWrap: "wrap", justifyContent: 'center' }}>
 
                                                 {the_job.Apprenticeship && <Alert color="primary" className="footer_tag">Apprenticeship   </Alert>}
                                                 {the_job.Freelance && <Alert color="primary" className="footer_tag">Freelance   </Alert>}
@@ -66,12 +65,7 @@ function SingleJobViewComponent(props) {
                                                 {the_job.Internship && <Alert color="primary" className="footer_tag">Internship   </Alert>}
                                                 {the_job.PartTime && <Alert color="primary" className="footer_tag">PartTime   </Alert>}
                                                 {the_job.Temporary && <Alert color="primary" className="footer_tag">Temporary   </Alert>}
-
-
-
-
-
-                                            </div>
+                                            </div> */}
                                         </div>
                                         <div id="job_body">
                                             <div style={{}}>
@@ -99,7 +93,7 @@ function SingleJobViewComponent(props) {
                                             <div class="section_header">
                                                 <span class="section_header_inner">
                                                     job DETAILS
-                                                 </span>
+                                                </span>
                                                 <div className="section_header_under"></div>
                                             </div>
                                         </Col>

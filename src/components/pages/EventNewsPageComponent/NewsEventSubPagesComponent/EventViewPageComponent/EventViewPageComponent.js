@@ -10,8 +10,31 @@ import { Col, Container, Row } from 'reactstrap';
 
 import moment from 'moment';
 import { Carousel } from 'react-responsive-carousel';
+import { Link } from 'react-router-dom';
 
 function EventViewPageComponent(props) {
+
+
+
+    function generate_downloads_views(downloads) {
+
+        const members_views = downloads.map((file, index) => {
+            return (
+
+                <a className="presentation_link" target="_blank" href={file.file && file.file.url} rel="noreferrer">
+                    <div className='downloads_container'       >
+                        <i class="fas fa-external-link-alt mr-2 ml-1"></i>
+                        {` ${file.title}`}
+
+                    </div>
+
+                </a>
+            )
+
+        })
+        return members_views
+
+    }
 
     // console.log(props.match.params.Event_id)
 
@@ -30,12 +53,12 @@ function EventViewPageComponent(props) {
 
 
                 const event_post = responseData[0].Event_post;
-                console.log(`responseData`, responseData)
 
                 const modified_event_post = event_post.replace('/uploads', `${process.env.REACT_APP_BACKEND_URL}/uploads`);
                 let modified_event = { ...responseData[0], event_post: modified_event_post }
 
                 setLoadedEvent(modified_event);
+                console.log({ modified_event })
 
 
             } catch (err) {
@@ -73,61 +96,75 @@ function EventViewPageComponent(props) {
 
 
                 {!!LoadedEvent ?
-                    <div>
-                        <div id="event_header" >
+                    <>
+                        <div>
+                            <div id="event_header" >
+                                <div id="header_img" style={{ backgroundColor: "", padding: "0px", height: "210px", width: "300px", maxWidth: '100%' }}>
+                                    {LoadedEvent.Event_thumbnail_image ?
+                                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
+                                            <img src={`${LoadedEvent.Event_thumbnail_image.url}`}
+                                                style={{ width: "300px", height: "auto", }} alt="" />
+                                        </div>
+                                        :
+                                        <img src={`/assets/images/logo_black.png`}
+                                            style={{ width: "300px", height: "auto", position: "relative", top: "50px" }} alt="" />
+                                    }
+                                </div>
 
-
-
-                            <div id="header_img" style={{ backgroundColor: "", padding: "0px", height: "210px", width: "300px", maxWidth: '100%' }}>
-                                {LoadedEvent.Event_thumbnail_image ?
-                                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
-                                        <img src={`${LoadedEvent.Event_thumbnail_image.url}`}
-                                            style={{ width: "300px", height: "auto", }} alt="" />
+                                <div id="header_text"
+                                    style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}>
+                                    <div id="event_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
+                                        <h1> {LoadedEvent.Title}</h1>
                                     </div>
-                                    :
-                                    <img src={`/assets/images/logo_black.png`}
-                                        style={{ width: "300px", height: "auto", position: "relative", top: "50px" }} alt="" />
+
+                                </div>
+
+
+                            </div>
+                            <div id="event_header_2">
+
+                                <div id="event_box_date" style={{ textAlign: "center", fontSize: '30px', color: "#56c7ec" }}>
+                                    <i class="fa fa-calendar mr-2" aria-hidden="true"></i>
+                                    <span>{moment(LoadedEvent.Event_date).format('DD-MMMM-YYYY')}</span>
+
+                                </div>
+
+                            </div>
+                            <div id="event_body">
+
+                                {LoadedEvent.Event_gallery && LoadedEvent.Event_gallery.length > 0 &&
+                                    <div className="carousel_wrapper">
+                                        <Carousel autoPlay infiniteLoop >
+
+                                            {generate_carousel_images(LoadedEvent.Event_gallery)}
+
+                                        </Carousel>
+                                    </div>
                                 }
-                            </div>
 
-                            <div id="header_text"
-                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}>
-                                <div id="event_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
-                                    <h1> {LoadedEvent.Title}</h1>
+
+                                <div style={{ maxWidth: '100%' }}>
+                                    <div style={{ width: '100%', margin: "auto" }}><Editor value={LoadedEvent.event_post} onChange={(input) => { }} /></div>
+                                </div>
+                            </div>
+                        </div>
+                        {LoadedEvent.downloads.length > 0 &&
+                            <>
+                                <div className="downloads_header " >
+                                    <span className="downloads_header_inner"     >
+                                        Downloads
+                                    </span>
                                 </div>
 
-                            </div>
-
-
-                        </div>
-                        <div id="event_header_2">
-
-                            <div id="event_box_date" style={{ textAlign: "center", fontSize: '30px', color: "#56c7ec" }}>
-                                <i class="fa fa-calendar mr-2" aria-hidden="true"></i>
-                                <span>{moment(LoadedEvent.Event_date).format('DD-MMMM-YYYY')}</span>
-
-                            </div>
-
-                        </div>
-                        <div id="event_body">
-
-                            {LoadedEvent.Event_gallery && LoadedEvent.Event_gallery.length > 0 &&
-                                <div className="carousel_wrapper">
-                                    <Carousel autoPlay infiniteLoop >
-
-                                        {generate_carousel_images(LoadedEvent.Event_gallery)}
-
-                                    </Carousel>
+                                <div className=" justify-content-center" style={{ maxWidth: '900px', margin: 'auto' }}>
+                                    <div style={{ padding: '0', margin: '20px auto 40px auto', maxWidth: '85vw', width: '100%', display: "flex", flexWrap: "wrap", justifyContent: "start", flexDirection: 'column' }}>
+                                        {generate_downloads_views(LoadedEvent.downloads)}
+                                    </div>
                                 </div>
-                            }
+                            </>
+                        }
 
-
-                            <div style={{ maxWidth: '100%' }}>
-                                <div style={{ width: '100%', margin: "auto" }}><Editor value={LoadedEvent.event_post} onChange={(input) => { }} /></div>
-                            </div>
-                        </div>
-                    </div>
-
+                    </>
                     :
                     <div id="loading_spinner" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "150px" }} >
                         <div style={{ marginTop: "100px" }}>
