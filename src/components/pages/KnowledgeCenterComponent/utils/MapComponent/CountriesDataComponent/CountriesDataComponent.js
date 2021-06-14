@@ -20,7 +20,7 @@ function CountriesDataComponent(props) {
         let reports_view = country.reports_publications.map((report, index) => {
             return (
                 <div className='data_box'   >
-                    <Link className="data_link" to={`/KNOWLEDGECENTER/REPORTS/${report.id}`}>
+                    <Link className="data_link" to={`/KNOWLEDGECENTER/REPORTS/${report.slug}`}>
                         <i class="fas fa-external-link-alt mr-2 ml-1"></i>
                         {`REPORT: ${report.title}`}
                     </Link>
@@ -30,7 +30,7 @@ function CountriesDataComponent(props) {
         let projects_view = country.projects.map((project, index) => {
             return (
                 <div className='data_box'   >
-                    <Link className="data_link" to={`/KNOWLEDGECENTER/PROJECTS/${project.id}`}>
+                    <Link className="data_link" to={`/KNOWLEDGECENTER/PROJECTS/${project.slug}`}>
                         <i class="fas fa-external-link-alt mr-2 ml-1"></i>
                         {`PROJECT: ${project.title}`}
                     </Link>

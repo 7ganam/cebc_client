@@ -28,7 +28,7 @@ function WebinarsPageComponent(props) {
         const webinars = reverse_webinars.map((webinar, index) => {
             return (
                 <Col md={4} className="d-flex justify-content-center align-items-center">
-                    <Link to={`/KNOWLEDGECENTER/WEBINARS/${webinar.id}`} style={{ width: '100%' }}>
+                    <Link to={`/KNOWLEDGECENTER/WEBINARS/${webinar.slug}`} style={{ width: '100%' }}>
                         <div className="webinar_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
 

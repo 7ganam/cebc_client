@@ -20,9 +20,10 @@ function SingleReportPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
     console.log(`singeprops.reports`, props.reports)
-    const report_id = props.match.params.report_id;
+    const report_slug = props.match.params.report_slug;
+    console.log(`report_slug`, report_slug)
 
-    const the_report = props.reports.filter((report) => report.id == report_id)[0] //leave this as two ==
+    const the_report = props.reports.filter((report) => report.slug == report_slug)[0] //leave this as two ==
 
     console.log(`the_report`, the_report)
 

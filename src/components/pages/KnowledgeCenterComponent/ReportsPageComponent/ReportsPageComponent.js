@@ -14,7 +14,7 @@ function ReportsPageComponent(props) {
 
 
     const render_reports = (reports) => {
-        console.log(` pagereports`, reports)
+        // console.log(` pagereports`, reports)
 
         const reports_object = {}
         for (const report of reports) {
@@ -32,6 +32,8 @@ function ReportsPageComponent(props) {
             const sub_objects = []
             for (const month in reports_object[year]) {
                 for (const report of reports_object[year][month]) {
+                    console.log(` report.slug`, report.slug)
+
                     sub_objects.push(
 
                         <Col md={4} lg={3}>
@@ -50,7 +52,7 @@ function ReportsPageComponent(props) {
                                     <CardText></CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
-                                    <Link to={`/KNOWLEDGECENTER/REPORTS/${report.id}`}>
+                                    <Link to={`/KNOWLEDGECENTER/REPORTS/${report.slug}`}>
                                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                                             <div style={{}}>Know more</div>
                                         </div>

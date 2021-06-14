@@ -21,7 +21,7 @@ function PresintationsPageComponent() {
             try {
 
                 const responseData = await sendPresentationsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/presentation-groups?_limit=500&_sort=published_at:DESC`
+                    `${process.env.REACT_APP_BACKEND_URL}/presentation-groups?_limit=500&_sort=date:DESC`
                 );
 
                 setLoadedPresentations(responseData);
@@ -52,9 +52,14 @@ function PresintationsPageComponent() {
         const presentation_container = []
         for (const presentation_group of LoadedPresentations) {
             presentation_container.push(
+
                 <div className='presentation_group_title' style={{ textAlign: 'left' }}>
                     {presentation_group.title}
+                    {presentation_group.date &&
+                        <div style={{ color: 'gray', fontSize: '15px' }}>{presentation_group.date}</div>
+                    }
                 </div>
+
             )
             console.log(`presentation_group`, presentation_group)
             for (const presentation of presentation_group.presentation) {

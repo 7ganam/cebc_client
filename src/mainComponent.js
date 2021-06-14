@@ -298,7 +298,7 @@ export default function MainComponent() {
 
 
 
-                        <Route exact path="/KNOWLEDGECENTER/PROJECTS/:project_id"
+                        <Route exact path="/KNOWLEDGECENTER/PROJECTS/:project_slug"
                             component={(props) => <   SingleProjectPageComponent {...props} projects={LoadedProjects} />}
                         />
 
@@ -308,7 +308,7 @@ export default function MainComponent() {
                         </Route>
 
 
-                        <Route exact path="/KNOWLEDGECENTER/REPORTS/:report_id"
+                        <Route exact path="/KNOWLEDGECENTER/REPORTS/:report_slug"
                             component={(props) => <   SingleReportPageComponent {...props} reports={LoadedReports} />}
                         />
 
@@ -356,7 +356,7 @@ export default function MainComponent() {
 
 
 
-                        <Route exact path="/KNOWLEDGECENTER/WEBINARS/:webinar_id"
+                        <Route exact path="/KNOWLEDGECENTER/WEBINARS/:webinar_slug"
                             component={(props) => <   SingleWebinarPageComponent {...props} webinars={LoadedWebinars} />}
                         />
 

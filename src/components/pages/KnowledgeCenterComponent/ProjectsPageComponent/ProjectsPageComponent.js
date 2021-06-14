@@ -10,7 +10,7 @@ function ProjectsPageComponent(props) {
         const projects = props.projects.map((project, index) => {
             return (
                 <Col md={4} className="d-flex justify-content-center align-items-center">
-                    <Link to={`/KNOWLEDGECENTER/PROJECTS/${project.id}`}>
+                    <Link to={`/KNOWLEDGECENTER/PROJECTS/${project.slug}`}>
                         <div className="project_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
                                 <img src={project.image && project.image.url} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />

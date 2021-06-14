@@ -14,9 +14,9 @@ function SingleProjectPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
     // console.log(`singeprops.projects`, props.projects)
-    const project_id = props.match.params.project_id;
+    const project_slug = props.match.params.project_slug;
 
-    const the_project = props.projects.filter((project) => project.id == project_id)[0] //leave this as two ==
+    const the_project = props.projects.filter((project) => project.slug == project_slug)[0] //leave this as two ==
 
     console.log(`the_project`, the_project)
 

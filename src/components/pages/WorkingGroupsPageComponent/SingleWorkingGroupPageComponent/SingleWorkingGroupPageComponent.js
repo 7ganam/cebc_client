@@ -75,7 +75,7 @@ function SingleWorkingGroupPageComponent(props) {
 
         const members_views = the_group.report_puplications.map((report, index) => {
             return (
-                <Link className="report_link" to={`/KNOWLEDGECENTER/REPORTS/${report.id}`}>
+                <Link className="report_link" to={`/KNOWLEDGECENTER/REPORTS/${report.slug}`}>
 
                     <div className='report_container'       >
                         <i class="fas fa-external-link-alt mr-2 ml-1"></i>
