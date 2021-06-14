@@ -22,8 +22,8 @@ function SingleWorkingGroupPageComponent(props) {
 
     // console.log(props.match.params.group_program_id)
 
-    const group_program_id = props.match.params.group_id;
-    const the_group = props.programmes_state.LoadedProgrammes.filter((group) => { return group.id == group_program_id })[0]
+    const group_program_slug = props.match.params.group_slug;
+    const the_group = props.programmes_state.LoadedProgrammes.filter((group) => { return group.slug == group_program_slug })[0]
     // console.log(`the_group`, the_group)
 
     function generate_members_view() {
@@ -35,7 +35,7 @@ function SingleWorkingGroupPageComponent(props) {
                     style={{ display: 'flex', flexDirection: 'column' }}
                 >
 
-                    <Link to={`/ABOUTUS/STAFF/${member.id}`} style={{ textDecoration: 'none' }} >
+                    <Link to={`/ABOUTUS/STAFF/${member.slug}`} style={{ textDecoration: 'none' }} >
                         <div className='entity_image_container' style={{ width: '100%', height: '170px' }}>
                             <img className='entity_image' src={member.image && member.image.url} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
                         </div>
@@ -57,7 +57,7 @@ function SingleWorkingGroupPageComponent(props) {
         console.log(`props.members`, props.members)
         const members_views = the_group.entities.map((member, index) => {
             return (
-                <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
+                <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                     <div class="group_member_card">
                         <div class="group_member_card_sub_div" style={{ background: 'white' }}>
                             <img class="group_mem_carousel_img" src={member.entity_image.url} />
@@ -200,7 +200,7 @@ function SingleWorkingGroupPageComponent(props) {
                                             <div className="section_header section_header_side" >
                                                 <span className="section_header_inner"     >
                                                     Reports & Publications
-                                            </span>
+                                                </span>
                                                 <div className="section_header_under" ></div>
                                             </div>
                                         </Row>

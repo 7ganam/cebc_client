@@ -225,7 +225,7 @@ function NewsEventSubPagesComponent(props) {
                                     <CardText></CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
-                                    <Link to={`/ACTIVITIES/EVENTS/PAST/${event.id}`}>
+                                    <Link to={`/ACTIVITIES/EVENTS/PAST/${event.slug}`}>
                                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                                             <div style={{}}>Know more</div>
                                         </div>
@@ -447,7 +447,7 @@ function NewsEventSubPagesComponent(props) {
                             </div>
                         </Row>
                     </Container>
-                    { !PastEventsIsLoading ?
+                    {!PastEventsIsLoading ?
                         <>
                             <div style={{ backgroundColor: "" }}>
                                 {render_past_events(past)}
@@ -480,7 +480,7 @@ function NewsEventSubPagesComponent(props) {
                             </div>
                         </Row>
                     </Container>
-                    { upcomming.length > 0 ?
+                    {upcomming.length > 0 ?
                         <>
 
                             <div style={{ backgroundColor: "" }}>
@@ -506,7 +506,7 @@ function NewsEventSubPagesComponent(props) {
                 <>
                     <div id="header_news" >
                     </div>
-                    { !NewsIsLoading ?
+                    {!NewsIsLoading ?
                         <>
                             <div style={{ backgroundColor: "" }}>
                                 {render_news(LoadedNews)}
@@ -525,7 +525,7 @@ function NewsEventSubPagesComponent(props) {
 
     return (
         <div style={{ marginBottom: "20px" }}>
-            { generate_page_view(props.match.params.sub_parameter, LoadedUpcommingEvents, LoadedPastEvents)}
+            {generate_page_view(props.match.params.sub_parameter, LoadedUpcommingEvents, LoadedPastEvents)}
         </div>
     )
 }

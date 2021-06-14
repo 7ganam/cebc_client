@@ -10,10 +10,10 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 
 function SingleMemberPageComponent(props) {
-    const member_id = props.match.params.member_id;
+    const member_slug = props.match.params.member_slug;
 
     const member = props.members.filter((member) => {
-        return member.id.toString() === member_id;
+        return member.slug.toString() === member_slug;
     })[0]
 
 
@@ -53,7 +53,7 @@ function SingleMemberPageComponent(props) {
                     style={{ display: 'flex', flexDirection: 'column' }}
                 >
 
-                    <Link to={`/ABOUTUS/STAFF/${member.id}`} style={{ textDecoration: 'none' }} >
+                    <Link to={`/ABOUTUS/STAFF/${member.slug}`} style={{ textDecoration: 'none' }} >
                         <div className='entity_image_container' style={{ width: '100%', height: '170px' }}>
                             <img className='entity_image' src={member.image && member.image.url} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
                         </div>
@@ -94,7 +94,7 @@ function SingleMemberPageComponent(props) {
 
         const members_views = case_studies.map((case_study, index) => {
             return (
-                <Link className="report_link" to={`/KNOWLEDGECENTER/CASE_STUDIES/${case_study.id}`}>
+                <Link className="report_link" to={`/KNOWLEDGECENTER/CASE_STUDIES/${case_study.slug}`}>
 
                     <div className='report_container'       >
                         <i class="fas fa-external-link-alt mr-2 ml-1"></i>
@@ -196,7 +196,7 @@ function SingleMemberPageComponent(props) {
                                         <div className="section_header section_header_side" >
                                             <span className="section_header_inner"     >
                                                 Projects
-                                                    </span>
+                                            </span>
                                             <div className="section_header_under" ></div>
                                         </div>
                                     </Row>
@@ -215,7 +215,7 @@ function SingleMemberPageComponent(props) {
                                         <div className="section_header section_header_side" >
                                             <span className="section_header_inner"     >
                                                 Members
-                                                    </span>
+                                            </span>
                                             <div className="section_header_under" ></div>
                                         </div>
                                     </Row>
@@ -234,7 +234,7 @@ function SingleMemberPageComponent(props) {
                                         <div className="section_header section_header_side" >
                                             <span className="section_header_inner"     >
                                                 Publications
-                                                    </span>
+                                            </span>
                                             <div className="section_header_under" ></div>
                                         </div>
                                     </Row>
@@ -254,7 +254,7 @@ function SingleMemberPageComponent(props) {
                                             <div className="section_header section_header_side" >
                                                 <span className="section_header_inner"     >
                                                     Case Studies
-                                                    </span>
+                                                </span>
                                                 <div className="section_header_under" ></div>
                                             </div>
                                         </Row>

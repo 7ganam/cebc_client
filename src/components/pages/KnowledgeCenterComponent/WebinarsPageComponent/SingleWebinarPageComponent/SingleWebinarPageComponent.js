@@ -19,7 +19,7 @@ function SingleWebinarPageComponent(props) {
 
 
     function extract_yt_id(url) {
-
+        console.log(`url`, url)
         var video_id = url.split('v=')[1];
         if (video_id) {
             var ampersandPosition = video_id.indexOf('&');

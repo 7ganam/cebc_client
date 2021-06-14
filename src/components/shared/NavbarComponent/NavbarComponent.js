@@ -151,16 +151,16 @@ const NavbarComponent = (props) => {
                                             {
                                                 path: "/ABOUTUS/working_groups", text: "working groups",
                                                 sub_subs: [
-                                                    { path: "/ABOUTUS/working_groups/7", text: "Future Mobility Club" },
-                                                    { path: "/ABOUTUS/working_groups/12", text: "Climate Finance" },
-                                                    { path: "/ABOUTUS/working_groups/13", text: "Energy Efficiency " },
-                                                    { path: "/ABOUTUS/working_groups/10", text: "Hydrogen and Energy Storage" },
-                                                    { path: "/ABOUTUS/working_groups/11", text: "Women in Clean Energy" },
+                                                    { path: "/ABOUTUS/working_groups/future-mobility-club", text: "Future Mobility Club" },
+                                                    { path: "/ABOUTUS/working_groups/climate-finance", text: "Climate Finance" },
+                                                    { path: "/ABOUTUS/working_groups/energy-efficiency", text: "Energy Efficiency " },
+                                                    { path: "/ABOUTUS/working_groups/hydrogen-and-energy-storage", text: "Hydrogen and Energy Storage" },
+                                                    { path: "/ABOUTUS/working_groups/women-in-clean-energy", text: "Women in Clean Energy" },
                                                 ]
                                             }, {
                                                 path: "/ABOUTUS/programms", text: "programmes",
                                                 sub_subs: [
-                                                    { path: "/ABOUTUS/working_groups/1", text: "CEBC Schools" },
+                                                    { path: "/ABOUTUS/working_groups/cebc-schools", text: "CEBC Schools" },
                                                 ]
                                             },
                                             { path: "/ABOUTUS/JOBS", text: "careers" },

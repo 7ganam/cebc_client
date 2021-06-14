@@ -163,7 +163,7 @@ export default function MainComponent() {
 
 
 
-                        <Route path="/ABOUTUS/working_groups/:group_id"
+                        <Route path="/ABOUTUS/working_groups/:group_slug"
                             component={(props) => <SingleWorkingGroupPageComponent {...props} programmes_state={{ LoadedProgrammes }} />
                             }
                         />
@@ -203,8 +203,11 @@ export default function MainComponent() {
                         <Route exact path="/ABOUTUS/FAQ">
                             <FaqPageComponent />
                         </Route>
-
+                        {/* 
                         <Route exact path="/ABOUTUS/STAFF/:member_id"
+                            component={(props) => <   StaffMemberSingleViewPageComponent {...props} staff={LoadedStaff_members} />}
+                        /> */}
+                        <Route exact path="/ABOUTUS/STAFF/:member_slug"
                             component={(props) => <   StaffMemberSingleViewPageComponent {...props} staff={LoadedStaff_members} />}
                         />
 
@@ -231,7 +234,7 @@ export default function MainComponent() {
 
 
 
-                        <Route exact path="/ACTIVITIES/ACADEMY/:course_id"
+                        <Route exact path="/ACTIVITIES/ACADEMY/:course_slug"
                             component={(props) => <   CoursePageComponent {...props} courses={LoadedCourses} />}
                         />
 
@@ -244,7 +247,7 @@ export default function MainComponent() {
 
 
 
-                        <Route path="/ACTIVITIES/EVENTS/:sub_parameter/:Event_id"
+                        <Route path="/ACTIVITIES/EVENTS/:sub_parameter/:Event_slug"
                             component={(props) =>
                                 <   EventViewPageComponent {...props} />
                             }
@@ -268,7 +271,7 @@ export default function MainComponent() {
 
 
 
-                        <Route exact path="/ACTIVITIES/PODCASTS/:podcast_id"
+                        <Route exact path="/ACTIVITIES/PODCASTS/:podcast_slug"
                             component={(props) => <   SinglePodcastsPageComponent {...props} podcasts={LoadedPodcasts} />}
                         />
 
@@ -316,7 +319,10 @@ export default function MainComponent() {
 
 
 
-                        <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES/:case_study_id"
+                        {/* <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES/:case_study_id"
+                            component={(props) => <   SingleCaseStudyPageComponent {...props} case_studies={LoadedCase_studies} />}
+                        /> */}
+                        <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES/:case_study_slug"
                             component={(props) => <   SingleCaseStudyPageComponent {...props} case_studies={LoadedCase_studies} />}
                         />
 
@@ -391,7 +397,10 @@ export default function MainComponent() {
                         </Route>
 
 
-                        <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_id"
+                        {/* <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_id"
+                            component={(props) => <SingleNewsLetterPageComponent {...props} NewsLetters={LoadedNewsletters} />}
+                        /> */}
+                        <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_slug"
                             component={(props) => <SingleNewsLetterPageComponent {...props} NewsLetters={LoadedNewsletters} />}
                         />
 
@@ -413,7 +422,7 @@ export default function MainComponent() {
 
 
 
-                        <Route path="/MEMBERSHIP/MEMBERS/:member_id"
+                        <Route path="/MEMBERSHIP/MEMBERS/:member_slug"
                             component={
                                 (props) => <   SingleMemberPageComponent {...props} members={LoadedEntity_s} />
                             }
@@ -480,7 +489,7 @@ export default function MainComponent() {
                         />
 
 
-                        <Route path="/EVENTS_NEWS/:sub_parameter/:Event_id"
+                        <Route path="/EVENTS_NEWS/:sub_parameter/:Event_slug"
                             component={(props) =>
                                 <   EventViewPageComponent {...props} />
                             }

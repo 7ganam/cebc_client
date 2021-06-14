@@ -97,7 +97,7 @@ function NewsComponent(props) {
                             </Col>
                             <Col id="sec_news_col " xs="12" md="6" style={{ paddingTop: "0" }}>
                                 <div className="" >
-                                    <Link className="" to={`/EVENTS_NEWS/PAST/${SortedEvents[0].id}`} >
+                                    <Link className="" to={`/EVENTS_NEWS/PAST/${SortedEvents[0].slug}`} >
                                         <div className="sec_news_div mb-3">
                                             <Row style={{ height: "100%" }} className="p-2">
                                                 <Col xs="5" md="5" style={{ height: "" }} >
@@ -127,7 +127,7 @@ function NewsComponent(props) {
                                             </Row>
                                         </div>
                                     </Link>
-                                    <Link className="" to={`/EVENTS_NEWS/PAST/${SortedEvents[1].id}`} >
+                                    <Link className="" to={`/EVENTS_NEWS/PAST/${SortedEvents[1].slug}`} >
                                         <div className="sec_news_div mb-3">
                                             <Row style={{ height: "100%" }} className="p-2">
                                                 <Col xs="5" md="5" style={{ height: "" }} >
@@ -155,7 +155,7 @@ function NewsComponent(props) {
                                             </Row>
                                         </div>
                                     </Link>
-                                    <Link className="" to={`/EVENTS_NEWS/PAST/${SortedEvents[2].id}`} >
+                                    <Link className="" to={`/EVENTS_NEWS/PAST/${SortedEvents[2].slug}`} >
                                         <div className="sec_news_div mb-3">
                                             <Row style={{ height: "100%" }} className="p-2">
                                                 <Col xs="5" md="5" style={{ height: "" }} >
@@ -195,7 +195,7 @@ function NewsComponent(props) {
                                 <Link className="" to={`/EVENTS_NEWS/News`} >
                                     <h4 className="end_text">
                                         MORE NEWS
-                                     </h4>
+                                    </h4>
                                 </Link>
                             </div>
                         </Row>

@@ -24,10 +24,10 @@ function PodcastsComponent(props) {
                             <CardSubtitle className='card_title_'>
                                 {podcast.title}
                             </CardSubtitle>
-                            <Link className="nav_link" to={`/ACTIVITIES/PODCASTS/${podcast.id}`}>
+                            <Link className="nav_link" to={`/ACTIVITIES/PODCASTS/${podcast.slug}`}>
                                 <button type="button" class="mt-2 btn btn-warning">
                                     Visit podcast
-                            <i class="ml-2 fas fa-headphones"></i>
+                                    <i class="ml-2 fas fa-headphones"></i>
                                 </button>
                             </Link>
                         </CardBody>
@@ -94,7 +94,7 @@ function PodcastsComponent(props) {
                 </div>
             </Container>
 
-            { props.podcasts && props.podcasts.length > 0 ?
+            {props.podcasts && props.podcasts.length > 0 ?
                 <Container style={{ marginTop: "10px ", marginBottom: "80px " }} >
                     {/* <Row style={{ display: "flex", justifyContent: "center" }} > */}
 

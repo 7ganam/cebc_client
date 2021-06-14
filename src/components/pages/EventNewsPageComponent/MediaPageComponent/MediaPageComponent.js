@@ -104,7 +104,7 @@ function MediaPageComponent(props) {
                                     <CardText></CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
-                                    <Link to={`/ACTIVITIES/EVENTS/PAST/${event.id}`}>
+                                    <Link to={`/ACTIVITIES/EVENTS/PAST/${event.slug}`}>
                                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                                             <div style={{}}>Know more</div>
                                         </div>
@@ -177,7 +177,7 @@ function MediaPageComponent(props) {
                         </Col>
                     </Row>
                 </Container>
-                { !PastEventsIsLoading ?
+                {!PastEventsIsLoading ?
                     <>
                         <div style={{ backgroundColor: "" }}>
                             {render_past_events(past)}
@@ -201,7 +201,7 @@ function MediaPageComponent(props) {
     }
     return (
         <div style={{ marginBottom: "20px" }}>
-            { generate_page_view(props.match.params.sub_parameter, LoadedPastEvents)}
+            {generate_page_view(props.match.params.sub_parameter, LoadedPastEvents)}
         </div>
     )
 }

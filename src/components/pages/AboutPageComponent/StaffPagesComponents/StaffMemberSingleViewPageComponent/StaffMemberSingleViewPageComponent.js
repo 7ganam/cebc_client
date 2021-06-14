@@ -14,9 +14,9 @@ function StaffMemberSingleViewPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
     // console.log(`singeprops.staff`, props.staff)
-    const member_id = props.match.params.member_id;
+    const member_slug = props.match.params.member_slug;
 
-    const the_member = props.staff.filter((member) => member.id == member_id)[0] //leave this as two ==
+    const the_member = props.staff.filter((member) => member.slug == member_slug)[0] //leave this as two ==
 
     console.log(`the_member`, the_member)
 
@@ -27,7 +27,7 @@ function StaffMemberSingleViewPageComponent(props) {
             if (member.membership_type) {
                 return (
 
-                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
+                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                         <div class="member_card">
                             <div class="member_card_sub_div">
                                 <img class="mem_carousel_img" src={member.entity_image ? member.entity_image.url : "/assets/images/logo_black.png"} />
@@ -48,7 +48,7 @@ function StaffMemberSingleViewPageComponent(props) {
         const groups = groups_list.map((groups, index) => {
             return (
                 <Col md={4} className="d-flex justify-content-center align-items-center">
-                    <Link to={`/ABOUTUS/working_groups/${groups.id}`} style={{ width: '100%' }}>
+                    <Link to={`/ABOUTUS/working_groups/${groups.slug}`} style={{ width: '100%' }}>
                         <div className="member_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
                                 <img src={groups.Thumb_nail_image && groups.Thumb_nail_image.url} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />

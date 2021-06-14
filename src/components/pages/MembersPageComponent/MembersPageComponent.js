@@ -13,7 +13,7 @@ function MembersPageComponent(props) {
             if (member.membership_type === type) {
                 return (
 
-                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
+                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                         <div class="member_card">
                             {member.entity_image ?
                                 <div class="member_card_sub_div2">
@@ -58,7 +58,7 @@ function MembersPageComponent(props) {
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
                             PARTNER MEMBERS
-                            </span>
+                        </span>
                         <div className="section_header_under" ></div>
                     </div>
                 </Row>
@@ -100,7 +100,7 @@ function MembersPageComponent(props) {
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
                             ASSOCIATE MEMBERS
-                            </span>
+                        </span>
                         <div className="section_header_under" ></div>
                     </div>
                 </Row>

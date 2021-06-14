@@ -13,7 +13,7 @@ function PartnersPageComponent(props) {
             if (member.membership_type === type) {
                 return (
 
-                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
+                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                         <div class="member_card">
                             {member.entity_image ?
                                 <div class="member_card_sub_div2">

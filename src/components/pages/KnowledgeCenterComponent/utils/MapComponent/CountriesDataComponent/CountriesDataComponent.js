@@ -10,7 +10,7 @@ function CountriesDataComponent(props) {
         let case_studies_views = country.case_studies.map((case_study, index) => {
             return (
                 <div className='data_box'   >
-                    <Link className="data_link" to={`/KNOWLEDGECENTER/CASE_STUDIES/${case_study.id}`}>
+                    <Link className="data_link" to={`/KNOWLEDGECENTER/CASE_STUDIES/${case_study.slug}`}>
                         <i class="fas fa-external-link-alt mr-2 ml-1"></i>
                         {`CASE STUDY: ${case_study.title}`}
                     </Link>

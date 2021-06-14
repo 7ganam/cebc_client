@@ -25,7 +25,7 @@ function AcademyPageComponent(props) {
                             {course.title}
                         </CardTitle>
                         <div style={{ flexGrow: '1' }}></div>
-                        <Link to={"/ACTIVITIES/ACADEMY/" + course.id}>
+                        <Link to={"/ACTIVITIES/ACADEMY/" + course.slug}>
                             <Button style={{ fontWeight: "bold", color: 'white' }} color='warning'>VISIT COURSE</Button>
                         </Link>
                     </CardBody>

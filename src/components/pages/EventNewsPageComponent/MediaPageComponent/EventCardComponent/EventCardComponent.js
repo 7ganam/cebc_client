@@ -61,11 +61,11 @@ function EventCardComponent(props) {
                 <Col className="event_box" md={12} style={{ backgroundColor: "black", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", }}>
                     <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                         Share event
-                        </div>
+                    </div>
                     <div style={{ flexGrow: "1" }}>
 
                     </div>
-                    <Link to={`/ACTIVITIES/EVENTS/UPCOMMMING/${props.event.id}`}>
+                    <Link to={`/ACTIVITIES/EVENTS/UPCOMMMING/${props.event.slug}`}>
                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                             <div style={{}}>Know more</div>
                         </div>

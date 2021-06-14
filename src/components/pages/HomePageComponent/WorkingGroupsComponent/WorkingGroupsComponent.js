@@ -16,7 +16,7 @@ function WorkingGroupsComponent(props) {
         const groups_view = filter_groups.map((group, index) => {
             return (
                 <Col className="working_group_col" xs="12" md="7" lg="4" style={{}}>
-                    <Link className="" to={`/ABOUTUS/working_groups/${group.id}`}>
+                    <Link className="" to={`/ABOUTUS/working_groups/${group.slug}`}>
                         <div className="working_group_col_div">
                             <WorkingGroupCardComponent image={group.Thumb_nail_image} title={group.Name} />
                         </div>
@@ -40,11 +40,11 @@ function WorkingGroupsComponent(props) {
                             {(props.type === "programm") ?
                                 <span class="sub_page_header_inner">
                                     programmes
-                             </span>
+                                </span>
                                 :
                                 <span class="sub_page_header_inner">
                                     Working groups
-                            </span>
+                                </span>
                             }
                             <div className="sub_page_header_under"></div>
                         </div>
@@ -64,7 +64,7 @@ function WorkingGroupsComponent(props) {
                         <div className="end_div">
                             <h4 className="end_text">
                                 BECOME A MEMBER
-                        </h4>
+                            </h4>
                         </div>
                     </Link>
                 </Row>

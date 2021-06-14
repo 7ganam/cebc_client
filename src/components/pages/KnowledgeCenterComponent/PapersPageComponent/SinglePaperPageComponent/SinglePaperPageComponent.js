@@ -33,7 +33,7 @@ function SinglePaperPageComponent(props) {
             if (member.membership_type) {
                 return (
 
-                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.id}`}>
+                    <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                         <div class="member_card">
                             <div class="member_card_sub_div">
                                 <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} />
@@ -51,7 +51,7 @@ function SinglePaperPageComponent(props) {
         const groups = groups_list.map((groups, index) => {
             return (
                 <Col md={4} className="d-flex justify-content-center align-items-center">
-                    <Link to={`/ABOUTUS/working_groups/${groups.id}`}>
+                    <Link to={`/ABOUTUS/working_groups/${groups.slug}`}>
                         <div className="project_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
                                 <img src={groups.Thumb_nail_image && groups.Thumb_nail_image.url} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />

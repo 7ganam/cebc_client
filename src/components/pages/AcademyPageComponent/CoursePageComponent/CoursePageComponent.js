@@ -191,8 +191,8 @@ function CoursePageComponent(props) {
 
     // console.log(props.match.params.course_id)
 
-    const course_id = props.match.params.course_id;
-    const the_course = props.courses.filter((course) => { return course.id == course_id })[0]
+    const course_slug = props.match.params.course_slug;
+    const the_course = props.courses.filter((course) => { return course.slug == course_slug })[0]
     console.log(`the_course`, the_course)
 
 
@@ -232,7 +232,7 @@ function CoursePageComponent(props) {
 
 
                                 <div id="course_box_title" >
-                                    <h1 style={{ fontSize: "50px" }}> {the_course.title}</h1>
+                                    <h1 style={{ fontSize: "50px", zIndex: "" }}> {the_course.title}</h1>
                                 </div>
 
                             </div>
@@ -246,7 +246,7 @@ function CoursePageComponent(props) {
                                 <div style={{ width: '100%', margin: "auto" }}>
                                     <div className='course_body_section_title'>
                                         Description:
-                                        </div>
+                                    </div>
                                     <div className='course_body_section_body'>
                                         <div className='course_section_subbody'>
                                             {the_course.description}
@@ -259,7 +259,7 @@ function CoursePageComponent(props) {
                                 <div style={{ width: '100%', margin: "auto" }}>
                                     <div className='course_body_section_title'>
                                         Prospective Participant:
-                                        </div>
+                                    </div>
                                     <div className='course_body_section_body'>
                                         <div className='course_section_subbody'>
                                             {the_course.prospective_participant}

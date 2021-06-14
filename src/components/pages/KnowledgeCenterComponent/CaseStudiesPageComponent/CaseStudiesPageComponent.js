@@ -30,7 +30,7 @@ function CaseStudiesPageComponent(props) {
                             <CardText></CardText>
                         </CardBody>
                         <CardFooter className="text-muted">
-                            <Link to={`/KNOWLEDGECENTER/CASE_STUDIES/${case_study.id}`}>
+                            <Link to={`/KNOWLEDGECENTER/CASE_STUDIES/${case_study.slug}`}>
                                 <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                                     <div style={{}}>Know more</div>
                                 </div>

@@ -15,7 +15,7 @@ function EventViewPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
 
-    const Event_id = props.match.params.Event_id;
+    const Event_slug = props.match.params.Event_slug;
 
     const { isLoading: EventIsLoading, error: EventError, sendRequest: sendEventRequest, clearError } = useHttpClient();
     const [LoadedEvent, setLoadedEvent] = useState(null);
@@ -24,14 +24,16 @@ function EventViewPageComponent(props) {
 
             try {
                 const responseData = await sendEventRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/events/${Event_id}`
+                    `${process.env.REACT_APP_BACKEND_URL}/events?slug=${Event_slug}`
                 );
 
 
 
-                const event_post = responseData.Event_post;
+                const event_post = responseData[0].Event_post;
+                console.log(`responseData`, responseData)
+
                 const modified_event_post = event_post.replace('/uploads', `${process.env.REACT_APP_BACKEND_URL}/uploads`);
-                let modified_event = { ...responseData, event_post: modified_event_post }
+                let modified_event = { ...responseData[0], event_post: modified_event_post }
 
                 setLoadedEvent(modified_event);
 
@@ -42,12 +44,12 @@ function EventViewPageComponent(props) {
 
 
         },
-        [sendEventRequest, Event_id],
+        [sendEventRequest, Event_slug],
     );
 
     useEffect(() => {
         fetchEvent()
-    }, [Event_id])
+    }, [Event_slug])
 
 
     function generate_carousel_images(gallery) {

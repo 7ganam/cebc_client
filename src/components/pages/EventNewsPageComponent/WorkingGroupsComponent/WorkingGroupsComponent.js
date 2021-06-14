@@ -14,7 +14,7 @@ function WorkingGroupsComponent(props) {
         const groups_view = groups.map((group, index) => {
             return (
                 <Col className="working_group_col" xs="12" md="7" lg="4" style={{}}>
-                    <Link className="" to={`/ABOUTUS/working_groups/${group.id}`}>
+                    <Link className="" to={`/ABOUTUS/working_groups/${group.slug}`}>
                         <div className="working_group_col_div">
                             <WorkingGroupCardComponent image={group.Thumb_nail_image} title={group.Name} />
                         </div>
@@ -33,7 +33,7 @@ function WorkingGroupsComponent(props) {
                     <div class="section_header" style={{ marginTop: "30px" }}>
                         <span class="section_header_inner">
                             Working groups
-                            </span>
+                        </span>
                         <div className="section_header_under"></div>
                     </div>
                 </Row>
