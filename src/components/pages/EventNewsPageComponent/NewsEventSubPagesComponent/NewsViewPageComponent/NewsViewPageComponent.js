@@ -13,7 +13,7 @@ function NewsViewPageComponent(props) {
 
     // console.log(props.match.params.News_id)
 
-    const News_id = props.match.params.News_id;
+    const News_slug = props.match.params.News_slug;
 
     const { isLoading: NewsIsLoading, error: NewsError, sendRequest: sendNewsRequest, clearError } = useHttpClient();
     const [LoadedNews, setLoadedNews] = useState(null);
@@ -22,14 +22,14 @@ function NewsViewPageComponent(props) {
 
             try {
                 const responseData = await sendNewsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/news/${News_id}`
+                    `${process.env.REACT_APP_BACKEND_URL}/news?slug=${News_slug}`
                 );
 
 
 
-                const news_post = responseData.page;
+                const news_post = responseData[0].page;
                 const modified_news_post = news_post.replace('/uploads', `${process.env.REACT_APP_BACKEND_URL}/uploads`);
-                let modified_news = { ...responseData, news_post: modified_news_post }
+                let modified_news = { ...responseData[0], news_post: modified_news_post }
 
                 setLoadedNews(modified_news);
 
@@ -40,12 +40,12 @@ function NewsViewPageComponent(props) {
 
 
         },
-        [sendNewsRequest, News_id],
+        [sendNewsRequest, News_slug],
     );
 
     useEffect(() => {
         fetchNews()
-    }, [News_id])
+    }, [News_slug])
 
 
     return (
@@ -78,18 +78,18 @@ function NewsViewPageComponent(props) {
                                 <div id="news_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
                                     <h1> {LoadedNews.title}</h1>
                                 </div>
-                                <div id="news_box_date" style={{ textAlign: "start", fontSize: '30px', color: "#56c7ec" }}>
-                                    <i class="fa fa-calendar mr-2" aria-hidden="true"></i>
-                                    <span>{moment(LoadedNews.date).format('DD-MMMM-YYYY')}</span>
 
-
-                                </div>
                             </div>
 
 
                         </div>
                         <div id="news_header_2">
+                            <div id="news_box_date" style={{ textAlign: "center", fontSize: '25px', color: "#56c7ec" }}>
+                                <i class="fa fa-calendar mr-2" aria-hidden="true"></i>
+                                <span>{moment(LoadedNews.date).format('DD-MMMM-YYYY')}</span>
 
+
+                            </div>
                         </div>
                         <div id="news_body">
                             <div style={{}}>

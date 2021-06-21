@@ -321,7 +321,7 @@ function NewsEventSubPagesComponent(props) {
                                     <CardText></CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">
-                                    <Link to={`/ACTIVITIES/News/${news.id}`}>
+                                    <Link to={`/ACTIVITIES/NEWS/${news.slug}`}>
                                         <div style={{ padding: '10px', borderStyle: "solid", borderWidth: "1px", background: "white", color: "black" }}>
                                             <div style={{}}>Know more</div>
                                         </div>

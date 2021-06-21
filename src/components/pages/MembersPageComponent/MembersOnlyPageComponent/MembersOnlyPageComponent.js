@@ -60,7 +60,7 @@ function MembersOnlyPageComponent(props) {
                         <CardTitle tag="h5">{news_post.title}</CardTitle>
                         <CardSubtitle tag="h6" className="mb-2 text-muted"> {news_post.date}</CardSubtitle>
                         <CardText>{news_post.thumb_nail_text}</CardText>
-                        <Link to={"/EVENTS_NEWS/News/" + news_post.id}>
+                        <Link to={"/EVENTS_NEWS/News/" + news_post.slug}>
                             <Button style={{ marginTop: '', width: '90%' }} >Know more</Button>
                         </Link>
 

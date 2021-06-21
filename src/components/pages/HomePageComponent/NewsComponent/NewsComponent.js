@@ -76,7 +76,7 @@ function NewsComponent(props) {
                     <>
                         <Row style={{ marginTop: "40px" }}>
                             <Col id="main_news_col" className="news_col main_news_col" xs="12" md="6" style={{}}>
-                                <Link className="" to={`/EVENTS_NEWS/News/${props.latest_news[0].id}`} >
+                                <Link className="" to={`/EVENTS_NEWS/News/${props.latest_news[0].slug}`} >
 
                                     <div id="main_news_div" className="p-2">
                                         <div id="main_news_img_div" style={{ width: "100%" }}>

@@ -6,6 +6,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import ReactLoading from 'react-loading';
 import { Link } from "react-router-dom";
+import moment from 'moment';
 
 
 
@@ -25,7 +26,7 @@ function PresintationsPageComponent() {
                 );
 
                 setLoadedPresentations(responseData);
-                console.log('loaded presentation-groups', responseData)
+                // console.log('loaded presentation-groups', responseData)
             } catch (err) {
                 console.log({ err })
             }
@@ -50,7 +51,27 @@ function PresintationsPageComponent() {
 
     function generate_presentations_view() {
         const presentation_container = []
+        let latest_date = '1000'
         for (const presentation_group of LoadedPresentations) {
+
+            if (presentation_group.date && (moment(presentation_group.date).year() !== latest_date)) {
+                latest_date = moment(presentation_group.date).year();
+                presentation_container.push(
+
+                    <div className='presentation_group_title' style={{ textAlign: 'center', fontSize: '35px', borderBottom: '3px solid #bebebe', marginBottom: '50px', marginTop: '70px', color: 'rgb(149 145 145)', padding: '10px' }}>
+                        {
+                            moment(presentation_group.date).year()
+
+                        }
+                        <span>
+                            {` - presentations`}
+                        </span>
+
+                    </div>
+
+                )
+
+            }
             presentation_container.push(
 
                 <div className='presentation_group_title' style={{ textAlign: 'left' }}>
@@ -61,8 +82,14 @@ function PresintationsPageComponent() {
                 </div>
 
             )
-            console.log(`presentation_group`, presentation_group)
-            for (const presentation of presentation_group.presentation) {
+            console.log(`presentation`, presentation_group.presentation)
+            let pres = [].concat(presentation_group.presentation).reverse()
+            console.log(`presentationrev`, pres)
+
+
+            for (const presentation of pres) {
+                // console.log(`presentation_title`, presentation.title)
+
                 presentation_container.push(
 
                     <div className='presentation_box'   >
@@ -73,7 +100,6 @@ function PresintationsPageComponent() {
                     </div>
 
                 )
-                console.log(`presentation_container`, presentation.title)
             }
         }
 

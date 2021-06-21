@@ -168,7 +168,7 @@ color:black
 
 #group_program_body .ck.ck-editor__main h2:before {
     content: '';
-    width: 100%;
+    width: 30%;
     height: 3px;
     position: absolute;
     bottom: -5px;
@@ -186,7 +186,7 @@ color:black
 
 
 #group_program_body .ck.ck-editor__main h2{
-    font-size: 30px;
+    font-size: 27px;
     position: relative;
     
 }#group_program_body .ck.ck-editor__main ul{
@@ -195,8 +195,8 @@ color:black
 }
 
 #group_program_body .ck.ck-editor__main ul li:before {    
-    font-family: 'FontAwesome';
-    content: '\f00c';
+    font-family: 'Font Awesome 5 free';
+    content: '\f058';
     margin:0 5px 0 -15px;
     color: #ffb600;
     margin-left: -25px;

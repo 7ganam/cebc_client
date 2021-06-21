@@ -17,9 +17,9 @@ function SingleJobViewComponent(props) {
 
     // console.log(props.match.params.Event_id)
     console.log(`singeprops.jobs`, props.jobs)
-    const job_id = props.match.params.job_id;
+    const job_slug = props.match.params.job_slug;
 
-    const the_job = props.jobs.filter((job) => job.id == job_id)[0] //leave this as two ==
+    const the_job = props.jobs.filter((job) => job.slug == job_slug)[0] //leave this as two ==
 
     // console.log(`the_job`, the_job)
 
@@ -41,9 +41,9 @@ function SingleJobViewComponent(props) {
                             <div className="job_box">
                                 {!!props.jobs && !!the_job ?
                                     <div>
-                                        <Row id="job_header" >
+                                        <div id="job_header" >
 
-                                            <Col id="header_text"
+                                            <div id="header_text"
                                                 style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}
                                             >
                                                 <div id="job_box_title" style={{ textAlign: "center", fontSize: '20px' }}>
@@ -52,10 +52,10 @@ function SingleJobViewComponent(props) {
                                                     </h1>
                                                 </div>
 
-                                            </Col>
+                                            </div>
 
 
-                                        </Row>
+                                        </div>
                                         <div id="job_header_2">
                                             {/* <div style={{ display: 'flex', flexWrap: "wrap", justifyContent: 'center' }}>
 

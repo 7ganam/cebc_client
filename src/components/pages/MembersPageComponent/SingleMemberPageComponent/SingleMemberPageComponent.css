@@ -1,3 +1,14 @@
+
+#member_box_title {
+    font-family: 'Raleway', sans-serif;
+
+}
+.member_description{
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+
 #member_background{
     background-color: #F1F1F1;
     min-height: 100vh;

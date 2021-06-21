@@ -62,9 +62,8 @@
 }
 .course_body_section_title{
     text-align: left ;
-    font-size: 50px;
     font-family: 'Raleway', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     border-bottom: solid 2px #ffb600;
 }
 .course_body_section_body{
@@ -260,7 +259,7 @@ color:black
 
 #course_body .ck.ck-editor__main h2:before {
     content: '';
-    width: 100%;
+    width: 30%;
     height: 3px;
     position: absolute;
     bottom: -5px;

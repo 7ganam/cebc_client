@@ -168,9 +168,9 @@ const NavbarComponent = (props) => {
                                     />
 
                                     <ExtendedNavItemComponent2
-                                        location={props.location} main_nav={{ base_path: "/MEMBERSHIP", path: "/MEMBERSHIP/BENIFITS", text: "MEMBERSHIP" }}
+                                        location={props.location} main_nav={{ base_path: "/MEMBERSHIP", path: "/MEMBERSHIP/BENEFITS", text: "MEMBERSHIP" }}
                                         sub_navs={[
-                                            { path: "/MEMBERSHIP/BENIFITS", text: "benefits & levels" },
+                                            { path: "/MEMBERSHIP/BENEFITS", text: "benefits & levels" },
                                             // { path: "/MEMBERSHIP/LEVELS", text: "levels" },
                                             { path: "/MEMBERSHIP/MEMBERS", text: "members" },
                                             { path: "/MEMBERSHIP/PARTNERS", text: "partners" },

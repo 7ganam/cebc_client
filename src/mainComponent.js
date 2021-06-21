@@ -149,7 +149,7 @@ export default function MainComponent() {
 
 
 
-                        <Route path="/ABOUTUS/JOBS/:job_id">
+                        <Route path="/ABOUTUS/JOBS/:job_slug">
                             {(props) => <SingleJobViewComponent {...props} jobs={LoadedJobs} />}
                         </Route>
 
@@ -255,7 +255,7 @@ export default function MainComponent() {
 
 
 
-                        <Route path="/ACTIVITIES/News/:News_id"
+                        <Route path="/ACTIVITIES/NEWS/:News_slug"
                             component={(props) =>
                                 <   NewsViewPageComponent {...props} />
                             }
@@ -446,7 +446,7 @@ export default function MainComponent() {
 
 
 
-                        <Route exact path="/MEMBERSHIP/BENIFITS">
+                        <Route exact path="/MEMBERSHIP/BENEFITS">
                             <BenifitsPageComponent />
                         </Route>
                         <Route exact path="/MEMBERSHIP/LEVELS">
@@ -482,7 +482,7 @@ export default function MainComponent() {
 
 
 
-                        <Route path="/EVENTS_NEWS/News/:News_id"
+                        <Route path="/EVENTS_NEWS/News/:News_slug"
                             component={(props) =>
                                 <   NewsViewPageComponent {...props} />
                             }

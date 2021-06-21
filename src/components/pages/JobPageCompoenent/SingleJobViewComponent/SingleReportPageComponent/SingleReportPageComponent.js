@@ -96,7 +96,7 @@ function SingleReportPageComponent(props) {
                                         <div className="open_report_button">
                                             <a target="_blank" href={the_report.file && the_report.file.url} style={{ textDecoration: 'none' }} rel="noreferrer">
                                                 <div className="report_publication_button">
-                                                    <div>open </div>
+                                                    <div>Open </div>
                                                     <i className="fas fa-external-link-alt ml-3"></i>
                                                 </div>
                                             </a>
@@ -112,19 +112,19 @@ function SingleReportPageComponent(props) {
                             <div className="report_box">
                                 {!!the_report && !!props.reports.length > 0 ?
                                     <div>
-                                        <Row id="report_header" >
+                                        <div id="report_header" >
 
-                                            <Col id="header_text"
-                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "210", justifyContent: "center" }}
+                                            <div id="header_text"
+                                                style={{ backgroundColor: "", flexGrow: "1", marginLeft: "20px", display: "flex", flexDirection: "column", minHeight: "200", justifyContent: "center" }}
                                             >
-                                                <div id="report_box_title" style={{ textAlign: "start", fontSize: '20px' }}>
+                                                <div id="report_box_title" style={{ textAlign: "center", fontSize: '20px' }}>
                                                     <h1> {the_report.title}</h1>
                                                 </div>
 
-                                            </Col>
+                                            </div>
 
 
-                                        </Row>
+                                        </div>
                                         <div id="report_header_2">
 
                                         </div>

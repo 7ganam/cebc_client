@@ -91,6 +91,26 @@ function SingleWorkingGroupPageComponent(props) {
 
     }
 
+    function generate_webinars_views() {
+
+        const members_views = the_group.webinars.map((webinar, index) => {
+            return (
+                <Link className="report_link" to={`/KNOWLEDGECENTER/WEBINARS/${webinar.slug}`}>
+
+                    <div className='report_container'       >
+                        <i class="fas fa-external-link-alt mr-2 ml-1"></i>
+                        {` ${webinar.title}`}
+
+                    </div>
+
+                </Link>
+            )
+
+        })
+        return members_views
+
+    }
+
     return (
         <>
 
@@ -193,8 +213,6 @@ function SingleWorkingGroupPageComponent(props) {
 
                             {the_group.report_puplications.length > 0 &&
                                 <>
-
-
                                     <>
                                         <Row className="title_row" style={{ maxWidth: '1000px', margin: 'auto' }}>
                                             <div className="section_header section_header_side" >
@@ -207,6 +225,26 @@ function SingleWorkingGroupPageComponent(props) {
                                         <Row className=" justify-content-center" style={{ maxWidth: '900px', margin: 'auto' }}>
                                             <div style={{ padding: '0', margin: '20px auto 40px auto', maxWidth: '85vw', width: '100%', display: "flex", flexWrap: "wrap", justifyContent: "start", flexDirection: 'column' }}>
                                                 {generate_reports_views()}
+                                            </div>
+                                        </Row>
+                                    </>
+                                </>
+                            }
+
+                            {the_group.webinars.length > 0 &&
+                                <>
+                                    <>
+                                        <Row className="title_row" style={{ maxWidth: '1000px', margin: 'auto' }}>
+                                            <div className="section_header section_header_side" >
+                                                <span className="section_header_inner"     >
+                                                    Webinars
+                                                </span>
+                                                <div className="section_header_under" ></div>
+                                            </div>
+                                        </Row>
+                                        <Row className=" justify-content-center" style={{ maxWidth: '900px', margin: 'auto' }}>
+                                            <div style={{ padding: '0', margin: '20px auto 40px auto', maxWidth: '85vw', width: '100%', display: "flex", flexWrap: "wrap", justifyContent: "start", flexDirection: 'column' }}>
+                                                {generate_webinars_views()}
                                             </div>
                                         </Row>
                                     </>

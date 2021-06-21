@@ -95,7 +95,7 @@ function SingleCaseStudyPageComponent(props) {
                                         <div className="open_report_button">
                                             <a target="_blank" href={!!the_case_study.file && the_case_study.file.url} style={{ textDecoration: 'none' }} rel="noreferrer">
                                                 <div className="report_publication_button">
-                                                    <div>open </div>
+                                                    <div>Open </div>
                                                     <i className="fas fa-external-link-alt ml-3"></i>
                                                 </div>
                                             </a>

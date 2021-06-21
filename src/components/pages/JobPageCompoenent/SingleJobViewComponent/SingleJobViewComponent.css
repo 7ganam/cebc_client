@@ -40,9 +40,8 @@
 
 #job_header{
     width: 100%;
-    min-height: 150px;
+    min-height: 50px;
     margin: 0;
-    padding: 20px;
     background: #ffffff;
     border: 1px solid #d7d7d7;
 }

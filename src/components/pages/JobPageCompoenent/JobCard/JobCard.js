@@ -15,11 +15,11 @@ const JobCard = (props) => {
 
     return (
         <div className="job_card">
-            <Link className="" to={`/ABOUTUS/JOBS/${props.job.id}`}>
+            <Link className="" to={`/ABOUTUS/JOBS/${props.job.slug}`}>
                 <Card>
                     <CardBody>
                         {/* <CardTitle className='header_text' tag="h2" style={{ marginTop: '0px' }}></CardTitle> */}
-                        <h2 className='header_text' style={{ margin: '10px', height: '100%' }}>
+                        <h2 className='header_text' style={{ margin: '10px', height: '100%', fontSize: '27px' }}>
                             {props.job.title}
                         </h2>
 

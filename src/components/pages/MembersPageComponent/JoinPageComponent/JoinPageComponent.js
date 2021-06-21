@@ -289,7 +289,7 @@ function JoinPageComponent() {
                                                             type='textarea'
                                                             id='message'
                                                             name='message'
-                                                            placeholder='message '
+                                                            placeholder='Your message '
                                                         />
                                                     </Col>
                                                     <Col xs={12} style={{ padding: '0px' }}>

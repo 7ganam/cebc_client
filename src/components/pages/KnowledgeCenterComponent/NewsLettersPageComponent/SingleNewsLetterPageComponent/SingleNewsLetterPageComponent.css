@@ -136,6 +136,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #FCC744;
+
 }
 
 #NewsLetter_box_title{

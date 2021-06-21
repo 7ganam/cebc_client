@@ -110,6 +110,28 @@ function SingleMemberPageComponent(props) {
 
     }
 
+
+    function generate_news_views(news) {
+
+        const members_views = news.map((news_post, index) => {
+            return (
+                <Link className="report_link" to={`/KNOWLEDGECENTER/NEWS/${news_post.slug}`}>
+
+                    <div className='report_container'       >
+                        <i class="fas fa-external-link-alt mr-2 ml-1"></i>
+                        {` ${news_post.title}`}
+
+                    </div>
+
+                </Link>
+            )
+
+        })
+        return members_views
+
+    }
+
+
     return (
         <>
 
@@ -162,18 +184,19 @@ function SingleMemberPageComponent(props) {
                                             <div style={{}}>
 
                                                 <div style={{ width: '100%', margin: "auto" }}>
-                                                    {member.description}
+                                                    <div className='member_description'> {member.description}</div>
                                                     <Editor value={member.entity_page} onChange={(input) => { }} />
                                                 </div>
+
                                                 {member.entity_website &&
-                                                    <a href={member.entity_website} target="_blank" rel="noreferrer">
-
-                                                        <div style={{ width: '100%', margin: "auto", border: '1px solid gray', padding: '7px' }}>
-                                                            <div >{member.entity_website}</div>
-
-                                                        </div>
-                                                    </a>
-
+                                                    <div className="open_report_button" style={{ marginTop: '20px' }}>
+                                                        <a target="_blank" href={member.entity_website} style={{ textDecoration: 'none' }} rel="noreferrer">
+                                                            <div className="report_publication_button" style={{ height: '35px', fontSize: '20px' }}>
+                                                                <div>Website </div>
+                                                                <i className="fas fa-external-link-alt ml-3"></i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 }
                                             </div>
                                         </div>
@@ -267,6 +290,29 @@ function SingleMemberPageComponent(props) {
                                     </Container>
                                 </>
                             }
+
+                            {!!member && !!member.news && !!member.news.length > 0 &&
+                                <>
+                                    <Container>
+
+                                        <Row className="title_row">
+                                            <div className="section_header section_header_side" >
+                                                <span className="section_header_inner"     >
+                                                    News
+                                                </span>
+                                                <div className="section_header_under" ></div>
+                                            </div>
+                                        </Row>
+                                        <Row>
+
+                                            {generate_news_views(member.news)}
+
+                                        </Row>
+
+                                    </Container>
+                                </>
+                            }
+
 
 
                         </Col>
