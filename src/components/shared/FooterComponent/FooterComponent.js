@@ -1,6 +1,7 @@
 import React from 'react'
 import "./FooterComponent.css"
 import footerLogo from './smaller.png'
+import { Link } from 'react-router-dom'
 
 const $ = require("jquery");
 
@@ -18,14 +19,19 @@ function FooterComponent() {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4">
-                                <aside id="text-22" className="widget widget_text"><h3 className="widget-title">About the CEBC</h3>
+                                <aside id="text-22" className="widget widget_text">
+                                    <h3 className="widget-title">About the CEBC</h3>
                                     <div className="textwidget">
                                         <span className="footer-cebc">
                                             Registered as a Not for Profit Company in Abu Dhabi Global Market (ADGM), the Clean Energy Business Council is the pre-eminent
                                             organization representing the private sector involved in the clean energy sector across the MENA region.
-                                            <br /><br />
-                                            Our goal is to establish a dialogue between the public and private sectors to drive the development of appropriate and much needed regulation and policy to support the development of this vital sector.
-                                            <br />
+                                        </span>
+                                    </div>
+                                    <h3 className="widget-title">Careers</h3>
+                                    <div className="textwidget">
+                                        <span className="footer-cebc">
+                                            Visit our job posting section
+                                            <Link to={'/ABOUTUS/JOBS'} > here</Link>
                                         </span>
                                     </div>
                                 </aside>

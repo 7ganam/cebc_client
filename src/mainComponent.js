@@ -511,9 +511,10 @@ export default function MainComponent() {
 
 
                     </Switch>
+                    <FooterComponent />
+
                 </Router>
             </div>
-            <FooterComponent />
 
         </div >
 
