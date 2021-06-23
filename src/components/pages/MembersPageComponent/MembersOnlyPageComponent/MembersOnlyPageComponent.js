@@ -38,7 +38,7 @@ function MembersOnlyPageComponent(props) {
                     <CardTitle tag="h5">{event.Title}</CardTitle>
                     <CardSubtitle tag="h6" className="mb-2 text-muted"> {event.date}</CardSubtitle>
                     <CardText>{ }</CardText>
-                    <Link to={"/EVENTS_NEWS/UPCOMMMING/" + event.id}>
+                    <Link to={"/EVENTS_NEWS/UPCOMMMING/" + event.slug}>
 
                         <Button style={{ marginTop: '', width: '90%' }} >Know more</Button>
 
