@@ -115,7 +115,7 @@ function SingleMemberPageComponent(props) {
 
         const members_views = news.map((news_post, index) => {
             return (
-                <Link className="report_link" to={`/KNOWLEDGECENTER/NEWS/${news_post.slug}`}>
+                <Link className="report_link" to={`/EVENTS_NEWS/NEWS/${news_post.slug}`}>
 
                     <div className='report_container'       >
                         <i class="fas fa-external-link-alt mr-2 ml-1"></i>
