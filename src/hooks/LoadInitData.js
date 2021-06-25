@@ -34,7 +34,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendProjectsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/projects`
+                    `${process.env.REACT_APP_BACKEND_URL}/projects?_limit=-1`
                 );
                 setLoadedProjects(responseData);
                 // console.log('projects ', responseData)
@@ -87,7 +87,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendReportsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/reports-publications?_limit=1000`
+                    `${process.env.REACT_APP_BACKEND_URL}/reports-publications?_limit=-1`
                 );
                 setLoadedReports(responseData);
                 // console.log('Reports', responseData)
@@ -106,7 +106,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendCase_studiesRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/case-studies`
+                    `${process.env.REACT_APP_BACKEND_URL}/case-studies?_limit=-1`
                 );
                 setLoadedCase_studies(responseData);
                 // console.log('Case_studies', responseData)
@@ -163,7 +163,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendBlogsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/blogs`
+                    `${process.env.REACT_APP_BACKEND_URL}/blogs?_limit=-1`
                 );
                 setLoadedBlogs(responseData);
                 // console.log('Blogs ', responseData)
@@ -182,7 +182,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendLinksRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/useful-links`
+                    `${process.env.REACT_APP_BACKEND_URL}/useful-links?_limit=-1`
                 );
                 setLoadedLinks(responseData);
                 // console.log('Links ', responseData)
@@ -220,7 +220,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendEntity_sRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/entities`
+                    `${process.env.REACT_APP_BACKEND_URL}/entities?_limit=-1`
                 );
                 setLoadedEntity_s(responseData);
                 // console.log('fetched_Entity_s ', responseData)
@@ -238,7 +238,7 @@ function useInitLoadedData() {
             try {
                 const responseData = await sendStaff_membersRequest(
                     // `${process.env.REACT_APP_BACKEND_URL}/staff-members`
-                    `${process.env.REACT_APP_BACKEND_URL}/users`
+                    `${process.env.REACT_APP_BACKEND_URL}/users?_limit=-1`
 
                 );
                 setLoadedStaff_members(responseData);
@@ -257,7 +257,7 @@ function useInitLoadedData() {
         async () => {
             try {
                 const responseData = await sendJobsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/jobs`
+                    `${process.env.REACT_APP_BACKEND_URL}/jobs?_limit=-1`
                 );
                 setLoadedJobs(responseData);
                 // console.log('fetched_Jobs ', responseData)
@@ -291,7 +291,7 @@ function useInitLoadedData() {
     const fetch_Newsletters = useCallback(
         async () => {
             try {
-                const responseData = await sendNewslettersRequest(`${process.env.REACT_APP_BACKEND_URL}/newsletters`);
+                const responseData = await sendNewslettersRequest(`${process.env.REACT_APP_BACKEND_URL}/newsletters?_limit=-1`);
                 setLoadedNewsletters(responseData);
                 // console.log('fetched_Newsletters ', responseData)
             } catch (err) {

@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 function StaffMemberSingleViewPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
-    // console.log(`singeprops.staff`, props.staff)
+    console.log(`singeprops.staff`, props.staff)
     const member_slug = props.match.params.member_slug;
 
     const the_member = props.staff.filter((member) => member.slug == member_slug)[0] //leave this as two ==
@@ -137,8 +137,8 @@ function StaffMemberSingleViewPageComponent(props) {
                                     </div>
                                     :
                                     <div id="loading_spinner" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "150px" }} >
-                                        <div style={{ marginTop: "100px" }}>
-                                            <ReactLoading type={"spin"} color={"#00D2F9"} width={"20vw"} />
+                                        <div style={{ marginTop: "10px" }}>
+                                            <ReactLoading type={"spin"} color={"#00D2F9"} width={"200px"} />
                                         </div>
                                     </div>
 
