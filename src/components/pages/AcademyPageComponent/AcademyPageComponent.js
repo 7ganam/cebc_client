@@ -62,11 +62,11 @@ function AcademyPageComponent(props) {
 
             <Container>
 
-                <Row>
+                {/* <Row>
                     <Col style={{ fontFamily: "'Raleway', sans-serif", textAlign: 'left', marginBottom: '30px', marginTop: '90px' }}>
                         CEBC provides courses to help empower Clean energy industries in the MENA region.
                     </Col>
-                </Row>
+                </Row> */}
                 <div className='courses_div'>
                     {props.courses && props.courses.length > 0 ?
                         render_courses()
