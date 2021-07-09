@@ -239,8 +239,10 @@ function CoursePageComponent(props) {
                             <div id="course_header_2">
                                 <i class="fas fa-chalkboard-teacher mr-2"></i>
 
-                                {`CEBC COURSE `}
-                                {/* {the_course.Type} */}
+                                {/* {`CEBC COURSE `} */}
+                                {the_course.course_type === "member_course" ? "MEMBER COURSE" : ""}
+                                {the_course.course_type === "cebc_course" ? "CEBC COURSE" : ""}
+
                             </div>
                             <div id="course_body">
                                 <div style={{ width: '100%', margin: "auto" }}>
@@ -256,25 +258,42 @@ function CoursePageComponent(props) {
                                 </div>
 
 
-                                <div style={{ width: '100%', margin: "auto" }}>
-                                    <div className='course_body_section_title'>
-                                        Prospective Participant:
-                                    </div>
-                                    <div className='course_body_section_body'>
-                                        <div className='course_section_subbody'>
-                                            {the_course.prospective_participant}
-                                        </div>
-                                    </div>
 
-                                </div>
 
                                 <div className='course_body_section_title'>
-                                    Structure:
+                                    curriculum:
 
                                 </div>
                                 <div className='course_body_section_body' >
                                     <Editor value={the_course.structure} onChange={(input) => { }} />
                                 </div>
+
+                                {the_course.instructor_biography &&
+                                    <div>
+                                        <div className='course_body_section_title'>
+                                            instructor biography:
+
+                                        </div>
+                                        <div className='course_body_section_body' >
+                                            <Editor value={the_course.instructor_biography} onChange={(input) => { }} />
+                                        </div>
+                                    </div>
+                                }
+
+                                {the_course.price &&
+                                    <div>
+                                        <div className='course_body_section_title'>
+                                            price:
+
+                                        </div>
+                                        <div className='course_body_section_body' >
+                                            <Editor value={the_course.price} onChange={(input) => { }} />
+                                        </div>
+                                    </div>
+                                }
+
+
+
                             </div>
                         </div>
 
@@ -296,8 +315,6 @@ function CoursePageComponent(props) {
                         <>
                             {the_course &&
                                 <div>
-
-
                                     <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "0px" }}>
                                         <Row style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>
                                             <Col md={5} style={{ height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex' }}>

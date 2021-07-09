@@ -11,9 +11,15 @@ import ReactLoading from 'react-loading';
 
 function AcademyPageComponent(props) {
     console.log(`courses`, props.courses)
+    let members_courses;
+    let cebc_courses;
+    if (props.courses) {
+        members_courses = props.courses.filter((course) => course.course_type === "member_course")
+        cebc_courses = props.courses.filter((course) => course.course_type === "cebc_course")
+    }
 
-    function render_courses() {
-        const courses_view = props.courses.map((course, index) => (
+    function render_courses(courses) {
+        const courses_view = courses.map((course, index) => (
 
             <div className='course_card'>
                 <Card style={{ height: "100%", }}>
@@ -52,7 +58,7 @@ function AcademyPageComponent(props) {
                 <Row className=" justify-content-center">
                     <Col>
                         <div class="sub_page_header">
-                            <span class="sub_page_header_inner">CEBC COURSES</span>
+                            <span class="sub_page_header_inner"> COURSES</span>
                             <div className="sub_page_header_under"></div>
 
                         </div>
@@ -67,9 +73,22 @@ function AcademyPageComponent(props) {
                         CEBC provides courses to help empower Clean energy industries in the MENA region.
                     </Col>
                 </Row> */}
+
+                <Row className="title_row mt-5">
+                    <div className="section_header section_header_side" >
+                        <span className="section_header_inner"     >
+                            CEBC Courses:
+                        </span>
+                        <div className="section_header_under" ></div>
+                    </div>
+                </Row>
                 <div className='courses_div'>
-                    {props.courses && props.courses.length > 0 ?
-                        render_courses()
+
+                    {props.courses && props.courses.length > 0 && cebc_courses ?
+                        <>
+
+                            {render_courses(cebc_courses)}
+                        </>
                         :
                         <div style={{ margin: 'auto' }}>
                             <div style={{ marginTop: "100px" }}>
@@ -79,6 +98,30 @@ function AcademyPageComponent(props) {
                     }
 
                 </div>
+
+
+
+
+
+                {props.courses && props.courses.length > 0 && members_courses.length > 0 &&
+                    <>
+                        <Row className="title_row mt-5">
+                            <div className="section_header section_header_side" >
+                                <span className="section_header_inner"     >
+                                    members courses:
+                                </span>
+                                <div className="section_header_under" ></div>
+                            </div>
+                        </Row>
+                        <div className='courses_div'>
+
+                            {render_courses(members_courses)}
+                        </div>
+                    </>
+                }
+
+
+
             </Container>
 
         </div>
