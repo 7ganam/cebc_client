@@ -64,7 +64,7 @@ function PresintationsPageComponent() {
 
                         }
                         <span>
-                            {` - presentations`}
+                            {` - Presentations`}
                         </span>
 
                     </div>

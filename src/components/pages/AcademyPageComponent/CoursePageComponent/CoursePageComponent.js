@@ -184,7 +184,31 @@ function CoursePageComponent(props) {
 
 
 
+    function generate_instructors_view(instructors) {
+        // console.log(`the_group.users`, the_group.users)
+        const members = instructors.map((member) => {
+            return (
 
+                <div className='member_container'
+                    style={{ display: 'flex', flexDirection: 'column' }}
+                >
+
+                    <Link to={`/ABOUTUS/STAFF/${member.slug}`} style={{ textDecoration: 'none' }} >
+                        <div className='entity_image_container' style={{ width: '100%', height: '170px' }}>
+                            <img className='entity_image' src={member.image && member.image.url} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
+                        </div>
+                        <div className='member_text'>
+                            <div className="member_name"> {member.username}</div>
+                            <div className="member_position"> {member.title}</div>
+                            {/* <div className="member_Entity"> {member.Entity}</div> */}
+                        </div>
+                    </Link>
+                </div>
+
+            )
+        })
+        return members;
+    }
 
 
 
@@ -240,50 +264,61 @@ function CoursePageComponent(props) {
                                 <i class="fas fa-chalkboard-teacher mr-2"></i>
 
                                 {/* {`CEBC COURSE `} */}
-                                {the_course.course_type === "member_course" ? "MEMBER COURSE" : ""}
+                                {the_course.course_type === "member_course" ? "PARTNER COURSE" : ""}
                                 {the_course.course_type === "cebc_course" ? "CEBC COURSE" : ""}
 
                             </div>
                             <div id="course_body">
-                                <div style={{ width: '100%', margin: "auto" }}>
-                                    <div className='course_body_section_title'>
-                                        Description:
-                                    </div>
-                                    <div className='course_body_section_body'>
-                                        <div className='course_section_subbody'>
-                                            {the_course.description}
+                                {the_course.course_type === "cebc_course" &&
+                                    <div style={{ width: '100%', margin: "auto" }}>
+                                        <div className='course_body_section_title'>
+                                            Description:
                                         </div>
+                                        <div className='course_body_section_body'>
+                                            <div className='course_section_subbody'>
+                                                {the_course.description}
+                                            </div>
+                                        </div>
+
                                     </div>
-
-                                </div>
-
+                                }
 
 
+                                {the_course.course_type === "cebc_course" &&
+                                    <div className='course_body_section_title'>
+                                        Curriculum:
 
-                                <div className='course_body_section_title'>
-                                    curriculum:
-
-                                </div>
+                                    </div>}
                                 <div className='course_body_section_body' >
                                     <Editor value={the_course.structure} onChange={(input) => { }} />
                                 </div>
 
-                                {the_course.instructor_biography &&
+                                {the_course.course_type === "cebc_course" && the_course.instructors &&
                                     <div>
                                         <div className='course_body_section_title'>
-                                            instructor biography:
+                                            Instructors :
 
                                         </div>
-                                        <div className='course_body_section_body' >
+                                        {/* <div className='course_body_section_body' >
                                             <Editor value={the_course.instructor_biography} onChange={(input) => { }} />
-                                        </div>
+                                        </div> */}
+                                        {
+                                            <Row className=" justify-content-center ml-5">
+                                                <div style={{ maxWidth: '1000px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "50px", marginBottom: "40px" }}>
+                                                    {generate_instructors_view(the_course.instructors)}
+
+                                                </div>
+                                            </Row>
+                                        }
+
+
                                     </div>
                                 }
 
-                                {the_course.price &&
+                                {the_course.course_type === "cebc_course" && the_course.price &&
                                     <div>
                                         <div className='course_body_section_title'>
-                                            price:
+                                            Price:
 
                                         </div>
                                         <div className='course_body_section_body' >
@@ -311,7 +346,7 @@ function CoursePageComponent(props) {
 
 
                 <div id="members_container">
-                    {!!the_course &&
+                    {!!the_course && the_course.course_type === "cebc_course" &&
                         <>
                             {the_course &&
                                 <div>
@@ -350,7 +385,7 @@ function CoursePageComponent(props) {
                                 </div>
                             }
 
-                            {the_course &&
+                            {the_course && the_course.course_type === "cebc_course" &&
                                 <div>
                                     <div style={{ maxWidth: '1000px', minWidth: '300px', margin: 'auto', width: '85vw', display: "flex", flexWrap: "wrap", justifyContent: "start", marginTop: "0px", marginBottom: "40px" }}>
 
@@ -367,7 +402,6 @@ function CoursePageComponent(props) {
 
                                                                 <div class="form_section_header" style={{}}>
                                                                     <span class="" style={{ marginTop: "20px", fontSize: '27px', fontWeight: 'bold' }}>APPLY NOW</span>
-
                                                                 </div>
 
 

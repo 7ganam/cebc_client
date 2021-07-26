@@ -72,8 +72,12 @@ function SingleWorkingGroupPageComponent(props) {
     }
 
     function generate_reports_views() {
+        // let reports = the_group.report_puplications.reverse()
+        var reports = [].concat(the_group.report_puplications).reverse();
 
-        const members_views = the_group.report_puplications.map((report, index) => {
+        console.log(`reports`, reports)
+
+        const members_views = reports.map((report, index) => {
             return (
                 <Link className="report_link" to={`/KNOWLEDGECENTER/REPORTS/${report.slug}`}>
 

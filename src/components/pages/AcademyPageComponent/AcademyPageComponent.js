@@ -108,7 +108,7 @@ function AcademyPageComponent(props) {
                         <Row className="title_row mt-5">
                             <div className="section_header section_header_side" >
                                 <span className="section_header_inner"     >
-                                    members courses:
+                                    partners courses:
                                 </span>
                                 <div className="section_header_under" ></div>
                             </div>
