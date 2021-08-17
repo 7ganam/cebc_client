@@ -1,38 +1,20 @@
 import "./CoursePageComponent.css"
 import { Link } from "react-router-dom";
 import moment from 'moment';
-
-
-
-import React, { useCallback, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactLoading from 'react-loading';
-import { useHttpClient } from "../../../../hooks/http-hook"
-
-import renderHTML from 'react-render-html';
-
 import Editor from './Editor/Editor'
-import { Col, Container, Row } from 'reactstrap';
-
-
-
-
+import { Col, Row } from 'reactstrap';
 import { useRef } from 'react'
-import { Modal, ModalBody, } from 'reactstrap';
-
-
-import { useContext } from "react";
 import * as Yup from 'yup'
-
 import logo_black from './logo_black.png'
 import { Alert } from 'reactstrap';
-
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 
 
 
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
 
 
@@ -42,7 +24,7 @@ const validationSchema = Yup.object({
         .email('Invalid email format')
         .required('Required'),
     entity: Yup.string().required('Required'),
-    message: Yup.string().required('Required'),
+    // message: Yup.string().required('Required'),
 
 })
 const initialValues = {
@@ -50,6 +32,9 @@ const initialValues = {
     email: '',
     entity: '',
     Message: '',
+    course_name: '',
+    discount_code: '',
+
 }
 
 
@@ -61,12 +46,6 @@ const initialValues = {
 
 
 function CoursePageComponent(props) {
-
-
-
-
-
-
 
     const formRef = useRef();
     const [modal, setModal] = useState(false);
@@ -80,13 +59,17 @@ function CoursePageComponent(props) {
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
         console.log('Form data', values)
-        console.log('submitProps', submitProps)
+        // console.log('submitProps', submitProps)
+        // console.log('the_course', the_course)
+
+
         const request_data = {
             "sender_name": values.name,
             "entity_name": values.entity,
             "email": values.email,
             "message": values.message,
-            "course": the_course,
+            "course_name": the_course.title,
+            "discount_code": values.discount_code,
 
         }
         console.log('request_data', request_data)
@@ -181,9 +164,6 @@ function CoursePageComponent(props) {
 
 
 
-
-
-
     function generate_instructors_view(instructors) {
         // console.log(`the_group.users`, the_group.users)
         const members = instructors.map((member) => {
@@ -217,7 +197,7 @@ function CoursePageComponent(props) {
 
     const course_slug = props.match.params.course_slug;
     const the_course = props.courses.filter((course) => { return course.slug == course_slug })[0]
-    console.log(`the_course`, the_course)
+    // console.log(`the_course`, the_course)
 
 
 
@@ -486,11 +466,21 @@ function CoursePageComponent(props) {
                                                                                         placeholder='message '
                                                                                     />
                                                                                 </Col>
-                                                                                <Col xs={12} style={{ padding: '0px' }}>
-                                                                                    <ErrorMessage className='err_msg' name='message'>
-                                                                                        {error => <div className='formikerror'>{error}</div>}
-                                                                                    </ErrorMessage>
+
+                                                                            </Row>
+
+                                                                            <Row className='formik-control'>
+                                                                                <Col md={12} style={{ padding: '0px 10px 0px 0px ' }}>
+                                                                                    <label className='formik-label' htmlFor='discount_code'>Discount Code</label>
                                                                                 </Col>
+                                                                                <Col style={{ padding: '0px' }}>
+                                                                                    <Field
+                                                                                        type='text'
+                                                                                        id='discount_code'
+                                                                                        name='discount_code'
+                                                                                    />
+                                                                                </Col>
+
                                                                             </Row>
 
                                                                             {render_submit_button()}
