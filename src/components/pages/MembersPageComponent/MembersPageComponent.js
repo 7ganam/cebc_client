@@ -3,6 +3,14 @@ import { Container, Row, Col } from 'reactstrap'
 import "./MembersPageComponent.css"
 import { Link } from "react-router-dom";
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function MembersPageComponent(props) {
 
 
@@ -17,7 +25,7 @@ function MembersPageComponent(props) {
                         <div class="member_card">
                             {member.entity_image ?
                                 <div class="member_card_sub_div2">
-                                    <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} alt='member' />
+                                    <img class="mem_carousel_img" src={s3_map(member.entity_image && member.entity_image.url)} alt='member' />
                                 </div>
                                 :
                                 <div class="member_card_sub_div2 mem_carousel_sub_elem_text">

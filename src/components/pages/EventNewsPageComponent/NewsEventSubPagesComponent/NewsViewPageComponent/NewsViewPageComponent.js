@@ -9,6 +9,15 @@ import { Col, Container, Row } from 'reactstrap';
 
 import moment from 'moment';
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function NewsViewPageComponent(props) {
 
     // console.log(props.match.params.News_id)
@@ -64,7 +73,7 @@ function NewsViewPageComponent(props) {
                             <div id="header_img" style={{ backgroundColor: "", padding: "0px", height: "210px", width: "300px", maxWidth: '100%' }}>
                                 {LoadedNews.thumbnail_image ?
                                     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
-                                        <img src={`${LoadedNews.thumbnail_image.url}`}
+                                        <img src={s3_map(`${LoadedNews.thumbnail_image.url}`)}
                                             style={{ width: "300px", height: "auto", }} alt="" />
                                     </div>
                                     :

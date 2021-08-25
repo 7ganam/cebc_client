@@ -9,6 +9,14 @@ import {
 import { Link } from 'react-router-dom';
 import ReactLoading from 'react-loading';
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function AcademyPageComponent(props) {
     console.log(`courses`, props.courses)
     let members_courses;
@@ -23,7 +31,7 @@ function AcademyPageComponent(props) {
 
             <div className='course_card'>
                 <Card style={{ height: "100%", }}>
-                    <CardImg top width="100%" height='170px' style={{}} src={course.image && course.image.url} alt="Card image cap" />
+                    <CardImg top width="100%" height='170px' style={{}} src={s3_map(course.image && course.image.url)} alt="Card image cap" />
                     <CardBody style={{ display: 'flex', flexDirection: "column", paddingTop: '3px' }}>
                         <div style={{ flexGrow: '1' }}></div>
                         <CardTitle tag="h5"

@@ -122,7 +122,7 @@ function BenifitsPageComponent() {
                 <Row className=" justify-content-center">
                     <Col>
                         <div class="page_header"
-                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/2000x1125energystorageshutterstock_356374046_b0929ff095.jpg")` }}
+                            style={{ backgroundImage: `url("https://cebc3.s3.eu-central-1.amazonaws.com/2000x1125energystorageshutterstock_356374046_b0929ff095.jpg")` }}
                         >
                             <span class="page_header_inner"> Membership Benefits & Levels</span>
                             <div className="page_header_under"></div>

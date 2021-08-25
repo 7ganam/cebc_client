@@ -11,6 +11,14 @@ import { Col, Container, Row } from 'reactstrap';
 import moment from 'moment';
 import { Carousel } from 'react-responsive-carousel';
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function EventViewPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
@@ -54,7 +62,7 @@ function EventViewPageComponent(props) {
         let images = gallery.map((image, index) =>
         (
             <div>
-                <img style={{ height: "300px", width: "auto" }} src={image.url} alt="wice" className="yours-custom-class" />
+                <img style={{ height: "300px", width: "auto" }} src={s3_map(image.url)} alt="wice" className="yours-custom-class" />
                 <p className="legend">Legend 2</p>
             </div>
         )
@@ -79,7 +87,7 @@ function EventViewPageComponent(props) {
                             <div id="header_img" style={{ backgroundColor: "", padding: "0px", height: "210px", width: "300px", maxWidth: '100%' }}>
                                 {LoadedEvent.Event_thumbnail_image ?
                                     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
-                                        <img src={`${LoadedEvent.Event_thumbnail_image.url}`}
+                                        <img src={s3_map(`${LoadedEvent.Event_thumbnail_image.url}`)}
                                             style={{ width: "300px", height: "auto", }} alt="" />
                                     </div>
                                     :

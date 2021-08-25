@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap'
 import "./ProjectsPageComponent.css"
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function ProjectsPageComponent(props) {
 
     console.log(`props.projects`, props.projects)
@@ -13,7 +22,7 @@ function ProjectsPageComponent(props) {
                     <Link to={`/KNOWLEDGECENTER/PROJECTS/${project.slug}`}>
                         <div className="project_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
-                                <img src={project.image && project.image.url} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                <img src={s3_map(project.image && project.image.url)} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                             </div>
 
                             <div style={{ background: "white", width: "100%", minHeight: "60px", color: "black", fontSize: "16px", display: 'flex', alignItems: "center", justifyContent: "center" }}>

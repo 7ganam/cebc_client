@@ -64,7 +64,7 @@ function EventNewsPageComponent(props) {
             <Container className='page_title_container' fluid>
                 <Row className=" justify-content-center">
                     <Col>
-                        <div class="page_header" style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/2_13a171ac76.jpg")` }}
+                        <div class="page_header" style={{ backgroundImage: `url("https://cebc3.s3.eu-central-1.amazonaws.com/2_13a171ac76.jpg")` }}
                         >
                             <span class="page_header_inner"> News & Media</span>
                             <div className="page_header_under"></div>
@@ -81,7 +81,7 @@ function EventNewsPageComponent(props) {
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
                             Latest News & media :
-                            </span>
+                        </span>
                         <div className="section_header_under" ></div>
                     </div>
                 </Row>

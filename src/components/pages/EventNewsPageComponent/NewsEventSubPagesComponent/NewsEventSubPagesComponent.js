@@ -19,6 +19,15 @@ import {
     CardSubtitle, CardBody, CardFooter
 } from 'reactstrap';
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function NewsEventSubPagesComponent(props) {
 
 
@@ -213,7 +222,7 @@ function NewsEventSubPagesComponent(props) {
                             <Card className="past_event_card mb-4">
                                 {event.Event_thumbnail_image ?
 
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${event.Event_thumbnail_image.url}`} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={s3_map(`${event.Event_thumbnail_image.url}`)} alt="Card image cap" />
                                     :
                                     <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                                 }
@@ -309,7 +318,7 @@ function NewsEventSubPagesComponent(props) {
                             <Card className="past_news_card mb-4">
                                 {news.thumbnail_image ?
 
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${news.thumbnail_image.url}`} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={s3_map(`${news.thumbnail_image.url}`)} alt="Card image cap" />
                                     :
                                     <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                                 }

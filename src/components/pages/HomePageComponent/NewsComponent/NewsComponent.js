@@ -6,6 +6,15 @@ import ReactLoading from 'react-loading';
 import { Link } from "react-router-dom";
 import moment from 'moment';
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function NewsComponent(props) {
 
     // console.log(`props.latest_news`, props.latest_news)
@@ -81,7 +90,7 @@ function NewsComponent(props) {
                                     <div id="main_news_div" className="p-2">
                                         <div id="main_news_img_div" style={{ width: "100%" }}>
                                             <img id="main_news_img" src={
-                                                props.latest_news[0].thumbnail_image && props.latest_news[0].thumbnail_image.url} alt="oval" />
+                                                s3_map(props.latest_news[0].thumbnail_image && props.latest_news[0].thumbnail_image.url)} alt="oval" />
                                         </div>
                                         <div id="main_news_title_div">
                                             {props.latest_news[0].title}
@@ -101,7 +110,7 @@ function NewsComponent(props) {
                                         <div className="sec_news_div mb-3">
                                             <Row style={{ height: "100%" }} className="p-2">
                                                 <Col xs="5" md="5" style={{ height: "" }} >
-                                                    <img className="sec_news_img" src={SortedEvents[0].Event_thumbnail_image && SortedEvents[0].Event_thumbnail_image.url} alt="oval" />
+                                                    <img className="sec_news_img" src={s3_map(SortedEvents[0].Event_thumbnail_image && SortedEvents[0].Event_thumbnail_image.url)} alt="oval" />
                                                 </Col>
                                                 <Col xs="7" md="7" style={{ height: "", overflow: "hidden" }} className="pl-0">
 
@@ -131,7 +140,7 @@ function NewsComponent(props) {
                                         <div className="sec_news_div mb-3">
                                             <Row style={{ height: "100%" }} className="p-2">
                                                 <Col xs="5" md="5" style={{ height: "" }} >
-                                                    <img className="sec_news_img" src={SortedEvents[1].Event_thumbnail_image && SortedEvents[1].Event_thumbnail_image.url} alt="oval" />
+                                                    <img className="sec_news_img" src={s3_map(SortedEvents[1].Event_thumbnail_image && SortedEvents[1].Event_thumbnail_image.url)} alt="oval" />
                                                 </Col>
                                                 <Col xs="7" md="7" style={{ height: "", overflow: "hidden" }} className="pl-0">
                                                     <div className="sec_news_title_div  text-left">
@@ -159,7 +168,7 @@ function NewsComponent(props) {
                                         <div className="sec_news_div mb-3">
                                             <Row style={{ height: "100%" }} className="p-2">
                                                 <Col xs="5" md="5" style={{ height: "" }} >
-                                                    <img className="sec_news_img" src={SortedEvents[2].Event_thumbnail_image && SortedEvents[2].Event_thumbnail_image.url} alt="oval" />
+                                                    <img className="sec_news_img" src={s3_map(SortedEvents[2].Event_thumbnail_image && SortedEvents[2].Event_thumbnail_image.url)} alt="oval" />
                                                 </Col>
                                                 <Col xs="7" md="7" style={{ height: "", overflow: "hidden" }} className="pl-0">
                                                     <div className="sec_news_title_div  text-left">

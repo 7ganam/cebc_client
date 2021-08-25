@@ -5,7 +5,11 @@ import WorkingGroupCardComponent from "./WorkingGroupCardComponent/WorkingGroupC
 
 import { Link } from "react-router-dom";
 
-
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
 
 
 function WorkingGroupsComponent(props) {

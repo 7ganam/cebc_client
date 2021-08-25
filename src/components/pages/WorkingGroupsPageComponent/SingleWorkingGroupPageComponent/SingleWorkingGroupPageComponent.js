@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 import React, { useCallback, useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactLoading from 'react-loading';
-import { useHttpClient } from "../../../../hooks/http-hook"
-
-import renderHTML from 'react-render-html';
 
 import Editor from './Editor/Editor'
-import { Col, Container, Row } from 'reactstrap';
+import { Row } from 'reactstrap';
 
-import moment from 'moment';
-
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
 
 
 
@@ -37,7 +37,7 @@ function SingleWorkingGroupPageComponent(props) {
 
                     <Link to={`/ABOUTUS/STAFF/${member.slug}`} style={{ textDecoration: 'none' }} >
                         <div className='entity_image_container' style={{ width: '100%', height: '170px' }}>
-                            <img className='entity_image' src={member.image && member.image.url} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
+                            <img className='entity_image' src={s3_map(member.image && member.image.url)} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
                         </div>
                         <div className='member_text'>
                             <div className="member_name"> {member.username}</div>
@@ -60,7 +60,7 @@ function SingleWorkingGroupPageComponent(props) {
                 <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                     <div class="group_member_card">
                         <div class="group_member_card_sub_div" style={{ background: 'white' }}>
-                            <img class="group_mem_carousel_img" src={member.entity_image.url} />
+                            <img class="group_mem_carousel_img" src={s3_map(member.entity_image.url)} />
                         </div>
                     </div>
                 </Link>
@@ -133,7 +133,7 @@ function SingleWorkingGroupPageComponent(props) {
                                                 position: "absolute",
                                                 display: "flex", justifyContent: "center", alignItems: "center", width: "100%", overflow: "hidden", height: "100%"
                                             }}>
-                                            <img src={`${the_group.Thumb_nail_image.url}`} style={{ width: "100%", height: "100%", objectFit: 'cover', filter: 'brightness(40%)' }} alt="" />
+                                            <img src={s3_map(`${the_group.Thumb_nail_image.url}`)} style={{ width: "100%", height: "100%", objectFit: 'cover', filter: 'brightness(40%)' }} alt="" />
                                         </div>
                                         :
                                         <img src={`/assets/images/logo_black.png`}

@@ -13,7 +13,11 @@ import { Alert } from 'reactstrap';
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 
-
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
 
 
 
@@ -175,7 +179,7 @@ function CoursePageComponent(props) {
 
                     <Link to={`/ABOUTUS/STAFF/${member.slug}`} style={{ textDecoration: 'none' }} >
                         <div className='entity_image_container' style={{ width: '100%', height: '170px' }}>
-                            <img className='entity_image' src={member.image && member.image.url} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
+                            <img className='entity_image' src={s3_map(member.image && member.image.url)} style={{ width: '100%', height: '100%', objectFit: "cover" }} alt='member' />
                         </div>
                         <div className='member_text'>
                             <div className="member_name"> {member.username}</div>
@@ -224,7 +228,7 @@ function CoursePageComponent(props) {
                                                 position: "absolute",
                                                 display: "flex", justifyContent: "center", alignItems: "center", width: "100%", overflow: "hidden", height: "100%"
                                             }}>
-                                            <img src={`${the_course.image && the_course.image.url}`} style={{ width: "100%", height: "100%", objectFit: 'cover', filter: 'brightness(40%)' }} alt="" />
+                                            <img src={s3_map(`${the_course.image && the_course.image.url}`)} style={{ width: "100%", height: "100%", objectFit: 'cover', filter: 'brightness(40%)' }} alt="" />
                                         </div>
                                         :
                                         <img src={`/assets/images/logo_black.png`}

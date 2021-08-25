@@ -9,6 +9,12 @@ import { Link } from "react-router-dom";
 import moment from 'moment';
 
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
 
 
 function PresintationsPageComponent() {
@@ -93,7 +99,7 @@ function PresintationsPageComponent() {
                 presentation_container.push(
 
                     <div className='presentation_box'   >
-                        <a className="presentation_link" target="_blank" href={presentation.file && presentation.file.url} rel="noreferrer">
+                        <a className="presentation_link" target="_blank" href={s3_map(presentation.file && presentation.file.url)} rel="noreferrer">
                             <i class="fas fa-external-link-alt mr-2 ml-1"></i>
                             {` ${presentation.title}`}
                         </a>

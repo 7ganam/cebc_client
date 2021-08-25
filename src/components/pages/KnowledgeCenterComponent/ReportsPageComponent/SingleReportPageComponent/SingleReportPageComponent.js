@@ -12,7 +12,11 @@ import { Link } from 'react-router-dom';
 
 
 
-
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
 
 
 
@@ -37,7 +41,7 @@ function SingleReportPageComponent(props) {
                     <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                         <div class="member_card">
                             <div class="member_card_sub_div">
-                                <img class="mem_carousel_img" src={member.entity_image && member.entity_image.url} />
+                                <img class="mem_carousel_img" src={s3_map(member.entity_image && member.entity_image.url)} />
                             </div>
                         </div>
                     </Link>
@@ -57,7 +61,7 @@ function SingleReportPageComponent(props) {
                     <Link to={`/ABOUTUS/working_groups/${groups.slug}`}>
                         <div className="project_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
-                                <img src={groups.Thumb_nail_image && groups.Thumb_nail_image.url} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                <img src={s3_map(groups.Thumb_nail_image && groups.Thumb_nail_image.url)} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                             </div>
 
                             <div style={{ background: "white", width: "100%", minHeight: "60px", color: "black", fontSize: "16px", display: 'flex', alignItems: "center", justifyContent: "center" }}>
@@ -89,13 +93,13 @@ function SingleReportPageComponent(props) {
                             {!!props.reports.length > 0 &&
                                 <div className="report_image_box">
                                     {!!the_report && the_report.image ?
-                                        <img className="side_report_image" src={`${the_report.image && the_report.image.url}`} style={{ width: "100%", height: "auto", }} alt="" />
+                                        <img className="side_report_image" src={s3_map(`${the_report.image && the_report.image.url}`)} style={{ width: "100%", height: "auto", }} alt="" />
                                         :
                                         <img className="side_report_image" src={"/assets/images/logo_black.png"} style={{ width: "100%", height: "auto", }} alt="" />
                                     }
                                     {!!the_report && !!props.reports.length > 0 &&
                                         <div className="open_report_button">
-                                            <a target="_blank" href={the_report.file && the_report.file.url} style={{ textDecoration: 'none' }} rel="noreferrer">
+                                            <a target="_blank" href={s3_map(the_report.file && the_report.file.url)} style={{ textDecoration: 'none' }} rel="noreferrer">
                                                 <div className="report_publication_button">
                                                     <div>Open </div>
                                                     <i className="fas fa-external-link-alt ml-3"></i>

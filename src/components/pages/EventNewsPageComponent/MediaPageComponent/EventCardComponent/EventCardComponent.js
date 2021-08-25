@@ -3,6 +3,14 @@ import { Col, Row } from 'reactstrap'
 import './EventCardComponent.css'
 import { Link } from "react-router-dom";
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
 function EventCardComponent(props) {
     // console.log('props.event', props.event)
     return (
@@ -14,7 +22,7 @@ function EventCardComponent(props) {
                 <Col className="event_box" md={3} style={{ padding: "0px", backgroundColor: "#ececec" }}>
                     {props.event && props.event.Event_thumbnail_image ?
                         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", overflow: "hidden" }}>
-                            <img src={`${props.event.Event_thumbnail_image.url}`}
+                            <img src={s3_map(`${props.event.Event_thumbnail_image.url}`)}
                                 style={{ width: "100%", height: "auto", }} alt="" />
                         </div>
                         :

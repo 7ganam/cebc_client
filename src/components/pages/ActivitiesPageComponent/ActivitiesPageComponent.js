@@ -11,7 +11,7 @@ import ReactLoading from 'react-loading';
 
 const activiites = [
     {
-        image: 'https://cebc.s3.eu-central-1.amazonaws.com/Policy_Working_Group_Photo_6_a2b1fc7c60.jpg',
+        image: 'https://cebc3.s3.eu-central-1.amazonaws.com/Policy_Working_Group_Photo_6_a2b1fc7c60.jpg',
         title: 'EVENTS',
         path: '/ACTIVITIES/EVENTS/All'
     },
@@ -31,7 +31,7 @@ const activiites = [
         path: '/ACTIVITIES/CONSULTANCY'
     },
     {
-        image: 'https://cebc.s3.eu-central-1.amazonaws.com/podcasting_pic_e077e0a2ce.jpg',
+        image: 'https://cebc3.s3.eu-central-1.amazonaws.com/podcasting_pic_e077e0a2ce.jpg',
         title: 'PODCAST',
         path: '/ACTIVITIES/PODCASTS'
     },
@@ -80,7 +80,7 @@ function ActivitiesPageComponent(props) {
                     <Col>
                         <div class="page_header"
 
-                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/1_2e02b2841f.jpg")` }}
+                            style={{ backgroundImage: `url("https://cebc3.s3.eu-central-1.amazonaws.com/1_2e02b2841f.jpg")` }}
                         >
                             <span class="page_header_inner"> CEBC Activities</span>
                             <div className="page_header_under"></div>
@@ -96,7 +96,7 @@ function ActivitiesPageComponent(props) {
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
                             Our Activities :
-                            </span>
+                        </span>
                         <div className="section_header_under" ></div>
                     </div>
                 </Row>

@@ -5,6 +5,14 @@ import { Col, Container, Row } from 'reactstrap'
 import { Link } from "react-router-dom";
 import { Card, CardImg, CardTitle, CardText, CardSubtitle, CardBody, CardFooter } from 'reactstrap';
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function CaseStudiesPageComponent(props) {
 
     console.log(` pagecase_studies1`, props.case_studies)
@@ -19,7 +27,7 @@ function CaseStudiesPageComponent(props) {
                     <Card className="past_report_card">
                         {case_study.image ?
 
-                            <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${case_study.image && case_study.image.url}`} alt="Card image cap" />
+                            <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={s3_map(`${case_study.image && case_study.image.url}`)} alt="Card image cap" />
                             :
                             <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                         }

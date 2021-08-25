@@ -7,6 +7,16 @@ import ReactLoading from 'react-loading';
 import Slider from "react-slick";
 import pod_img from './pod_logo.png'
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
+
 function PodcastsComponent(props) {
 
     console.log(`props.podcasts`, props.podcasts)
@@ -15,7 +25,7 @@ function PodcastsComponent(props) {
             return (
                 <div md={4} style={{ maxWidth: "200px", marginTop: "20px", marginRight: "20px" }} >
                     <Card style={{ maxWidth: "280px", boxShadow: "rgb(0 0 0 / 10%) 0px 0px 9px 5px", padding: "8px", margin: 'auto' }} >
-                        <CardImg top width="100%" src={!!podcast.image ? podcast.image.url : '/assets/images/podcast_image_3.png'} alt="Card image cap" />
+                        <CardImg top width="100%" src={s3_map(!!podcast.image ? podcast.image.url : '/assets/images/podcast_image_3.png')} alt="Card image cap" />
                         <CardBody>
                             <CardTitle tag="h5" style={{ marginTop: '5px' }}>
                                 {`Season ${podcast.season}. Episode ${podcast.episode}`}
@@ -84,7 +94,7 @@ function PodcastsComponent(props) {
             <Container>
                 <div className="season_header" style={{ marginTop: "50px ", marginBottom: "0px " }} >
                     <div className="season_header_logo" >
-                        <img className="season_header_logo_img" src={pod_img} alt='P' />
+                        <img className="season_header_logo_img" src={s3_map(pod_img)} alt='P' />
                     </div>
                     <div className="season_header_text_container" >
                         Season <span className='pod_number'>

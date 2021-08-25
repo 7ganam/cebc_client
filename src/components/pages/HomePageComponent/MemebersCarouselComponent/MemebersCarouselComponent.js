@@ -9,6 +9,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Col, Row } from 'reactstrap';
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
 
 
 rcbrand_overload($)
@@ -56,7 +61,7 @@ function MemebersCarouselComponent(props) {
                         <div class="mem_carousel_elem">
                             {member.entity_image ?
                                 <div class="mem_carousel_sub_elem">
-                                    <img class="mem_carousel_img" src={member.entity_image ? member.entity_image.url : "corprate.png"} alt="member" />
+                                    <img class="mem_carousel_img" src={s3_map(member.entity_image ? member.entity_image.url : "corprate.png")} alt="member" />
                                 </div> :
                                 <div class="mem_carousel_sub_elem mem_carousel_sub_elem_text">
                                     <div class="mem_carousel_name" >

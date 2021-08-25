@@ -7,7 +7,6 @@ import mena from './../images/mena1.png';
 
 import WorkingAreaComponent from './../WorkingAreaComponent/WorkingAreaComponent';
 
-import SDGComponenet from './../SDGComponenet/SDGComponenet';
 
 import { useHttpClient } from '../../../../hooks/http-hook';
 
@@ -47,7 +46,7 @@ function WhatWeDoPageComponent(props) {
                 <Row className=" justify-content-center">
                     <Col>
                         <div className="page_header"
-                            style={{ backgroundImage: `url("https://cebc2.s3.eu-central-1.amazonaws.com/sheikh_zayed_road_4k_1547938105_c01a610c75.jpg")` }}
+                            style={{ backgroundImage: `url("https://cebc3.s3.eu-central-1.amazonaws.com/sheikh_zayed_road_4k_1547938105_c01a610c75.jpg")` }}
                         >
                             <div className="page_header_inner">
                                 <div className="page_header_inner_text"> About the CEBC</div>
@@ -94,7 +93,7 @@ function WhatWeDoPageComponent(props) {
                                     <div>
                                         The world is witnessing an energy transformation and clean
                                         energy revolution
-                                   </div>
+                                    </div>
                                 </div>
                                 <div className="quote_signature">
                                     <div style={{ color: '#ffb600' }}>H.E. DR. NASSER SAIDI</div>
@@ -171,7 +170,7 @@ function WhatWeDoPageComponent(props) {
                             <div className="mt-3">
                                 {' '}
                                 We are active throughout the MENA region with our Working Groups and Programmes, a range of events and networking opportunities, and by promoting connections between private and public sector organisations.
-                           </div>
+                            </div>
 
                         </Col>
                     </Row>
@@ -185,7 +184,7 @@ function WhatWeDoPageComponent(props) {
                     <div className="section_header section_header_side" >
                         <span className="section_header_inner"     >
                             VISION AND MISSION
-                            </span>
+                        </span>
                         <div className="section_header_under" ></div>
                     </div>
                 </Row>
@@ -225,10 +224,10 @@ function WhatWeDoPageComponent(props) {
                             </div>
                             <div className="media-body align-content-start text-left">
                                 <h3 className="mt-0 media_header">Leading forum</h3>
-                Establish a leading forum for companies and government entities
-                focused on the development and deployment of clean energy in the
-                MENA region;
-              </div>
+                                Establish a leading forum for companies and government entities
+                                focused on the development and deployment of clean energy in the
+                                MENA region;
+                            </div>
                         </div>
                     </Col>
                     <Col className="p-md-2" md={{ size: 6, order: 2, offset: 0 }}>
@@ -239,10 +238,10 @@ function WhatWeDoPageComponent(props) {
 
                             <div className="media-body align-content-start text-left">
                                 <h3 className="mt-0 media_header">Promote the clean energy</h3>
-                Promote the clean energy industry beginning to flourish in the
-                region and inform the wider community of the benefits of the
-                sector;
-              </div>
+                                Promote the clean energy industry beginning to flourish in the
+                                region and inform the wider community of the benefits of the
+                                sector;
+                            </div>
                         </div>
                     </Col>
                 </Row>
@@ -256,11 +255,11 @@ function WhatWeDoPageComponent(props) {
                             <div className="media-body align-content-start text-left">
                                 <h3 className="mt-0 media_header">
                                     Collaborate with governments
-                </h3>
-                Collaborate with government agencies and other stakeholders in
-                policy development and regulation of this rapidly developing and
-                exciting sector;
-              </div>
+                                </h3>
+                                Collaborate with government agencies and other stakeholders in
+                                policy development and regulation of this rapidly developing and
+                                exciting sector;
+                            </div>
                         </div>
                     </Col>
                     <Col className="p-md-2" md={{ size: 6, order: 2, offset: 0 }}>
@@ -271,10 +270,10 @@ function WhatWeDoPageComponent(props) {
 
                             <div className="media-body align-content-start text-left">
                                 <h3 className="mt-0 media_header">Strategic alliances</h3>
-                Develop a series of strategic alliances with research
-                institutions, international associations, media and others to
-                drive the delivery of clean energy solutions for MENA;
-              </div>
+                                Develop a series of strategic alliances with research
+                                institutions, international associations, media and others to
+                                drive the delivery of clean energy solutions for MENA;
+                            </div>
                         </div>
                     </Col>
                 </Row>
@@ -287,10 +286,10 @@ function WhatWeDoPageComponent(props) {
 
                             <div className="media-body align-content-start text-left">
                                 <h3 className="mt-0 media_header">Data and information</h3>
-                Coordinate the gathering of data and information on the sector
-                to ensure relevant benchmarking and transparency in the sectors
-                development;
-              </div>
+                                Coordinate the gathering of data and information on the sector
+                                to ensure relevant benchmarking and transparency in the sectors
+                                development;
+                            </div>
                         </div>
                     </Col>
                     <Col className="p-md-2" md={{ size: 6, order: 2, offset: 0 }}>
@@ -301,9 +300,9 @@ function WhatWeDoPageComponent(props) {
 
                             <div className="media-body align-content-start text-left">
                                 <h3 className="mt-0 media_header"> Assist governments</h3>
-                Support and assist governments, industry and the community in
-                the region to meet low carbon targets and sustainability goals.
-              </div>
+                                Support and assist governments, industry and the community in
+                                the region to meet low carbon targets and sustainability goals.
+                            </div>
                         </div>
                     </Col>
                 </Row>

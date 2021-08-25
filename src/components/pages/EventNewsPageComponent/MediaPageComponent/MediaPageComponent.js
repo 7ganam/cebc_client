@@ -17,6 +17,15 @@ import {
     CardSubtitle, CardBody, CardFooter
 } from 'reactstrap';
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function MediaPageComponent(props) {
 
 
@@ -92,9 +101,9 @@ function MediaPageComponent(props) {
                             <Card className="past_event_card mb-4">
                                 {event.Event_thumbnail_image ?
 
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${event.Event_thumbnail_image.url}`} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={s3_map(`${event.Event_thumbnail_image.url}`)} alt="Card image cap" />
                                     :
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={s3_map("/assets/images/logo_black.png")} alt="Card image cap" />
                                 }
                                 <CardBody>
                                     <CardTitle className='card_title_' tag="h5"> {event.Title}</CardTitle>

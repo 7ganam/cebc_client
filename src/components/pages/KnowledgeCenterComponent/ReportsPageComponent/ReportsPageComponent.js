@@ -5,6 +5,15 @@ import { Col, Container, Row } from 'reactstrap'
 import { Link } from "react-router-dom";
 import { Card, CardImg, CardTitle, CardText, CardSubtitle, CardBody, CardFooter } from 'reactstrap';
 
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
+
+
 function ReportsPageComponent(props) {
     console.log(` pagereports1`, props.reports)
 
@@ -41,7 +50,7 @@ function ReportsPageComponent(props) {
                             <Card className="past_report_card">
                                 {report.image ?
 
-                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={`${report.image && report.image.url}`} alt="Card image cap" />
+                                    <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={s3_map(`${report.image && report.image.url}`)} alt="Card image cap" />
                                     :
                                     <CardImg top width="100%" style={{ height: '100px', objectFit: "contain" }} src={"/assets/images/logo_black.png"} alt="Card image cap" />
                                 }

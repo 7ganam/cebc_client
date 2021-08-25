@@ -6,23 +6,28 @@ import renderHTML from 'react-render-html';
 import "./StaffMemberSingleViewPageComponent.css"
 import Editor from './Editor/Editor'
 import { Col, Container, Row } from 'reactstrap';
-
-import moment from 'moment';
 import { Link } from 'react-router-dom';
+
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
+
 
 function StaffMemberSingleViewPageComponent(props) {
 
     // console.log(props.match.params.Event_id)
-    console.log(`singeprops.staff`, props.staff)
+
+    // console.log(`singeprops.staff`, props.staff)
     const member_slug = props.match.params.member_slug;
 
     const the_member = props.staff.filter((member) => member.slug == member_slug)[0] //leave this as two ==
+    // console.log(`the_member`, the_member)
 
-    console.log(`the_member`, the_member)
 
     function generate_entity_views(type) {
 
-        console.log(`props.staff`, props.staff)
         const members_views = the_member.entities.map((member, index) => {
             if (member.membership_type) {
                 return (
@@ -30,7 +35,7 @@ function StaffMemberSingleViewPageComponent(props) {
                     <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
                         <div class="member_card">
                             <div class="member_card_sub_div">
-                                <img class="mem_carousel_img" src={member.entity_image ? member.entity_image.url : "/assets/images/logo_black.png"} />
+                                <img class="mem_carousel_img" src={s3_map(member.entity_image ? member.entity_image.url : "/assets/images/logo_black.png")} />
                             </div>
                         </div>
                     </Link>
@@ -51,7 +56,7 @@ function StaffMemberSingleViewPageComponent(props) {
                     <Link to={`/ABOUTUS/working_groups/${groups.slug}`} style={{ width: '100%' }}>
                         <div className="member_card">
                             <div style={{ width: "100%", height: "250px", borderRadius: "", overflow: "hidden", borderBottom: '1px solid #80808045' }}>
-                                <img src={groups.Thumb_nail_image && groups.Thumb_nail_image.url} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                <img src={s3_map(groups.Thumb_nail_image && groups.Thumb_nail_image.url)} alt="wice" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                             </div>
 
                             <div style={{ background: "white", width: "100%", minHeight: "60px", color: "black", fontSize: "16px", display: 'flex', alignItems: "center", justifyContent: "center" }}>
@@ -83,7 +88,7 @@ function StaffMemberSingleViewPageComponent(props) {
                         <Col className='p-0' md={4} style={{ background: '', }}>
                             {!!the_member &&
                                 <div className="member_image_box">
-                                    <img src={`${the_member.image ? the_member.image.url : '/assets/images/logo_black.png'}`} style={{ width: "100%", height: "auto", }} alt="" />
+                                    <img src={s3_map(`${the_member.image ? the_member.image.url : '/assets/images/logo_black.png'}`)} style={{ width: "100%", height: "auto", }} alt="" />
                                 </div>
                             }
 

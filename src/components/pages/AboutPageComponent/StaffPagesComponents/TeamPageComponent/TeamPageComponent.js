@@ -8,6 +8,11 @@ import ReactLoading from 'react-loading';
 
 import { Link } from 'react-router-dom';
 
+function s3_map(str) {
+    str = str.replace('cebc2', 'cebc3');
+    str = str.replace('cebc.s3.eu-central', 'cebc3.s3.eu-central');
+    return str
+}
 
 function TeamPageComponent(props) {
     // console.log(`props.staff`, props.staff)
@@ -25,7 +30,7 @@ function TeamPageComponent(props) {
                                 </Link>
                                 <div className="card_image_container" style={{ height: '200px', }}>
 
-                                    <img src={member.image && member.image.url} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="" />
+                                    <img src={s3_map(member.image && member.image.url)} style={{ height: "100%", width: "100%", objectFit: "cover" }} alt="" />
 
                                 </div>
                                 <CardBody style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '5px' }}>
