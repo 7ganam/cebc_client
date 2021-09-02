@@ -92,11 +92,9 @@ function JobPageCompoenent(props) {
                 </Row>
             </Container>
 
-            { props.jobs && props.jobs.length > 0 ?
+            {props.jobs && props.jobs.length > 0 ?
                 <div>
-
                     <Container>
-
                         <div className='filter_box' style={{ zIndex: '3', position: 'relative' }}>
 
                             <div className='filter_title'> Filter jobs</div>
@@ -185,10 +183,14 @@ function JobPageCompoenent(props) {
                     </Container>
                 </div>
                 :
-                <div style={{ margin: 'auto', display: "flex", justifyContent: 'center' }}>
-                    <ReactLoading type={"spin"} color={"#00D2F9"} width={"100px"} />
-                </div>
 
+                <div>
+                    <div style={{ fontSize: "25px", color: "gray" }}>No careers Posted</div>
+
+                    <div style={{ margin: 'auto', display: "flex", justifyContent: 'center', marginTop: "100px" }}>
+                        <ReactLoading type={"spin"} color={"#00D2F9"} width={"100px"} />
+                    </div>
+                </div>
             }
         </div>
     )
