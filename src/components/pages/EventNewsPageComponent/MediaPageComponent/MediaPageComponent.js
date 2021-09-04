@@ -48,15 +48,13 @@ function MediaPageComponent(props) {
             try {
 
                 const responseData = await sendPastEventsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/events?_limit=${EntryPerPage}&_start=${EntryPerPage * (page_number - 1)}`
+                    `${process.env.REACT_APP_BACKEND_URL}/events?_limit=${EntryPerPage}&_start=${EntryPerPage * (page_number - 1)}&_sort=Event_date:DESC`
                 );
+
                 setLoadedPastEvents(responseData);
 
-                const countresponseData = await sendPastEventsRequest(
-                    `${process.env.REACT_APP_BACKEND_URL}/events/count`);
+                const countresponseData = await sendPastEventsRequest(`${process.env.REACT_APP_BACKEND_URL}/events/count`);
                 setLoadedEventsCount(countresponseData);
-
-
 
 
             } catch (err) {
