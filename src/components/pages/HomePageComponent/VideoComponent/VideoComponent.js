@@ -28,8 +28,8 @@ function VideoComponent() {
             <video id='home_video' autoplay="" muted loop plays-inline="" data-vscid="sbql8lfln" >
                 {/* <source src="//energy.mit.edu/wp-content/uploads/2018/12/homepage-video.mp4" type="video/mp4" />
                 <source src="//energy.mit.edu/wp-content/uploads/2018/12/homepage-video.ogv" type="video/ogg" /> */}
-                <source src="//cebc2.s3.eu-central-1.amazonaws.com/cebc_final_6adf8221ce.mp4" type="video/mp4" />
-                <source src="//cebc2.s3.eu-central-1.amazonaws.com/cebc_final_6adf8221ce.mp4" type="video/mp4" />
+                <source src="//cebc3.s3.eu-central-1.amazonaws.com/cebc_final_6adf8221ce.mp4" type="video/mp4" />
+                <source src="//cebc3.s3.eu-central-1.amazonaws.com/cebc_final_6adf8221ce.mp4" type="video/mp4" />
 
                 {/* <source src="//energy.mit.edu/wp-content/uploads/2018/12/homepage-video.ogv" type="video/ogg" /> */}
             </video>
