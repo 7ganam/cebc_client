@@ -41,15 +41,11 @@ function SignUpModalComponenet() {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
-        console.log('submitProps', submitProps)
         const request_data = {
             "name": values.name,
             "entity": values.entity,
             "email": values.email
         }
-        console.log('request_data', request_data)
-
         try {
             setSending_data(true)
             const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/applications-for-user-accounts`, {
@@ -90,8 +86,7 @@ function SignUpModalComponenet() {
     }
 
     function render_submit_button() {
-        console.log(`Error_messageeeeeeeeeeeee`, Error_message)
-        console.log(`Fetch_success`, Fetch_success)
+
         let fomik_object = formRef.current;
 
 

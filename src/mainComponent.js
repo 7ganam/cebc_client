@@ -95,6 +95,8 @@ import SingleNewsLetterPageComponent from './components/pages/KnowledgeCenterCom
 import ActivitiesPageComponent from './components/pages/ActivitiesPageComponent/ActivitiesPageComponent'
 
 
+import GoogleAnalytics from './GoogleAnalytics'
+
 export default function MainComponent() {
 
 
@@ -130,388 +132,308 @@ export default function MainComponent() {
                 <SignInModalComponenet />
                 <StickersComponent />
                 <Router >
-                    <ScrollToTopComponent />
-                    <NavbarComponent /> {/* the navbar has to be inside the router since it uses LINK component which runs only inside router component */}
-                    <Switch id="react_router_switch">
-                        <Route exact path="/">
-                            <HomePageComponent className="home"
-                                programmes_state={{ LoadedProgrammes }}
-                                members={LoadedEntity_s}
-                                latest_news={LoadedNews}
-                                LoadedPodcasts={LoadedPodcasts}
-                                latest_events={LoadedEvents}
+                    <GoogleAnalytics>
+                        <ScrollToTopComponent />
+                        <NavbarComponent /> {/* the navbar has to be inside the router since it uses LINK component which runs only inside router component */}
+                        <Switch id="react_router_switch">
+                            <Route exact path="/">
+                                <HomePageComponent className="home"
+                                    programmes_state={{ LoadedProgrammes }}
+                                    members={LoadedEntity_s}
+                                    latest_news={LoadedNews}
+                                    LoadedPodcasts={LoadedPodcasts}
+                                    latest_events={LoadedEvents}
+                                />
+                            </Route>
+
+                            <Route exact path="/CONSULTANCY">
+                                <ConsultancyPageComponent className="academyPage" />
+                            </Route>
+
+                            <Route path="/ABOUTUS/JOBS/:job_slug">
+                                {(props) => <SingleJobViewComponent {...props} jobs={LoadedJobs} />}
+                            </Route>
+
+                            <Route path="/ABOUTUS/JOBS">
+                                {(props) => <JobPageCompoenent {...props} jobs={LoadedJobs} />}
+                            </Route>
+
+                            <Route path="/ABOUTUS/working_groups/:group_slug"
+                                component={(props) => <SingleWorkingGroupPageComponent {...props} programmes_state={{ LoadedProgrammes }} />
+                                }
                             />
-                        </Route>
 
-                        <Route exact path="/CONSULTANCY">
-                            <ConsultancyPageComponent className="academyPage" />
-                        </Route>
+                            <Route exact path="/ABOUTUS/working_groups">
+                                <WorkingGroupsPageComponent type="working_group" programmes_state={{ LoadedProgrammes }} />
+                            </Route>
 
+                            <Route exact path="/ABOUTUS/programms">
+                                <WorkingGroupsPageComponent type="programm" programmes_state={{ LoadedProgrammes }} />
+                            </Route>
 
+                            <Route exact path="/ABOUTUS/WHATWEDO">
+                                <WhatWeDoPageComponent programmes_state={{ LoadedProgrammes }} />
+                            </Route>
 
-                        <Route path="/ABOUTUS/JOBS/:job_slug">
-                            {(props) => <SingleJobViewComponent {...props} jobs={LoadedJobs} />}
-                        </Route>
+                            <Route exact path="/ABOUTUS/STAFF">
+                                <BoardPageComponent staff={LoadedStaff_members} />
+                            </Route>
 
-                        <Route path="/ABOUTUS/JOBS">
-                            {(props) => <JobPageCompoenent {...props} jobs={LoadedJobs} />}
-                        </Route>
+                            <Route exact path="/ABOUTUS/STAFF/Board">
+                                <BoardPageComponent staff={LoadedStaff_members} />
+                            </Route>
 
+                            <Route exact path="/ABOUTUS/STAFF/ADVISORY">
+                                <AdvisoryBoardPageComponent staff={LoadedStaff_members} />
+                            </Route>
 
+                            <Route exact path="/ABOUTUS/STAFF/TEAM">
+                                <TeamPageComponent staff={LoadedStaff_members} />
+                            </Route>
 
+                            <Route exact path="/ABOUTUS/FAQ">
+                                <FaqPageComponent />
+                            </Route>
 
+                            <Route exact path="/ABOUTUS/STAFF/:member_slug"
+                                component={(props) => <   StaffMemberSingleViewPageComponent {...props} staff={LoadedStaff_members} />}
+                            />
 
+                            <Route exact path="/ABOUTUS">
+                                <AboutPageComponent />
+                            </Route>
 
+                            <Route exact path="/ACTIVITIES/CONSULTANCY">
+                                <ConsultancyPageComponent className="academyPage" />
+                            </Route>
 
-                        <Route path="/ABOUTUS/working_groups/:group_slug"
-                            component={(props) => <SingleWorkingGroupPageComponent {...props} programmes_state={{ LoadedProgrammes }} />
-                            }
-                        />
+                            <Route exact path="/ACTIVITIES/ACADEMY/:course_slug"
+                                component={(props) => <   CoursePageComponent {...props} courses={LoadedCourses} />}
+                            />
 
-                        <Route exact path="/ABOUTUS/working_groups">
-                            <WorkingGroupsPageComponent type="working_group" programmes_state={{ LoadedProgrammes }} />
-                        </Route>
+                            <Route exact path="/ACTIVITIES/ACADEMY">
+                                <AcademyPageComponent className="academyPage" courses={LoadedCourses} />
+                            </Route>
 
+                            <Route path="/ACTIVITIES/EVENTS/:sub_parameter/:Event_slug"
+                                component={(props) =>
+                                    <   EventViewPageComponent {...props} />
+                                }
+                            />
 
+                            <Route path="/ACTIVITIES/NEWS/:News_slug"
+                                component={(props) =>
+                                    <   NewsViewPageComponent {...props} />
+                                }
+                            />
 
-                        <Route exact path="/ABOUTUS/programms">
-                            <WorkingGroupsPageComponent type="programm" programmes_state={{ LoadedProgrammes }} />
-                        </Route>
+                            <Route path="/ACTIVITIES/EVENTS/:sub_parameter">
+                                {(props) =>
+                                    <   NewsEventSubPagesComponent {...props} />
+                                }
+                            </Route>
 
+                            <Route exact path="/ACTIVITIES/PODCASTS/:podcast_slug"
+                                component={(props) => <   SinglePodcastsPageComponent {...props} podcasts={LoadedPodcasts} />}
+                            />
 
+                            <Route exact path="/ACTIVITIES/PODCASTS">
+                                <PodcastsPageComponent podcasts={LoadedPodcasts} />
+                            </Route>
 
-                        <Route exact path="/ABOUTUS/WHATWEDO">
-                            <WhatWeDoPageComponent programmes_state={{ LoadedProgrammes }} />
-                        </Route>
 
-                        <Route exact path="/ABOUTUS/STAFF">
-                            <BoardPageComponent staff={LoadedStaff_members} />
-                        </Route>
+                            <Route exact path="/ACTIVITIES">
+                                <ActivitiesPageComponent />
+                            </Route>
 
-                        <Route exact path="/ABOUTUS/STAFF/Board">
-                            <BoardPageComponent staff={LoadedStaff_members} />
-                        </Route>
+                            <Route exact path="/KNOWLEDGECENTER/PROJECTS/:project_slug"
+                                component={(props) => <   SingleProjectPageComponent {...props} projects={LoadedProjects} />}
+                            />
 
-                        <Route exact path="/ABOUTUS/STAFF/ADVISORY">
-                            <AdvisoryBoardPageComponent staff={LoadedStaff_members} />
-                        </Route>
+                            <Route exact path="/KNOWLEDGECENTER/PROJECTS">
+                                <ProjectsPageComponent projects={LoadedProjects} />
+                            </Route>
 
-                        <Route exact path="/ABOUTUS/STAFF/TEAM">
-                            <TeamPageComponent staff={LoadedStaff_members} />
-                        </Route>
+                            <Route exact path="/KNOWLEDGECENTER/REPORTS/:report_slug"
+                                component={(props) => <   SingleReportPageComponent {...props} reports={LoadedReports} />}
+                            />
 
-                        <Route exact path="/ABOUTUS/FAQ">
-                            <FaqPageComponent />
-                        </Route>
-                        {/* 
-                        <Route exact path="/ABOUTUS/STAFF/:member_id"
-                            component={(props) => <   StaffMemberSingleViewPageComponent {...props} staff={LoadedStaff_members} />}
-                        /> */}
-                        <Route exact path="/ABOUTUS/STAFF/:member_slug"
-                            component={(props) => <   StaffMemberSingleViewPageComponent {...props} staff={LoadedStaff_members} />}
-                        />
+                            <Route exact path="/KNOWLEDGECENTER/REPORTS">
+                                <ReportsPageComponent reports={LoadedReports} />
+                            </Route>
 
-                        <Route exact path="/ABOUTUS">
-                            <AboutPageComponent />
-                        </Route>
+                            <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES/:case_study_slug"
+                                component={(props) => <   SingleCaseStudyPageComponent {...props} case_studies={LoadedCase_studies} />}
+                            />
 
+                            <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES">
+                                <CaseStudiesPageComponent case_studies={LoadedCase_studies} />
+                            </Route>
 
 
 
+                            <Route exact path="/KNOWLEDGECENTER/PAPERS/:paper_id"
+                                component={(props) => <   SinglePaperPageComponent {...props} papers={LoadedPapers} />}
+                            />
 
 
+                            <Route exact path="/KNOWLEDGECENTER/PAPERS">
+                                <PapersPageComponent papers={LoadedPapers} />
+                            </Route>
 
 
 
 
+                            <Route exact path="/KNOWLEDGECENTER/PODCASTS/:podcast_id"
+                                component={(props) => <   SinglePodcastsPageComponent {...props} podcasts={LoadedPodcasts} />}
+                            />
 
 
+                            <Route exact path="/KNOWLEDGECENTER/PODCASTS">
+                                <PodcastsPageComponent podcasts={LoadedPodcasts} />
+                            </Route>
 
 
-                        <Route exact path="/ACTIVITIES/CONSULTANCY">
-                            <ConsultancyPageComponent className="academyPage" />
-                        </Route>
 
+                            <Route exact path="/KNOWLEDGECENTER/WEBINARS/:webinar_slug"
+                                component={(props) => <   SingleWebinarPageComponent {...props} webinars={LoadedWebinars} />}
+                            />
 
 
-                        <Route exact path="/ACTIVITIES/ACADEMY/:course_slug"
-                            component={(props) => <   CoursePageComponent {...props} courses={LoadedCourses} />}
-                        />
+                            <Route exact path="/KNOWLEDGECENTER/WEBINARS">
+                                <WebinarsPageComponent webinars={LoadedWebinars} />
+                            </Route>
 
-                        <Route exact path="/ACTIVITIES/ACADEMY">
-                            <AcademyPageComponent className="academyPage" courses={LoadedCourses} />
-                        </Route>
 
 
 
+                            <Route exact path="/KNOWLEDGECENTER/BLOGS/:blog_id"
+                                component={(props) => <   SingleBlogPageComponent {...props} blogs={LoadedBlogs} />}
+                            />
 
 
+                            <Route exact path="/KNOWLEDGECENTER/BLOGS">
+                                <BlogsPageComponent blogs={LoadedBlogs} />
+                            </Route>
 
-                        <Route path="/ACTIVITIES/EVENTS/:sub_parameter/:Event_slug"
-                            component={(props) =>
-                                <   EventViewPageComponent {...props} />
-                            }
-                        />
 
+                            <Route exact path="/KNOWLEDGECENTER/LINKS">
+                                <LinksPageComponent links={LoadedLinks} />
+                            </Route>
 
 
-                        <Route path="/ACTIVITIES/NEWS/:News_slug"
-                            component={(props) =>
-                                <   NewsViewPageComponent {...props} />
-                            }
-                        />
+                            <Route exact path="/KNOWLEDGECENTER/PRESENTATIONS">
+                                <PresintationsPageComponent />
+                            </Route>
 
-                        <Route path="/ACTIVITIES/EVENTS/:sub_parameter">
-                            {(props) =>
-                                <   NewsEventSubPagesComponent {...props} />
-                            }
-                        </Route>
 
+                            <Route exact path="/KNOWLEDGECENTER/PRESENTATIONS">
+                                <PresintationsPageComponent />
+                            </Route>
 
+                            <Route exact path="/KNOWLEDGECENTER/NEWSLETTER">
+                                <NewsLettersPageComponent NewsLetters={LoadedNewsletters} />
+                            </Route>
 
 
-
-                        <Route exact path="/ACTIVITIES/PODCASTS/:podcast_slug"
-                            component={(props) => <   SinglePodcastsPageComponent {...props} podcasts={LoadedPodcasts} />}
-                        />
-
-
-                        <Route exact path="/ACTIVITIES/PODCASTS">
-                            <PodcastsPageComponent podcasts={LoadedPodcasts} />
-                        </Route>
-
-
-                        <Route exact path="/ACTIVITIES">
-                            <ActivitiesPageComponent />
-                        </Route>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PROJECTS/:project_slug"
-                            component={(props) => <   SingleProjectPageComponent {...props} projects={LoadedProjects} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PROJECTS">
-                            <ProjectsPageComponent projects={LoadedProjects} />
-                        </Route>
-
-
-                        <Route exact path="/KNOWLEDGECENTER/REPORTS/:report_slug"
-                            component={(props) => <   SingleReportPageComponent {...props} reports={LoadedReports} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/REPORTS">
-                            <ReportsPageComponent reports={LoadedReports} />
-                        </Route>
-
-
-
-                        {/* <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES/:case_study_id"
-                            component={(props) => <   SingleCaseStudyPageComponent {...props} case_studies={LoadedCase_studies} />}
-                        /> */}
-                        <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES/:case_study_slug"
-                            component={(props) => <   SingleCaseStudyPageComponent {...props} case_studies={LoadedCase_studies} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/CASE_STUDIES">
-                            <CaseStudiesPageComponent case_studies={LoadedCase_studies} />
-                        </Route>
-
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PAPERS/:paper_id"
-                            component={(props) => <   SinglePaperPageComponent {...props} papers={LoadedPapers} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PAPERS">
-                            <PapersPageComponent papers={LoadedPapers} />
-                        </Route>
-
-
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PODCASTS/:podcast_id"
-                            component={(props) => <   SinglePodcastsPageComponent {...props} podcasts={LoadedPodcasts} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PODCASTS">
-                            <PodcastsPageComponent podcasts={LoadedPodcasts} />
-                        </Route>
-
-
-
-                        <Route exact path="/KNOWLEDGECENTER/WEBINARS/:webinar_slug"
-                            component={(props) => <   SingleWebinarPageComponent {...props} webinars={LoadedWebinars} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/WEBINARS">
-                            <WebinarsPageComponent webinars={LoadedWebinars} />
-                        </Route>
-
-
-
-
-                        <Route exact path="/KNOWLEDGECENTER/BLOGS/:blog_id"
-                            component={(props) => <   SingleBlogPageComponent {...props} blogs={LoadedBlogs} />}
-                        />
-
-
-                        <Route exact path="/KNOWLEDGECENTER/BLOGS">
-                            <BlogsPageComponent blogs={LoadedBlogs} />
-                        </Route>
-
-
-                        <Route exact path="/KNOWLEDGECENTER/LINKS">
-                            <LinksPageComponent links={LoadedLinks} />
-                        </Route>
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PRESENTATIONS">
-                            <PresintationsPageComponent />
-                        </Route>
-
-
-                        <Route exact path="/KNOWLEDGECENTER/PRESENTATIONS">
-                            <PresintationsPageComponent />
-                        </Route>
-
-                        <Route exact path="/KNOWLEDGECENTER/NEWSLETTER">
-                            <NewsLettersPageComponent NewsLetters={LoadedNewsletters} />
-                        </Route>
-
-
-                        {/* <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_id"
+                            {/* <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_id"
                             component={(props) => <SingleNewsLetterPageComponent {...props} NewsLetters={LoadedNewsletters} />}
                         /> */}
-                        <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_slug"
-                            component={(props) => <SingleNewsLetterPageComponent {...props} NewsLetters={LoadedNewsletters} />}
-                        />
+                            <Route exact path="/KNOWLEDGECENTER/NEWSLETTER/:NewsLetter_slug"
+                                component={(props) => <SingleNewsLetterPageComponent {...props} NewsLetters={LoadedNewsletters} />}
+                            />
+
+                            <Route exact path="/KNOWLEDGECENTER">
+                                <KnowledgeCenterComponent />
+                            </Route>
+
+                            <Route path="/MEMBERSHIP/MEMBERS/:member_slug"
+                                component={
+                                    (props) => <   SingleMemberPageComponent {...props} members={LoadedEntity_s} />
+                                }
+                            />
+
+                            <Route path="/MEMBERSHIP/MEMBERSONLY/POSTJOB"
+                                component={
+                                    (props) => <   PastJobPageComponent {...props} />
+                                }
+                            />
+
+                            <Route path="/MEMBERSHIP/MEMBERSONLY"
+                                component={
+                                    (props) => <   MembersOnlyPageComponent {...props} latest_news={LoadedNews} />
+                                }
+                            />
+
+                            <Route exact path="/MEMBERSHIP/BENEFITS">
+                                <BenifitsPageComponent />
+                            </Route>
+                            <Route exact path="/MEMBERSHIP/LEVELS">
+                                <LevelsPageComponent />
+                            </Route>
+                            <Route exact path="/MEMBERSHIP/JOIN">
+                                <JoinPageComponent />
+                            </Route>
 
 
-                        <Route exact path="/KNOWLEDGECENTER">
-                            <KnowledgeCenterComponent />
-                        </Route>
+                            <Route exact path="/MEMBERSHIP/MEMBERS">
+                                <MembersPageComponent members={LoadedEntity_s} />
+                            </Route>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <Route path="/MEMBERSHIP/MEMBERS/:member_slug"
-                            component={
-                                (props) => <   SingleMemberPageComponent {...props} members={LoadedEntity_s} />
-                            }
-                        />
-
-
-                        <Route path="/MEMBERSHIP/MEMBERSONLY/POSTJOB"
-                            component={
-                                (props) => <   PastJobPageComponent {...props} />
-                            }
-                        />
-
-
-                        <Route path="/MEMBERSHIP/MEMBERSONLY"
-                            component={
-                                (props) => <   MembersOnlyPageComponent {...props} latest_news={LoadedNews} />
-                            }
-                        />
-
-
-
-
-
-                        <Route exact path="/MEMBERSHIP/BENEFITS">
-                            <BenifitsPageComponent />
-                        </Route>
-                        <Route exact path="/MEMBERSHIP/LEVELS">
-                            <LevelsPageComponent />
-                        </Route>
-                        <Route exact path="/MEMBERSHIP/JOIN">
-                            <JoinPageComponent />
-                        </Route>
-
-
-                        <Route exact path="/MEMBERSHIP/MEMBERS">
-                            <MembersPageComponent members={LoadedEntity_s} />
-                        </Route>
-
-                        <Route exact path="/MEMBERSHIP/PARTNERS">
-                            <PartnersPageComponent members={LoadedEntity_s} />
-                        </Route>
-                        <Route exact path="/MEMBERSHIP">
-                            <MembersPageComponent members={LoadedEntity_s} />
-                        </Route>
+                            <Route exact path="/MEMBERSHIP/PARTNERS">
+                                <PartnersPageComponent members={LoadedEntity_s} />
+                            </Route>
+                            <Route exact path="/MEMBERSHIP">
+                                <MembersPageComponent members={LoadedEntity_s} />
+                            </Route>
 
 
 
 
 
 
-                        <Route path="/EVENTS_NEWS/MEDIA"
-                            component={(props) =>
-                                <   MediaPageComponent {...props} />
-                            }
-                        />
+                            <Route path="/EVENTS_NEWS/MEDIA"
+                                component={(props) =>
+                                    <   MediaPageComponent {...props} />
+                                }
+                            />
 
 
 
 
-                        <Route path="/EVENTS_NEWS/News/:News_slug"
-                            component={(props) =>
-                                <   NewsViewPageComponent {...props} />
-                            }
-                        />
+                            <Route path="/EVENTS_NEWS/News/:News_slug"
+                                component={(props) =>
+                                    <   NewsViewPageComponent {...props} />
+                                }
+                            />
 
 
-                        <Route path="/EVENTS_NEWS/:sub_parameter/:Event_slug"
-                            component={(props) =>
-                                <   EventViewPageComponent {...props} />
-                            }
-                        />
-                        <Route path="/EVENTS_NEWS/:sub_parameter">
-                            {(props) =>
-                                <   NewsEventSubPagesComponent {...props} />
-                            }
-                        </Route>
-
-
-
-
-                        <Route path="/EVENTS_NEWS">
-                            {(props) => <EventNewsPageComponent {...props} />}
-                        </Route>
+                            <Route path="/EVENTS_NEWS/:sub_parameter/:Event_slug"
+                                component={(props) =>
+                                    <   EventViewPageComponent {...props} />
+                                }
+                            />
+                            <Route path="/EVENTS_NEWS/:sub_parameter">
+                                {(props) =>
+                                    <   NewsEventSubPagesComponent {...props} />
+                                }
+                            </Route>
 
 
 
 
-                    </Switch>
-                    <FooterComponent />
+                            <Route path="/EVENTS_NEWS">
+                                {(props) => <EventNewsPageComponent {...props} />}
+                            </Route>
+
+
+
+
+                        </Switch>
+                        <FooterComponent />
+
+
+                    </GoogleAnalytics>
 
                 </Router>
             </div>
