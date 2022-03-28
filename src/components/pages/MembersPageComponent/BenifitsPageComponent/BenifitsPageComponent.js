@@ -34,7 +34,7 @@ function BenifitsPageComponent() {
             title: 'Logo on CEBC website and marketing materials',
             PARTNER: true,
             CORPORATE: true,
-            ASSOCIATE: true,
+            ASSOCIATE: 'Acknowledgement on CEBC website',
         },
         {
             title: 'Access to the Members only content of the CEBC website for a number of services including event listings and job postings',
@@ -43,9 +43,9 @@ function BenifitsPageComponent() {
             ASSOCIATE: false,
         },
         {
-            title: 'Free access to CEBC Events (conferences and seminars) – 2 tickets free per event',
-            PARTNER: true,
-            CORPORATE: true,
+            title: 'Free access to CEBC Events (conferences and seminars)',
+            PARTNER: '2 tickets free per event',
+            CORPORATE: '1 ticket free per event',
             ASSOCIATE: false,
         },
         {
@@ -56,12 +56,18 @@ function BenifitsPageComponent() {
         },
         {
             title: 'Opportunity to champion/head a working group promoting a specific topic in the clean energy industry culminating in research paper',
+            PARTNER: '50% discount per delegate',
+            CORPORATE: '25% discount per delegate',
+            ASSOCIATE: false,
+        },
+        {
+            title: 'CEBC to run and manage a webinar (at discounted price compared to market) per year for our partners to engage and communicate with their audiences',
             PARTNER: true,
             CORPORATE: false,
             ASSOCIATE: false,
         },
         {
-            title: 'CEBC to run and manage a webinar (at discounted price compared to market) per year for our partners to engage and communicate with their audiences',
+            title: 'Priority speaking opportunities at conferences and events',
             PARTNER: true,
             CORPORATE: false,
             ASSOCIATE: false,
@@ -79,27 +85,46 @@ function BenifitsPageComponent() {
     function generate_table_view(data) {
 
 
-
         const data_views = data.map((entry, index) => {
+            console.log('entry.CORPORATE', typeof (entry.ASSOCIATE))
             return (
                 <Row style={{ backgroundColor: index % 2 === 1 ? '#eaeaea' : 'white', minHeight: '50px', padding: '15px' }}>
-                    <Col xs={4} md={3} className=" " style={{ display: "flex", justifyContent: 'center', flexDirection: 'column' }}>
+                    <Col xs={4} md={3} className=" " style={{ display: "flex", justifyContent: 'left', flexDirection: 'column', textAlign: 'left' }}>
                         {entry.title}
                     </Col>
 
                     <Col xs={2} md={3} className=" " style={{ fontSize: "30px", color: 'gray' }}>
                         <div className="table_cell" >
-                            {entry.PARTNER && <i class="far fa-check-square"></i>}
+                            {
+                                entry.PARTNER && typeof (entry.PARTNER) === 'string' &&
+                                <div style={{ fontSize: "18px", color: 'gray' }}>
+                                    {entry.PARTNER}
+                                </div>
+                            }
+                            {entry.PARTNER && typeof (entry.PARTNER) === 'boolean' && <i class="far fa-check-square"></i>}
                         </div>
                     </Col>
                     <Col xs={2} md={3} className=" " style={{ fontSize: "30px", color: 'gray' }}>
+
                         <div className="table_cell">
-                            {entry.CORPORATE && <i class="far fa-check-square"></i>}
+                            {
+                                entry.CORPORATE && typeof (entry.CORPORATE) === 'string' &&
+                                <div style={{ fontSize: "18px", color: 'gray' }}>
+                                    {entry.CORPORATE}
+                                </div>
+                            }
+                            {entry.CORPORATE && typeof (entry.CORPORATE) === 'boolean' && <i class="far fa-check-square"></i>}
                         </div>
                     </Col>
                     <Col xs={2} md={3} className=" " style={{ fontSize: "30px", color: 'gray' }}>
                         <div className="table_cell" >
-                            {entry.ASSOCIATE && <i class="far fa-check-square"></i>}
+                            {
+                                entry.ASSOCIATE && typeof (entry.ASSOCIATE) === 'string' &&
+                                <div style={{ fontSize: "18px", color: 'gray' }}>
+                                    {entry.ASSOCIATE}
+                                </div>
+                            }
+                            {entry.ASSOCIATE && typeof (entry.ASSOCIATE) === 'boolean' && <i class="far fa-check-square"></i>}
                         </div>
                     </Col>
                 </Row>
@@ -244,7 +269,7 @@ function BenifitsPageComponent() {
                                                 CORPORATE MEMBER
                                             </div>
                                             <div style={{ fontSize: "30px", fontWeight: "bolder", color: "white" }}>
-                                                $2,500 USD
+                                                $3,000 USD
                                             </div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 per annum
@@ -259,7 +284,7 @@ function BenifitsPageComponent() {
                                                 ASSOCIATE MEMBER
                                             </div>
                                             <div style={{ fontSize: "30px", fontWeight: "bolder", color: "white" }}>
-                                                $500 USD
+                                                $1,000 USD
                                             </div>
                                             <div style={{ fontSize: "", fontWeight: "", color: "white" }}>
                                                 per annum

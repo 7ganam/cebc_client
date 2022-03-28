@@ -8,7 +8,7 @@ function LevelsPageComponent() {
 
     const data = [
         {
-            title: 'Opportunity to attend CEBC social networking events to establish and build on professional relationships (an event every quarter)',
+            title: 'Opportunity to attend CEBC 2social networking events to establish and build on professional relationships (an event every quarter)',
             PARTNER: true,
             CORPORATE: true,
             ASSOCIATE: true,
