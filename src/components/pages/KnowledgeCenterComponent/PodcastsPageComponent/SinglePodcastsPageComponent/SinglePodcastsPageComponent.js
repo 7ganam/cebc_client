@@ -16,13 +16,11 @@ import apple_image from "./images/apple.png"
 
 function SinglePodcastsPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    // console.log(`singeprops.podcasts`, props.podcasts)
+
     const podcast_slug = props.match.params.podcast_slug;
 
     const the_podcast = props.podcasts.filter((podcast) => podcast.slug == podcast_slug)[0] //leave this as two ==
 
-    console.log(`the_podcast`, the_podcast)
 
 
 

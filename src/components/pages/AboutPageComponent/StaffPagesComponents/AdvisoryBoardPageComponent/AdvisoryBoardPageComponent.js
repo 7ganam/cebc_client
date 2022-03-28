@@ -16,7 +16,7 @@ function s3_map(str) {
 }
 
 function AdvisoryBoardPageComponent(props) {
-    // console.log(`props.staff`, props.staff)
+
 
     function create_staff_view(staff, position) {
         const staff_view_array = staff.map((member, index) => {

@@ -7,8 +7,6 @@ import { Card, CardImg, CardTitle, CardText, CardSubtitle, CardBody, CardFooter 
 
 function PapersPageComponent(props) {
 
-    console.log(` pagepapers1`, props.papers)
-
 
     const render_papers2 = (papers) => {
         const sub_objects = []

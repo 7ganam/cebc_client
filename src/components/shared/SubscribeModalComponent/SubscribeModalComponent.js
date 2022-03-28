@@ -43,8 +43,7 @@ function SubscribeModalComponent(props) {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
-        console.log('submitProps', submitProps)
+
         const request_data = {
 
             "first_name": values.first_name,
@@ -54,7 +53,6 @@ function SubscribeModalComponent(props) {
             "company": values.company,
 
         }
-        console.log('request_data', request_data)
 
         try {
             setSending_data(true)
@@ -75,7 +73,6 @@ function SubscribeModalComponent(props) {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
                 // login(response_json_content)
                 // toggle();
             }

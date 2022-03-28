@@ -17,11 +17,9 @@ const app = () => {
       slidingAnimation="top_to_bottom"
       orientation="vertical"
       initialSlide={1}
-      onBeforeChange={(previousSlide, nextSlide) =>
-        console.log("onBeforeChange", previousSlide, nextSlide)
-      }
-      onChange={nextSlide => console.log("onChange", nextSlide)}
-      onAfterChange={nextSlide => console.log("onAfterChange", nextSlide)}
+      onBeforeChange={(previousSlide, nextSlide) => { }}
+      onChange={nextSlide => { }}
+      onAfterChange={nextSlide => { }}
       style={{
         backgroundColor: "#000"
       }}

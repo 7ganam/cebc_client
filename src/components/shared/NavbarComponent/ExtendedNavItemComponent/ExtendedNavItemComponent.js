@@ -46,9 +46,7 @@ function ExtendedNavItemComponent(props) {
             var clickOver = $(event.target)
 
 
-            // console.log(`clickOver`, $('.navbar .navbar-toggler').attr('aria-expanded'))
             if ($('.navbar-collapse').hasClass("show")) {
-                console.log(`clickOver`, clickOver)
                 // Click on navbar toggler button
                 $('.navbar-toggler').click();
             }
@@ -156,9 +154,8 @@ function ExtendedNavItemComponent2(props) {
             var clickOver = $(event.target)
 
 
-            // console.log(`clickOver`, $('.navbar .navbar-toggler').attr('aria-expanded'))
             if ($('.navbar-collapse').hasClass("show")) {
-                console.log(`clickOver`, clickOver)
+
                 // Click on navbar toggler button
                 $('.navbar-toggler').click();
             }

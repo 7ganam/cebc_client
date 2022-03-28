@@ -54,7 +54,6 @@ function SingleWorkingGroupPageComponent(props) {
 
     function generate_entity_views() {
 
-        console.log(`props.members`, props.members)
         const members_views = the_group.entities.map((member, index) => {
             return (
                 <Link className="" to={`/MEMBERSHIP/MEMBERS/${member.slug}`}>
@@ -75,7 +74,6 @@ function SingleWorkingGroupPageComponent(props) {
         // let reports = the_group.report_puplications.reverse()
         var reports = [].concat(the_group.report_puplications).reverse();
 
-        console.log(`reports`, reports)
 
         const members_views = reports.map((report, index) => {
             return (

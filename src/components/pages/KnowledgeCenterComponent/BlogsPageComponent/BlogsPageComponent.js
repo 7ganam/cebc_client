@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 import { Card, CardImg, CardTitle, CardText, CardSubtitle, CardBody, CardFooter } from 'reactstrap';
 
 function BlogsPageComponent(props) {
-    console.log(` props.blogs`, props.blogs)
-
-
 
     const render_blogs = (blogs) => {
 
@@ -65,7 +62,7 @@ function BlogsPageComponent(props) {
             <div class="section_header" style={{ marginTop: "100px" }}>
                 <span class="section_header_inner">
                     blogs
-            </span>
+                </span>
                 <div className="section_header_under"></div>
             </div>
         )
@@ -78,7 +75,6 @@ function BlogsPageComponent(props) {
             },
             {}
         );
-        console.log(`ordered_years`, ordered_years)
 
         for (const year of ordered_years) {
             render_blog.push(

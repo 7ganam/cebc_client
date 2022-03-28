@@ -47,8 +47,6 @@ function JoinPageComponent() {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
-        console.log('submitProps', submitProps)
         const request_data = {
             "sender_name": values.name,
             "entity_name": values.entity,
@@ -57,7 +55,7 @@ function JoinPageComponent() {
             "message": values.message,
 
         }
-        console.log('request_data', request_data)
+
 
         try {
             setSending_data(true)
@@ -78,13 +76,12 @@ function JoinPageComponent() {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
+
             }
 
         } catch (err) {
             setSending_data(false)
             setError_message(err)
-            console.log(err);
         }
 
     }

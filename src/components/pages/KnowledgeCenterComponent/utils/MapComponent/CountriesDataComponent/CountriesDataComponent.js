@@ -4,7 +4,7 @@ import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 function CountriesDataComponent(props) {
-    console.log(`props`, props)
+
     function generate_country_data(country) {
         if (!country) { return (<div>no data found</div>) }
         let case_studies_views = country.case_studies.map((case_study, index) => {
@@ -49,7 +49,6 @@ function CountriesDataComponent(props) {
         let views = selected_countries.map((country, country_index) => {
             let loaded_country = loaded_counties.filter((loaded_country) => country === loaded_country.alpha2_code)
             loaded_country = loaded_country[0]
-            console.log('country', country, 'loaded_country', loaded_country)
             return (
                 <li key={loaded_country.id} className={
                     `country_data_item

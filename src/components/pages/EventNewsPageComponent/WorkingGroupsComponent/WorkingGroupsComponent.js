@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 function WorkingGroupsComponent(props) {
 
 
-    console.log('WorkingGroupsComponent', props)
 
     const render_groups = (groups) => {
         const groups_view = groups.map((group, index) => {

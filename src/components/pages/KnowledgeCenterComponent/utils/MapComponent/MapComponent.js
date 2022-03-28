@@ -21,7 +21,6 @@ function MapComponent() {
                 const responseData = await sendcountrysRequest(`${process.env.REACT_APP_BACKEND_URL}/countries`);
 
                 setLoadedcountrys(responseData);
-                console.log('loaded countrys', responseData)
             } catch (err) {
                 console.log({ err })
             }
@@ -105,7 +104,6 @@ function MapComponent() {
         let countries_to_hide = all_countries.filter((country) => {
             return !shown_country_list.includes(country.alpha2)
         })
-        // console.log(countries_to_hide)
         let russia = document.querySelectorAll('[data-code="RU"]');
         if (russia.length > 0) {
             for (let country_to_hide of countries_to_hide) {

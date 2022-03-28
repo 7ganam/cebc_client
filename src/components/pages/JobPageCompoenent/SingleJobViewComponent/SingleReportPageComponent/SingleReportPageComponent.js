@@ -18,17 +18,13 @@ import { Link } from 'react-router-dom';
 
 function SingleReportPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    console.log(`singeprops.reports`, props.reports)
+
     const report_id = props.match.params.report_id;
 
     const the_report = props.reports.filter((report) => report.id == report_id)[0] //leave this as two ==
 
-    console.log(`the_report`, the_report)
-
     function generate_entity_views(type) {
 
-        // console.log(`props.members`, props.members)
         const members_views = the_report.entities.map((member, index) => {
             if (member.membership_type) {
                 return (
@@ -74,7 +70,6 @@ function SingleReportPageComponent(props) {
     }
 
 
-    console.log(`the_report`, the_report)
     return (
 
         <>

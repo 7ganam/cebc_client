@@ -12,7 +12,7 @@ const PaginationComponent = (props) => {
         event.preventDefault();
         setPageNumber(button_number);
         props.fetch_items(props.items_per_page, button_number)
-        console.log(`button_number`, button_number)
+        // console.log(`button_number`, button_number)
     }
 
 

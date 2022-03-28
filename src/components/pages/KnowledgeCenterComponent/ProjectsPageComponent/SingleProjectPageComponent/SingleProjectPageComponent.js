@@ -19,17 +19,14 @@ function s3_map(str) {
 
 function SingleProjectPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    // console.log(`singeprops.projects`, props.projects)
+
     const project_slug = props.match.params.project_slug;
 
     const the_project = props.projects.filter((project) => project.slug == project_slug)[0] //leave this as two ==
 
-    console.log(`the_project`, the_project)
 
     function generate_entity_views(type) {
 
-        console.log(`props.members`, props.members)
         const members_views = the_project.entities.map((member, index) => {
             if (member.membership_type) {
                 return (

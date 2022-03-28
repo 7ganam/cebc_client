@@ -10,17 +10,10 @@ import moment from 'moment';
 
 function SingleBlogPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    // console.log(`singeprops.blogs`, props.blogs)
+
     const blog_id = props.match.params.blog_id;
 
     const the_blog = props.blogs.filter((blog) => blog.id == blog_id)[0] //leave this as two ==
-
-    console.log(`the_blog`, the_blog)
-
-
-
-
 
     return (
 

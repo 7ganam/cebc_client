@@ -88,13 +88,10 @@ function PresintationsPageComponent() {
                 </div>
 
             )
-            console.log(`presentation`, presentation_group.presentation)
             let pres = [].concat(presentation_group.presentation).reverse()
-            console.log(`presentationrev`, pres)
 
 
             for (const presentation of pres) {
-                // console.log(`presentation_title`, presentation.title)
 
                 presentation_container.push(
 

@@ -65,7 +65,6 @@ function SignUpModalComponenet() {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
                 // login(response_json_content)
                 // toggle();
             }
@@ -180,7 +179,6 @@ function SignUpModalComponenet() {
                                     innerRef={formRef}
                                 >
                                     {formik => {
-                                        // console.log('Formik props', formik)
                                         return (
                                             <Form className="signUP_form">
                                                 <Row className='formik-control'>

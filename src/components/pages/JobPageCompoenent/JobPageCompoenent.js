@@ -8,7 +8,7 @@ import { useRef, useEffect, useState } from 'react'
 import './JobPageCompoenent.css'
 
 function JobPageCompoenent(props) {
-    // console.log(`props`, props)
+    //
 
 
 
@@ -38,7 +38,6 @@ function JobPageCompoenent(props) {
 
 
     function filter_jobs(jobs, values) {
-        console.log(`jobs`, jobs)
         const true_values = []
         // console.log(`values`, values)
         for (const value in values) {

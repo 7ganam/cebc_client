@@ -75,8 +75,7 @@ function PastJobPageComponent() {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
-        // console.log('submitProps', submitProps)
+
         const request_data = {
             "title": values.title,
             "location": values.location,
@@ -89,7 +88,6 @@ function PastJobPageComponent() {
             "Temporary": values.Temporary,
 
         }
-        console.log('request_data', values)
 
         try {
             setSending_data(true)
@@ -111,7 +109,6 @@ function PastJobPageComponent() {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
             }
 
         } catch (err) {
@@ -191,7 +188,7 @@ function PastJobPageComponent() {
                         <div style={{ padding: "0px", }} >
                             <div className='modal_header'  >
                                 Post a job
-                        </div>
+                            </div>
                             <Row style={{ padding: "10px 10px 10px 0px ", }} >
                                 <Col md={4} >
                                     <div className='su_left_col' style={{}}>
@@ -200,7 +197,7 @@ function PastJobPageComponent() {
                                         </div>
                                         <div style={{ color: 'grey', textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '20px', padding: '10px' }}>
                                             post a job to be listed in cebc jobs page
-                                    </div>
+                                        </div>
                                         <div style={{ color: "grey", textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '5px', padding: '10px' }}>
                                         </div>
                                     </div>

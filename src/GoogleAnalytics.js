@@ -11,7 +11,7 @@ function GoogleAnalytics(props) {
         // To Report Page View 
         ReactGA.pageview(window.location.pathname + window.location.search);
 
-        console.log(`You changed the page to: ${window.location.pathname + window.location.search}`)
+        // console.log(`You changed the page to: ${window.location.pathname + window.location.search}`)
     }, [location]);
 
     return <>

@@ -20,7 +20,6 @@ import { Link } from 'react-router-dom';
 
 
 function MembersOnlyPageComponent(props) {
-    console.log(`props`, props)
 
     const { login, IsLoggedIn, Token, ToggleLoginModal, logout, IsSignUpModalShown, ToggleSignUpModal, User } = useContext(LoginContext);
 
@@ -83,7 +82,6 @@ function MembersOnlyPageComponent(props) {
                 var localTime = moment().format('YYYY-MM-DD'); // store localTime
                 var current_date = localTime + "T00:00:00.000Z";
                 var current_date = localTime;
-                console.log('comming evs', Token)
 
                 const responseData = await sendUpcommingEventsRequest(
                     `${process.env.REACT_APP_BACKEND_URL}/events?Event_date_gte=${current_date}`,
@@ -92,7 +90,7 @@ function MembersOnlyPageComponent(props) {
                     { 'Authorization': "Bearer " + Token }
                 );
 
-                console.log('comming evs', responseData)
+
 
                 setLoadedUpcommingEvents(responseData);
             } catch (err) {

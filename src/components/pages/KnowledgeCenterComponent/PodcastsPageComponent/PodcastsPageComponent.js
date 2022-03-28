@@ -17,7 +17,6 @@ function PodcastsPageComponent(props) {
         // collect in array of season_objects seasons_array with the form [ {season:x , episodes:[obj , obj2 , ...]} , {season:y , episods:[obj , obj2 , ...]} ]
         let seasons_array = [];
         for (let pod of podcasts) {
-            // console.log(`pod`, pod);
             //check if the season of the podcast has entry in seasons_array if not add an entry
             if (seasons_array.length == 0) {
                 seasons_array.push({ season: pod.season, episodes: [pod] })
@@ -43,7 +42,6 @@ function PodcastsPageComponent(props) {
         for (let season_object of seasons_array) {
             season_object.episodes.sort((a, b) => (a.episode > b.episode) ? 1 : -1)
         }
-        console.log(`seasons_array`, seasons_array)
         return seasons_array;
 
 
@@ -79,7 +77,7 @@ function PodcastsPageComponent(props) {
 
 
 
-            { props.podcasts && props.podcasts.length > 0 ?
+            {props.podcasts && props.podcasts.length > 0 ?
 
                 <div>
                     {generate_seasons_view()}

@@ -15,11 +15,9 @@ function SingleWebinarPageComponent(props) {
 
     const the_webinar = props.webinars.filter((webinar) => webinar.slug == webinar_slug)[0] //leave this as two ==
 
-    console.log(`the_webinar`, the_webinar)
 
 
     function extract_yt_id(url) {
-        console.log(`url`, url)
         var video_id = url.split('v=')[1];
         if (video_id) {
             var ampersandPosition = video_id.indexOf('&');

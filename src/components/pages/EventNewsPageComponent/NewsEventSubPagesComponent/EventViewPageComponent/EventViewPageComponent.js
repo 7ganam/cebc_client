@@ -63,11 +63,11 @@ function EventViewPageComponent(props) {
                 let modified_event = { ...responseData[0], event_post: modified_event_post }
 
                 setLoadedEvent(modified_event);
-                console.log({ modified_event })
+                // console.log({ modified_event })
 
 
             } catch (err) {
-                console.log({ err })
+                // console.log({ err })
             }
 
 

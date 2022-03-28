@@ -43,8 +43,8 @@ function Consultantform() {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
-        console.log('submitProps', submitProps)
+        // console.log('Form data', values)
+        // console.log('submitProps', submitProps)
         const request_data = {
             "sender_name": values.name,
             "entity_name": values.entity,
@@ -52,7 +52,7 @@ function Consultantform() {
             "title": values.title,
             "email": values.email,
         }
-        console.log('request_data', request_data)
+        // console.log('request_data', request_data)
 
         try {
             setSending_data(true)
@@ -73,13 +73,13 @@ function Consultantform() {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
+                // console.log({ response_json_content })
             }
 
         } catch (err) {
             setSending_data(false)
             setError_message(err)
-            console.log(err);
+            // console.log(err);
         }
 
     }
@@ -170,7 +170,7 @@ function Consultantform() {
 
                                         <div style={{ color: 'grey', textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '20px', paddingRight: '20px' }}>
                                             Send us a message  and we will contact you back soon
-                        </div>
+                                        </div>
                                         <div style={{ color: "grey", textAlign: "left", width: '100%', display: "flex", justifyContent: 'center', marginTop: '5px', padding: '10px' }}>
                                         </div>
                                     </div>

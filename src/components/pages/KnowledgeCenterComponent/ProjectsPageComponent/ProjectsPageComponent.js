@@ -14,7 +14,6 @@ function s3_map(str) {
 
 function ProjectsPageComponent(props) {
 
-    console.log(`props.projects`, props.projects)
     function generate_projects_cards() {
         const projects = props.projects.map((project, index) => {
             return (

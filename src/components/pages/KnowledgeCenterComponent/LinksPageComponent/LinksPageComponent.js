@@ -28,7 +28,6 @@ function LinksPageComponent(props) {
                     {link_group.title_for_new_group_of_links}
                 </div>
             )
-            console.log(`link_group`, link_group)
             for (const link of link_group.link) {
                 link_container.push(
 
@@ -47,7 +46,6 @@ function LinksPageComponent(props) {
                     </>
 
                 )
-                console.log(`link_container`, link.title)
             }
         }
 

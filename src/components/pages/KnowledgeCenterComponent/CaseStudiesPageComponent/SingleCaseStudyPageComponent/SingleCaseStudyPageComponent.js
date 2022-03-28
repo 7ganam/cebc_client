@@ -18,17 +18,13 @@ import { Link } from 'react-router-dom';
 
 function SingleCaseStudyPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    // console.log(`singeprops.case_studies`, props.case_studies)
     const case_study_slug = props.match.params.case_study_slug;
 
     const the_case_study = props.case_studies.filter((case_study) => case_study.slug == case_study_slug)[0] //leave this as two ==
 
-    console.log(`the_case_study`, the_case_study)
 
     function generate_entity_views(type) {
 
-        console.log(`props.members`, props.members)
         const members_views = the_case_study.entities.map((member, index) => {
             if (member.membership_type) {
                 return (

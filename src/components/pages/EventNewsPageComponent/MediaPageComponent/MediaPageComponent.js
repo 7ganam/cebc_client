@@ -58,7 +58,7 @@ function MediaPageComponent(props) {
 
 
             } catch (err) {
-                console.log({ err })
+                // console.log({ err })
             }
 
 
@@ -168,7 +168,7 @@ function MediaPageComponent(props) {
 
     function generate_page_view(sub_par, past_events) {
         let past = past_events.filter((event) => event.show_in_media === true)
-        console.log(`past`, past)
+        // console.log(`past`, past)
         return (
             <>
                 <div className='background_image_div' >

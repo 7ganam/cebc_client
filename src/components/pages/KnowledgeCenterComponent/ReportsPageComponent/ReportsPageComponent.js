@@ -15,7 +15,6 @@ function s3_map(str) {
 
 
 function ReportsPageComponent(props) {
-    console.log(` pagereports1`, props.reports)
 
 
 
@@ -42,7 +41,6 @@ function ReportsPageComponent(props) {
             const sub_objects = []
             for (const month in reports_object[year]) {
                 for (const report of reports_object[year][month]) {
-                    console.log(` report.slug`, report.slug)
 
                     sub_objects.unshift(
 
@@ -86,7 +84,6 @@ function ReportsPageComponent(props) {
             },
             {}
         );
-        console.log(`ordered_years`, ordered_years)
 
         for (const year of ordered_years) {
             render_report.push(

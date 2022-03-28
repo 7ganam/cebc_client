@@ -17,7 +17,6 @@ function s3_map(str) {
 
 function NewsComponent(props) {
 
-    // console.log(`props.latest_news`, props.latest_news)
     const [SortedEvents, setSortedEvents] = useState([])
 
     function sort_events(events) {

@@ -38,15 +38,12 @@ function ContactUsModalComponent(props) {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
-        console.log('submitProps', submitProps)
+
         const request_data = {
             "name": values.name,
             "message": values.message,
             "email": values.email
         }
-        console.log('request_data', request_data)
-
         try {
             setSending_data(true)
             const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/application-for-contacts`, {
@@ -66,7 +63,6 @@ function ContactUsModalComponent(props) {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
                 // login(response_json_content)
                 // toggle();
             }
@@ -74,7 +70,6 @@ function ContactUsModalComponent(props) {
         } catch (err) {
             setSending_data(false)
             setError_message(err)
-            console.log(err);
         }
 
 

@@ -19,11 +19,9 @@ function WebinarsPageComponent(props) {
 
     }
 
-    console.log(`props.webinars`, props.webinars)
     function generate_webinars_cards() {
         let reverse_webinars = props.webinars;
-        console.log(` props.webinars`, props.webinars)
-        console.log(`reverse_webinars`, reverse_webinars)
+
 
         const webinars = reverse_webinars.map((webinar, index) => {
             return (

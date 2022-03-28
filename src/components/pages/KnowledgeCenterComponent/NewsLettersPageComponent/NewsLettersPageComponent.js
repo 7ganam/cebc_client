@@ -17,9 +17,7 @@ function s3_map(str) {
 
 function NewsLettersPageComponent(props) {
 
-    console.log(`pageNewsLetters1`, props.NewsLetters)
     const render_NewsLetters = (NewsLetters) => {
-        console.log(` pageNewsLetters`, NewsLetters)
 
         const NewsLetters_object = {}
         for (const NewsLetter of NewsLetters) {
@@ -97,7 +95,6 @@ function NewsLettersPageComponent(props) {
             },
             {}
         );
-        console.log(`ordered_years`, ordered_years)
 
         for (const year of ordered_years) {
             render_NewsLetter.push(

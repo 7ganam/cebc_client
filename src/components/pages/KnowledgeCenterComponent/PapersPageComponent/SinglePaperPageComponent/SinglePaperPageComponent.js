@@ -18,17 +18,14 @@ import { Link } from 'react-router-dom';
 
 function SinglePaperPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    console.log(`singeprops.papers`, props.papers)
+
     const paper_id = props.match.params.paper_id;
 
     const the_paper = props.papers.filter((paper) => paper.id == paper_id)[0] //leave this as two ==
 
-    console.log(`the_paper`, the_paper)
 
     function generate_entity_views(type) {
 
-        console.log(`props.members`, props.members)
         const members_views = the_paper.entities.map((member, index) => {
             if (member.membership_type) {
                 return (

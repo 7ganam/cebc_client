@@ -15,18 +15,10 @@ import { Alert } from 'reactstrap';
 
 function SingleJobViewComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    console.log(`singeprops.jobs`, props.jobs)
     const job_slug = props.match.params.job_slug;
 
     const the_job = props.jobs.filter((job) => job.slug == job_slug)[0] //leave this as two ==
 
-    // console.log(`the_job`, the_job)
-
-
-
-
-    console.log(`the_job`, the_job)
     return (
 
         <>

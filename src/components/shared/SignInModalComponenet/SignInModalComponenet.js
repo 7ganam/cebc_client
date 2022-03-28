@@ -45,7 +45,6 @@ function SignInModalComponenet() {
             "password": values.password
         }
 
-        console.log('request_data', request_data)
 
         try {
             setSending_data(true)
@@ -66,7 +65,6 @@ function SignInModalComponenet() {
 
             if (response_json_content.jwt !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
                 login(response_json_content.jwt, response_json_content.user)
                 toggle();
             }

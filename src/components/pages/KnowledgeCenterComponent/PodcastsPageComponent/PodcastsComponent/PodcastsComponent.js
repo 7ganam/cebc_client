@@ -19,7 +19,6 @@ function s3_map(str) {
 
 function PodcastsComponent(props) {
 
-    console.log(`props.podcasts`, props.podcasts)
     function generate_podcasts_cards() {
         const podcasts = props.podcasts.map((podcast, index) => {
             return (

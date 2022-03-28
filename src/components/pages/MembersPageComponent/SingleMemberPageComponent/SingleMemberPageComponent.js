@@ -26,7 +26,6 @@ function SingleMemberPageComponent(props) {
 
 
 
-    console.log(`member`, member)
 
     function generate_projects_cards(projects_list) {
         const projects = projects_list.map((project, index) => {

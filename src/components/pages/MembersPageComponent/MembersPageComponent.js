@@ -16,7 +16,6 @@ function MembersPageComponent(props) {
 
     function generate_assoicate_members_views(type) {
 
-        console.log(`props.members`, props.members)
         const members_views = props.members.map((member, index) => {
             if (member.membership_type === type) {
                 return (

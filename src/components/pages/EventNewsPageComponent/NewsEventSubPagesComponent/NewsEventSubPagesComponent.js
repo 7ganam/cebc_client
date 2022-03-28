@@ -31,7 +31,7 @@ function s3_map(str) {
 function NewsEventSubPagesComponent(props) {
 
 
-    console.log(`props.match.params.sub_parameter`, props.match.params.sub_parameter)
+    // console.log(`props.match.params.sub_parameter`, props.match.params.sub_parameter)
     const events_per_page = 30;
     const news_per_page = 30;
 
@@ -45,7 +45,7 @@ function NewsEventSubPagesComponent(props) {
                 setLoadedNewsCount(responseData);
                 return responseData
             } catch (err) {
-                console.log({ err })
+                // console.log({ err })
             }
         },
         [sendNewsRequest],
@@ -125,7 +125,7 @@ function NewsEventSubPagesComponent(props) {
                         `${process.env.REACT_APP_BACKEND_URL}/news?_sort=date:DESC&_limit=${EntryPerPage}&_start=${EntryPerPage * (page_number - 1)}`
                     );
                 setLoadedNews(responseData);
-                console.log('loadednews ', responseData)
+                // console.log('loadednews ', responseData)
             } catch (err) {
                 console.log({ err })
             }
@@ -289,7 +289,7 @@ function NewsEventSubPagesComponent(props) {
         return render_event
     }
     const render_news = (past_newss) => {
-        console.log(`past_newss`, past_newss)
+        // console.log(`past_newss`, past_newss)
 
         const newss_object = {}
         for (const news of past_newss) {
@@ -304,7 +304,7 @@ function NewsEventSubPagesComponent(props) {
             newss_object[year][month].sort((a, b) => (moment(a.date) > moment(b.date)) ? 1 : -1)
 
         }
-        console.log(`newss_object`, newss_object)
+        // console.log(`newss_object`, newss_object)
 
 
 

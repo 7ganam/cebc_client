@@ -62,7 +62,7 @@ function CoursePageComponent(props) {
 
     const onSubmit = async (values, submitProps) => {
         setError_message(null)
-        console.log('Form data', values)
+        // console.log('Form data', values)
         // console.log('submitProps', submitProps)
         // console.log('the_course', the_course)
 
@@ -76,7 +76,7 @@ function CoursePageComponent(props) {
             "discount_code": values.discount_code,
 
         }
-        console.log('request_data', request_data)
+        // console.log('request_data', request_data)
 
         try {
             setSending_data(true)
@@ -97,13 +97,13 @@ function CoursePageComponent(props) {
 
             if (response_json_content.email !== "") {
                 setFetch_success(true)
-                console.log({ response_json_content })
+                // console.log({ response_json_content })
             }
 
         } catch (err) {
             setSending_data(false)
             setError_message(err)
-            console.log(err);
+            // console.log(err);
         }
 
     }

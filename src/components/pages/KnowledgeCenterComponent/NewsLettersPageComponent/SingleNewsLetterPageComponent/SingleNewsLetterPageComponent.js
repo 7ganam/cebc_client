@@ -22,17 +22,13 @@ function s3_map(str) {
 
 function SingleNewsLetterPageComponent(props) {
 
-    // console.log(props.match.params.Event_id)
-    console.log(`singeprops.NewsLetters`, props.NewsLetters)
     const NewsLetter_slug = props.match.params.NewsLetter_slug;
 
     const the_NewsLetter = props.NewsLetters.filter((NewsLetter) => NewsLetter.slug == NewsLetter_slug)[0] //leave this as two ==
 
-    // console.log(`the_NewsLetter`, the_NewsLetter)
 
     function generate_entity_views(type) {
 
-        // console.log(`props.members`, props.members)
         const members_views = the_NewsLetter.entities.map((member, index) => {
             if (member.membership_type) {
                 return (
