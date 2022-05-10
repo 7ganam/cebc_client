@@ -1,0 +1,70 @@
+.banar_col {
+  /* height: 500px; */
+  padding: 5px;
+}
+
+#main_banar_div {
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 10%);
+  max-height: 100%;
+  overflow: hidden;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(128, 128, 128, 0.419);
+}
+@media (max-width: 768px) {
+  #main_banar_div {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+#main_banar_title_div {
+  font-weight: 700;
+  margin-top: 10px;
+  color: rgb(105, 102, 102);
+}
+
+#main_banar_body_div {
+  color: grey;
+  font-size: 12px;
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-height: 20px;
+  max-height: 80px;
+}
+
+.sec_banar_div {
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 10%);
+  height: 200px;
+  width: 100%;
+  margin-top: 5px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .sec_banar_div {
+    max-width: 90%;
+    margin: 10px auto 0 auto;
+  }
+}
+
+#main_banar_img_div {
+  height: 100%;
+  width: 50%;
+}
+
+#main_banar_img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
