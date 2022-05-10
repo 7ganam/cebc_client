@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactLoading from 'react-loading';
 import {Link} from 'react-router-dom';
 import moment from 'moment';
-import banar from './banar.png';
+import banar from './banar.jpg';
 
 function s3_map(str) {
   str = str.replace('cebc2', 'cebc3');
@@ -26,7 +26,7 @@ function BanarComponent(props) {
               className='banar_col main_banar_col'
               xs='12'
               style={{}}>
-              <a className='' href={`https://evinnovationsummit.com/`}>
+              <a className='' href={`https://mailchi.mp/cebcmena/evis`}>
                 <div id='main_banar_div' className='p-2'>
                   <div id='main_banar_img_div' style={{width: '100%'}}>
                     <img id='main_banar_img' src={banar} alt='oval' />
