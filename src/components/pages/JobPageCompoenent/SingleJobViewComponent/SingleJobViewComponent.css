@@ -155,6 +155,13 @@
   text-decoration: none;
 }
 
+.sc-kLojOw {
+  min-height: 200px;
+  background-color: white;
+  border: dashed 1px #6e7072 !important;
+  width: 100%;
+  max-width: 100% !important;
+}
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }

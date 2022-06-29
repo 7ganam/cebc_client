@@ -61,8 +61,6 @@ function JobPageCompoenent(props) {
     return jobs_view;
   };
 
-  useEffect(() => {}, [props.jobs]);
-
   return (
     <div
       style={{
