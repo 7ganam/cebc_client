@@ -1,142 +1,122 @@
-
-.sound_cloud_plugin{
-    
-    margin: 200px auto auto;
-    width: 70%;
-    min-height: 200px;
-    border-radius: 22px;
-    overflow: hidden;
-    border: 1px solid #80808075;
-    box-shadow: -1px 2px 9px 1px grey;
+.sound_cloud_plugin {
+  margin: 200px auto auto;
+  width: 70%;
+  min-height: 200px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #80808075;
+  box-shadow: -1px 2px 9px 1px grey;
 }
 
-#podcast_background{
-    background-color: #F1F1F1;
-    min-height: 100vh;
-    margin-top: 0;
-    /* overflow: hidden; */
+#podcast_background {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  margin-top: 0;
+  /* overflow: hidden; */
 }
 
-.podcast_box{
-    max-width: 80%;
-    width: 100%;
-    max-width: 1000px;
-    min-height: 500px;
-    margin: auto;
-    margin-bottom: 20px;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-
+.podcast_box {
+  max-width: 80%;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
 }
 
-.podcast_image_box{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 200px;
-    width: 85%;
-    margin: auto;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-    padding: 10px;
-    margin-bottom: 20px;
+.podcast_image_box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  width: 85%;
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-
-.podcast_details_box{
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-    padding: 10px;
-    margin-bottom: 30px;
+.podcast_details_box {
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 
+#podcast_header {
+  width: 100%;
 
-#podcast_header{
-    width: 100%;
-   
-    min-height: 250px;
-    margin: 0;
-    padding: 20px;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
+  min-height: 250px;
+  margin: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
 }
 
+#podcast_header_2 {
+  width: 100%;
 
-#podcast_header_2{
-    width: 100%;
-   
-    min-height: 60px;
-    margin: 0;
-    padding: 20px;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
+  min-height: 60px;
+  margin: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
 }
 
-#podcast_body{
-    padding: 25px;
+#podcast_body {
+  padding: 25px;
 }
 
-
-
-
-
-#podcast_header{
-    display: flex;
-     flex-direction: column;
-    }
-
-
-
+#podcast_header {
+  display: flex;
+  flex-direction: column;
+}
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-
+@media (min-width: 576px) {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-
-   #podcast_header{
+@media (min-width: 768px) {
+  #podcast_header {
     display: flex;
-     flex-direction: row;
-    }
-
-
- }
+    flex-direction: row;
+  }
+}
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
-  }
+}
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+}
 
-  }
+.pod_card_text {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  width: 80%;
+  border-left: 1px grey solid;
+}
 
-
-  .pod_card_text{
-      margin:auto;
-      font-family: 'Roboto', sans-serif;
-      text-transform: uppercase;
-      color : black;
-      font-weight: bold;
-      width: 80%;
-      border-left: 1px grey solid;
-  }
-
-  .pod_button{
-    height: 60px;
-     min-width: 250px;
-      width: 300px;
-       max-width:90vw ;
-       border: 1px solid #8080803d;
-    border-radius: 20px;
-    box-shadow: 0px 3px 0 0 #0000002b;
-    display: flex;
-    justify-content: left;
-    align-content: center;
-    align-items: center;
-    margin:20px;
-    overflow: hidden;
-    /* flex-wrap: wrap;  */
-  }
+.pod_button {
+  height: 60px;
+  min-width: 250px;
+  width: 300px;
+  max-width: 90vw;
+  border: 1px solid #8080803d;
+  border-radius: 20px;
+  box-shadow: 0px 3px 0 0 #0000002b;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  align-items: center;
+  margin: 20px;
+  overflow: hidden;
+  /* flex-wrap: wrap;  */
+}

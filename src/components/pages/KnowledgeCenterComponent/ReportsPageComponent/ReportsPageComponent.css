@@ -1,19 +1,17 @@
-.card_title_{
-    height: 100px;
-    /* white-space: nowrap; */
+.card_title_ {
+  height: 100px;
+  /* white-space: nowrap; */
 
-    margin-top: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4; /* number of lines to show */
-    line-height: 20px;        /* fallback */
-    max-height: 80px;       /* fallback */
-
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-height: 20px; /* fallback */
+  max-height: 80px; /* fallback */
 }
-.past_report_card{
-    margin-bottom: 30px;
-    box-shadow: 0px 1px 2px 2px #ccc2c27a;
- 
+.past_report_card {
+  margin-bottom: 30px;
+  box-shadow: 0px 1px 2px 2px #ccc2c27a;
 }

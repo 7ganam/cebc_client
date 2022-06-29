@@ -5,20 +5,16 @@ import Navbar from "../UI/Navbar/Navbar";
 import Wrapper from "../UI/Wrapper/Wrapper";
 import Title from "../UI/Title/Title";
 import Subtitle from "../UI/Subtitle/Subtitle";
-import kyoto from "../12.jpg"
+import kyoto from "../12.jpg";
 import tenryuJiTemple from "../Clean-Air-Forum-Photo-22.jpg";
 import hakone from "../Policy-Working-Group-Photo-62.jpg";
 import byodoInTemple from "../DSCF5480-1024x6832.jpg";
 // Images
 
-
-
 // const kyoto = "https://i.imgur.com/xw5Abku.jpg";
 // const tenryuJiTemple = "../Clean-Air-Forum-Photo-2.jpg";
 // const hakone = "../Policy-Working-Group-Photo-6.jpg";
 // const byodoInTemple = "../DSCF5480-1024x683.jpg";
-
-
 
 const app = () => {
   return (
@@ -32,7 +28,7 @@ const app = () => {
       // onChange={nextSlide => console.log("onChange", nextSlide)}
       // onAfterChange={nextSlide => console.log("onAfterChange", nextSlide)}
       style={{
-        backgroundColor: "black"
+        backgroundColor: "black",
       }}
       settings={{
         slidingDuration: 400,
@@ -40,7 +36,7 @@ const app = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: false,
         autoplayDuration: 2000,
-        height: "99.5vh"
+        height: "99.5vh",
       }}
     >
       <Navbar />
@@ -51,16 +47,13 @@ const app = () => {
         </Wrapper>
       </OverlayContainer>
 
-
-
       <Slide
         shouldRenderMask
         navDescription="Our working groups"
         background={{
           backgroundColor: "#c7a662",
-          maskBackgroundBlendMode: 'luminosity',
-          backgroundImage: tenryuJiTemple
-
+          maskBackgroundBlendMode: "luminosity",
+          backgroundImage: tenryuJiTemple,
         }}
       />
 
@@ -69,8 +62,8 @@ const app = () => {
         navDescription="Our groups"
         background={{
           backgroundColor: "#745b5f",
-          maskBackgroundBlendMode: 'luminosity',
-          backgroundImage: hakone
+          maskBackgroundBlendMode: "luminosity",
+          backgroundImage: hakone,
         }}
       />
       <Slide
@@ -78,8 +71,8 @@ const app = () => {
         navDescription="What we do"
         background={{
           backgroundColor: "#8A8A8A",
-          maskBackgroundBlendMode: 'luminosity',
-          backgroundImage: kyoto
+          maskBackgroundBlendMode: "luminosity",
+          backgroundImage: kyoto,
         }}
       />
       <Slide
@@ -87,10 +80,9 @@ const app = () => {
         navDescription="Our vision"
         background={{
           backgroundColor: "#2D7791",
-          maskBackgroundBlendMode: 'luminosity',
-          backgroundImage: byodoInTemple
+          maskBackgroundBlendMode: "luminosity",
+          backgroundImage: byodoInTemple,
         }}
-
       >
         {/* <h1>test</h1> */}
       </Slide>

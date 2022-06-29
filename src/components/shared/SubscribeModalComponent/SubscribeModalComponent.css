@@ -1,113 +1,102 @@
-
-
-
 @media (max-width: 766px) {
-.subscribe_modal .subscribe_modal_header{
+  .subscribe_modal .subscribe_modal_header {
     font-size: 15px;
-}
+  }
 
-.subscribe_modal .subscribe_modal_left_col{
+  .subscribe_modal .subscribe_modal_left_col {
     display: none;
-}
+  }
 
-.subscribe_modal .formik-label{
+  .subscribe_modal .formik-label {
     font-size: 15px;
-}
+  }
 
-.subscribe_modal input{
+  .subscribe_modal input {
     height: 15px;
-}
+  }
 
-.subscribe_modal .formik-control{
+  .subscribe_modal .formik-control {
     margin-top: 10px;
+  }
 }
 
- }
-
-
-.subscribe_modal{
-    box-shadow: #ffffff8c 0px 0px 8px 0px;
-    margin-top: 11vh;
-     max-width: 1000px;
-      width: 80%; 
-      margin-right: auto; 
-      margin-left:auto; 
-      background-color: transparent;
-       z-index: 113333333333333333;
+.subscribe_modal {
+  box-shadow: #ffffff8c 0px 0px 8px 0px;
+  margin-top: 11vh;
+  max-width: 1000px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  z-index: 113333333333333333;
 }
 
-.modal_form{
-   /* min-height: 400px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 30px;
+.modal_form {
+  /* min-height: 400px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
-.formik-control{
-    width: 100%;
-    margin-top: 20px;
-    max-width: 600px;
-}
-
-.subscribe_modal_header{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: black;
-    color: white;
-
-    font-size: 40px;
-    line-height: 45px;
-    margin-bottom: 5px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Raleway', sans-serif;
-}
-.sign_up_modal{
-    margin-top: 200px;
-    z-index: 77777777777777777777;
-}
-.formik-label{
-    font-size: 20px;
-    /* text-align: right; */
-    width: 100%;
-    margin-right: 10px;
+.formik-control {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 600px;
 }
 
-.formikerror{
-    color:red
+.subscribe_modal_header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
+}
+.sign_up_modal {
+  margin-top: 200px;
+  z-index: 77777777777777777777;
+}
+.formik-label {
+  font-size: 20px;
+  /* text-align: right; */
+  width: 100%;
+  margin-right: 10px;
 }
 
-.su_left_col{
-    border-style: none;
+.formikerror {
+  color: red;
+}
+
+.su_left_col {
+  border-style: none;
 }
 @media (min-width: 768px) {
-    .su_left_col{
-        border-right: solid 1px grey;
-        padding: 0px;
-        margin:20px;
-        width: 100%;
-        height: 90%;
-        
-    }
+  .su_left_col {
+    border-right: solid 1px grey;
+    padding: 0px;
+    margin: 20px;
+    width: 100%;
+    height: 90%;
+  }
 }
 
-
-
-
-
-
-
-
-@media (min-width: 576px) { }
+@media (min-width: 576px) {
+}
 
 @media (min-width: 768px) {
-
 }
 
-@media (min-width: 992px) {  }
+@media (min-width: 992px) {
+}
 
-@media (min-width: 1200px) { }
+@media (min-width: 1200px) {
+}

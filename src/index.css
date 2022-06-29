@@ -1,30 +1,25 @@
-
-
 .cBHahU .ck-editor__main > div {
   min-height: 0px !important;
 }
 .cBHahU .ck-editor__main {
-  min-height:  0px !important;
+  min-height: 0px !important;
 }
 
 body {
   margin: 0;
-  font-family:   sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: #1B273D;
+  background-color: #1b273d;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -32,14 +27,14 @@ code {
 }
 
 ::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(33, 33, 33, .3);
+  background: rgba(33, 33, 33, 0.3);
 }
 
-#twitter-widget-holder { 
-  max-height:400px; 
-  max-width:320px; 
-  padding:20px; 
-  background:#fff; 
-  border-radius:3px; 
-  box-shadow:2px 2px 3px rgba(0,0,0,.1); 
+#twitter-widget-holder {
+  max-height: 400px;
+  max-width: 320px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }

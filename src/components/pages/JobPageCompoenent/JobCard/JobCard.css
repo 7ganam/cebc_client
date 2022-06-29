@@ -1,10 +1,8 @@
-.job_card
-{
-    max-width: 1200px;
-    margin-top:30px;
-    box-shadow: -2px 2px 3px 0px #00000030;
+.job_card {
+  max-width: 1200px;
+  margin-top: 30px;
+  box-shadow: -2px 2px 3px 0px #00000030;
 }
-.footer_tag{
-    margin: 3px 10px 0px 0px;
-    
+.footer_tag {
+  margin: 3px 10px 0px 0px;
 }

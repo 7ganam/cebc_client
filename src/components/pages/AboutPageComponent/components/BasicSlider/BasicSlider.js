@@ -23,7 +23,7 @@ const TEST = () => {
       // onChange={nextSlide => console.log("onChange", nextSlide)}
       // onAfterChange={nextSlide => console.log("onAfterChange", nextSlide)}
       style={{
-        backgroundColor: "rgba(0, 0, 0, 0.33)"
+        backgroundColor: "rgba(0, 0, 0, 0.33)",
       }}
       settings={{
         slidingDuration: 250,
@@ -31,7 +31,7 @@ const TEST = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: true,
         autoplayDuration: 5000,
-        height: "100vh"
+        height: "100vh",
       }}
     >
       <OverlayContainer>
@@ -44,28 +44,28 @@ const TEST = () => {
       <Slide
         background={{
           backgroundImage: giauPass,
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       />
 
       <Slide
         background={{
           backgroundImage: bogliasco,
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       />
 
       <Slide
         background={{
           backgroundImage: countyClare,
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       />
 
       <Slide
         background={{
           backgroundImage: craterRock,
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       />
 

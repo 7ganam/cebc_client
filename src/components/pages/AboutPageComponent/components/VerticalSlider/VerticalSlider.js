@@ -17,11 +17,11 @@ const app = () => {
       slidingAnimation="top_to_bottom"
       orientation="vertical"
       initialSlide={1}
-      onBeforeChange={(previousSlide, nextSlide) => { }}
-      onChange={nextSlide => { }}
-      onAfterChange={nextSlide => { }}
+      onBeforeChange={(previousSlide, nextSlide) => {}}
+      onChange={(nextSlide) => {}}
+      onAfterChange={(nextSlide) => {}}
       style={{
-        backgroundColor: "#000"
+        backgroundColor: "#000",
       }}
       settings={{
         slidingDuration: 400,
@@ -29,7 +29,7 @@ const app = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: true,
         autoplayDuration: 8000,
-        height: "100vh"
+        height: "100vh",
       }}
     >
       <OverlayContainer>
@@ -48,7 +48,7 @@ const app = () => {
         background={{
           backgroundAttachment: "fixed",
           backgroundColor: "#6D9B98",
-          backgroundImage: salta
+          backgroundImage: salta,
         }}
       />
 
@@ -58,7 +58,7 @@ const app = () => {
         background={{
           backgroundAttachment: "fixed",
           backgroundColor: "#8A8A8A",
-          backgroundImage: scharbeutz
+          backgroundImage: scharbeutz,
         }}
       />
 
@@ -68,7 +68,7 @@ const app = () => {
         background={{
           backgroundAttachment: "fixed",
           backgroundColor: "#EA2329",
-          backgroundImage: selvaDiValGardena
+          backgroundImage: selvaDiValGardena,
         }}
       />
 
@@ -78,7 +78,7 @@ const app = () => {
         background={{
           backgroundAttachment: "fixed",
           backgroundColor: "#2D7791",
-          backgroundImage: seoraksanMountains
+          backgroundImage: seoraksanMountains,
         }}
       />
 
@@ -86,7 +86,7 @@ const app = () => {
         position={{
           bottom: "15%",
           left: "50%",
-          transform: "translateX(-50%)"
+          transform: "translateX(-50%)",
         }}
       />
       <SideNav />
@@ -95,7 +95,7 @@ const app = () => {
         position={{
           top: "50%",
           left: "0",
-          transform: "translateY(-50%)"
+          transform: "translateY(-50%)",
         }}
       />
     </HeroSlider>

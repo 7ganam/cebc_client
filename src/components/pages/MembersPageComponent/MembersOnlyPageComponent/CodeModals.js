@@ -1,36 +1,44 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Alert,
+} from "reactstrap";
 
 const CodeModals = (props) => {
-    const {
-        buttonLabel,
-        className
-    } = props;
+  const { buttonLabel, className } = props;
 
-    const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(false);
 
-    const toggle = () => setModal(!modal);
+  const toggle = () => setModal(!modal);
 
-    return (
-        <div>
+  return (
+    <div>
+      <Button
+        onClick={toggle}
+        style={{ marginTop: "5px", width: "90%" }}
+        color="warning"
+      >
+        members discount code
+      </Button>
 
-            <Button onClick={toggle} style={{ marginTop: '5px', width: '90%' }} color="warning">members discount code</Button>
-
-
-            <Modal isOpen={modal} toggle={toggle} className={className}>
-                <ModalHeader toggle={toggle}>Discount Code</ModalHeader>
-                <ModalBody>
-                    <Alert color="success">
-                        {props.event.discount_code}
-                    </Alert>
-                </ModalBody>
-                <ModalFooter>
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
-                </ModalFooter>
-            </Modal>
-        </div>
-    );
-}
+      <Modal isOpen={modal} toggle={toggle} className={className}>
+        <ModalHeader toggle={toggle}>Discount Code</ModalHeader>
+        <ModalBody>
+          <Alert color="success">{props.event.discount_code}</Alert>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="secondary" onClick={toggle}>
+            Cancel
+          </Button>
+        </ModalFooter>
+      </Modal>
+    </div>
+  );
+};
 
 export default CodeModals;

@@ -1,132 +1,115 @@
 .back_image {
-    position:absolute;
-    left:50%;
-    background-image: url('images/sha1.jpg');
-    width:774px;
-    height:759px;
-    overflow-x:hidden;
-    overflow-y:hidden;
-    background-size: contain;
+  position: absolute;
+  left: 50%;
+  background-image: url("images/sha1.jpg");
+  width: 774px;
+  height: 759px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-size: contain;
 }
 
-
-.vision_mission_div{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border-color: #ffa600;
-    border-width: 10px;
-    border-style: solid;
-    overflow: hidden;
+.vision_mission_div {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border-color: #ffa600;
+  border-width: 10px;
+  border-style: solid;
+  overflow: hidden;
 }
 
-
-.vision_mission_col
-{
-/* height:150px ; */
+.vision_mission_col {
+  /* height:150px ; */
 }
-.vision_mission_title{
-    min-height:120px ;
-    margin-top: 20px;
+.vision_mission_title {
+  min-height: 120px;
+  margin-top: 20px;
 }
 
-
-.media_element{
-    /* margin-bottom: 15px; */
-    margin:7px;
-    margin-right: 20px;
-    margin-left: 20px;
-
+.media_element {
+  /* margin-bottom: 15px; */
+  margin: 7px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-.vision_icon{
-    text-align: center;
-    cursor: default;
-    background-color: #FFB600;
-    color: #fff;
-    display: inline-block;
-    margin:auto;
-    border-radius: 10%;
-    width:50px ; 
-    height:50px;
-    font-size:30px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    margin-top: 10px;
-    /* min-width: 80px; */
-    box-shadow: -3px 2px 3px 0px #00000012;
-
-    
+.vision_icon {
+  text-align: center;
+  cursor: default;
+  background-color: #ffb600;
+  color: #fff;
+  display: inline-block;
+  margin: auto;
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  /* min-width: 80px; */
+  box-shadow: -3px 2px 3px 0px #00000012;
 }
 
-
-.vision_ico::before{
-    font-size: 36px;
+.vision_ico::before {
+  font-size: 36px;
 }
 
-.section_head_title{
-    min-height: 100px;
-    margin-top: 10px;
+.section_head_title {
+  min-height: 100px;
+  margin-top: 10px;
 }
 
-
-
-.working_area_icon{
-    height: 150px ;
-    width: 150px;
-    border-radius: 50%;
-    border-style: solid;
-    overflow: hidden;
-    border-color: #ffa600;
-    border-width: 10px;
-    border-style: solid;
+.working_area_icon {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border-style: solid;
+  overflow: hidden;
+  border-color: #ffa600;
+  border-width: 10px;
+  border-style: solid;
 }
-.working_area_icob_title{
-    min-height: 10px;
+.working_area_icob_title {
+  min-height: 10px;
 }
 
-#working_area_col_2{
-    /* border-style: solid; */
+#working_area_col_2 {
+  /* border-style: solid; */
 }
 
-.partition_separator{
-    min-height: 100px;
-    /* background: rgb(11, 95, 11); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.partition_separator {
+  min-height: 100px;
+  /* background: rgb(11, 95, 11); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
-
-.board_div{
-    min-height:300px;
-    width: 100%;
-    border-radius: 10px;
-    border-style: solid;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+.board_div {
+  min-height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
-.board_separator{
-    margin-top: 70px;
+.board_separator {
+  margin-top: 70px;
 }
 
-
-.media-body{
-    padding: 15px;
-    border: 1px solid #8080804f;
-    border-radius: 7px;
-    background: rgba(255, 255, 255, 0.678);
-    box-shadow: -3px 2px 3px 0px #00000012;
-    
-    
+.media-body {
+  padding: 15px;
+  border: 1px solid #8080804f;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.678);
+  box-shadow: -3px 2px 3px 0px #00000012;
 }
 
-.vision_icon{
-    /* box-shadow: inset -2px 2px 2px rgb(0 0 0 / 18%); */
+.vision_icon {
+  /* box-shadow: inset -2px 2px 2px rgb(0 0 0 / 18%); */
 }

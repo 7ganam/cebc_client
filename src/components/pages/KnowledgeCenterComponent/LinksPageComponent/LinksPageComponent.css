@@ -1,63 +1,56 @@
-.link_sub_box{
-    min-height: 50px;
-     background: white;
-      margin-bottom: 25px;
-      display: flex;
-      font-family: 'Roboto', sans-serif;
-    color: grey;
-    font-size: 15px;
-    margin-top: 0px;
-    padding: 15px;
-    align-items: center;
-    width: 80%;
+.link_sub_box {
+  min-height: 50px;
+  background: white;
+  margin-bottom: 25px;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  color: grey;
+  font-size: 15px;
+  margin-top: 0px;
+  padding: 15px;
+  align-items: center;
+  width: 80%;
 
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-    text-decoration-color: #ffb600;
-    margin-left: 50px;
-    margin-right: 10px;
-    text-align: left;
-
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  text-decoration-color: #ffb600;
+  margin-left: 50px;
+  margin-right: 10px;
+  text-align: left;
 }
 
+.link_box {
+  min-height: 25px;
+  background: white;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  color: grey;
+  font-size: 25px;
+  margin-top: 0px;
+  padding: 10px 15px 10px 15px;
+  align-items: center;
+  width: 80%;
 
-
-
-.link_box{
-    min-height: 25px;
-     background: white;
-      display: flex;
-      font-family: 'Roboto', sans-serif;
-    color: grey;
-    font-size: 25px;
-    margin-top: 0px;
-    padding: 10px 15px 10px 15px;
-    align-items: center;
-    width: 80%;
-
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-    text-decoration-color: #ffb600;
-    margin-left: 50px;
-    margin-right: 10px;
-
-
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  text-decoration-color: #ffb600;
+  margin-left: 50px;
+  margin-right: 10px;
 }
 
-.link_box a{
-    color:#4a4a4a;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    text-decoration-color: #ffb600;
-
+.link_box a {
+  color: #4a4a4a;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-decoration-color: #ffb600;
 }
 
-.link_group_title{
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    margin: 15px 0 15px 0;
+.link_group_title {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  margin: 15px 0 15px 0;
 }
 
-.link_link{
-    text-align: left;
+.link_link {
+  text-align: left;
 }

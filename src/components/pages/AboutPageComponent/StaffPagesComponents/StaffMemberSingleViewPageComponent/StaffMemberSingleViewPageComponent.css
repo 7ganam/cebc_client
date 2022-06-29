@@ -1,91 +1,76 @@
-
-#member_background{
-    background-color: #F1F1F1;
-    min-height: 100vh;
-    margin-top: 0;
-    /* overflow: hidden; */
+#member_background {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  margin-top: 0;
+  /* overflow: hidden; */
 }
 
-
-.member_image_box{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 200px;
-    width: 85%;
-    margin: auto;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-    padding: 10px;
-    margin-bottom: 20px;
+.member_image_box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  width: 85%;
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-
-.member_details_box{
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
-    padding: 10px;
-    margin-bottom: 30px;
+.member_details_box {
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 
+#member_header {
+  width: 100%;
 
-#member_header{
-    width: 100%;
-   
-    min-height: 150px;
-    margin: 0;
-    padding: 20px;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
+  min-height: 150px;
+  margin: 0;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
 }
 
-
-#member_header_2{
-    width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    min-height: 50px;
-    margin: 0;
-    padding: 6px;
-    background: #ffffff;
-    border: 1px solid #d7d7d7;
+#member_header_2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin: 0;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
 }
 
-#member_body{
-    padding: 25px;
+#member_body {
+  padding: 25px;
 }
 
-
-#member_header{
-    display: flex;
-     flex-direction: column;
-    }
-
-
-
+#member_header {
+  display: flex;
+  flex-direction: column;
+}
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-
+@media (min-width: 576px) {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-
-   #member_header{
+@media (min-width: 768px) {
+  #member_header {
     display: flex;
-     flex-direction: row;
-    }
-
-
- }
+    flex-direction: row;
+  }
+}
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
-  }
+}
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
-  }
+}

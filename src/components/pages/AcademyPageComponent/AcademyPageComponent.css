@@ -1,13 +1,12 @@
-.courses_div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.courses_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
-.course_card{
-    width: 250px;
-    height: 300px;
-    margin: 10px;
-    box-shadow: 0px 3px 8px 2px grey;
+.course_card {
+  width: 250px;
+  height: 300px;
+  margin: 10px;
+  box-shadow: 0px 3px 8px 2px grey;
 }

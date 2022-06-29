@@ -4,7 +4,7 @@ import HeroSlider, {
   Slide,
   ButtonsNav,
   Nav,
-  OverlayContainer
+  OverlayContainer,
 } from "hero-slider";
 import Wrapper from "../UI/Wrapper/Wrapper";
 import Title from "../UI/Title/Title";
@@ -21,11 +21,11 @@ const app = () => {
     <HeroSlider
       orientation="horizontal"
       initialSlide={1}
-      onBeforeChange={(previousSlide, nextSlide) => { }}
-      onChange={nextSlide => { }}
-      onAfterChange={nextSlide => { }}
+      onBeforeChange={(previousSlide, nextSlide) => {}}
+      onChange={(nextSlide) => {}}
+      onAfterChange={(nextSlide) => {}}
       style={{
-        backgroundColor: "#000"
+        backgroundColor: "#000",
       }}
       settings={{
         slidingDuration: 500,
@@ -33,7 +33,7 @@ const app = () => {
         shouldAutoplay: true,
         shouldDisplayButtons: true,
         autoplayDuration: 5000,
-        height: "100vh"
+        height: "100vh",
       }}
     >
       <OverlayContainer>
@@ -50,7 +50,7 @@ const app = () => {
         navDescription="Hallstatt - Austria"
         background={{
           backgroundImage: hallstatt,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
         }}
       />
 
@@ -58,7 +58,7 @@ const app = () => {
         navDescription="Hvitserkur - Iceland"
         background={{
           backgroundImage: hvitserkur,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
         }}
       />
 
@@ -66,7 +66,7 @@ const app = () => {
         navDescription="Jacksonville - USA"
         background={{
           backgroundImage: jacksonville,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
         }}
       />
 
@@ -74,7 +74,7 @@ const app = () => {
         navDescription="Moraine Lake - Canada"
         background={{
           backgroundImage: moraineLake,
-          backgroundAnimation: "zoom"
+          backgroundAnimation: "zoom",
         }}
       />
 
@@ -83,7 +83,7 @@ const app = () => {
         position={{
           top: 0,
           left: "50%",
-          transform: "translateX(-50%)"
+          transform: "translateX(-50%)",
         }}
       />
       <Nav />
