@@ -24,10 +24,85 @@ function SingleJobViewComponent(props) {
   const [Error_message, setError_message] = useState(null);
   const [formValues, setFormValues] = useState(null);
 
+  function render_submit_button() {
+    let fomik_object = formRef.current;
+
+    if (Sending_data) {
+      return (
+        <div style={{ marginTop: "30px" }}>
+          <ReactLoading type={"spin"} color={"#00D2F9"} width={"30px"} />
+        </div>
+      );
+    } else if (Fetch_success) {
+      return (
+        <Alert color="success" style={{ marginTop: "30px", color: "" }}>
+          we recieved your message .. we will come back to you soon
+        </Alert>
+      );
+    } else if (Error_message) {
+      return (
+        <div>
+          <button
+            className="signub_submit_button"
+            type="submit"
+            disabled={!fomik_object.isValid}
+            style={{ backgroundColor: !fomik_object.isValid ? "grey" : "" }}
+          >
+            {!fomik_object.isValid ? "Data not valid" : "Submit"}
+          </button>
+          <Alert color="danger" style={{ marginTop: "30px", color: "" }}>
+            something went wrong please try again later
+          </Alert>
+        </div>
+      );
+    } else if (formRef.current) {
+      return (
+        <>
+          <button
+            className="signub_submit_button"
+            type="submit"
+            disabled={!fomik_object.isValid || fomik_object.isSubmitting}
+            style={{
+              backgroundColor:
+                !fomik_object.isValid || fomik_object.isSubmitting
+                  ? "grey"
+                  : "",
+            }}
+          >
+            {!fomik_object.isValid || fomik_object.isSubmitting
+              ? "Data not valid"
+              : "Submit"}
+          </button>
+        </>
+      );
+    }
+  }
+
+  const validationSchema = Yup.object({
+    first_name: Yup.string().required("Required"),
+    last_name: Yup.string().required("Required"),
+    country: Yup.string().required("Required"),
+    email: Yup.string().email("Invalid email format").required("Required"),
+    cv: Yup.mixed("required").required("Required"),
+  });
+
+  const initialValues = {
+    first_name: "",
+    last_name: "",
+    country: "",
+    email: "",
+    cv: null,
+  };
+
+  const job_slug = props.match.params.job_slug;
+
+  const the_job = props.jobs.filter((job) => job.slug == job_slug)[0]; //leave this as two ==
+
   const onSubmit = async (values, submitProps) => {
     setError_message(null);
 
     const data = {
+      job: the_job?.title,
       first_name: values.first_name,
       last_name: values.last_name,
       email: values.email,
@@ -67,79 +142,10 @@ function SingleJobViewComponent(props) {
     }
   };
 
-  function render_submit_button() {
-    let fomik_object = formRef.current;
-
-    if (Sending_data) {
-      return (
-        <div style={{ marginTop: "30px" }}>
-          <ReactLoading type={"spin"} color={"#00D2F9"} width={"30px"} />
-        </div>
-      );
-    } else if (Fetch_success) {
-      return (
-        <Alert color="success" style={{ marginTop: "30px", color: "" }}>
-          we recieved your message .. we will come back to you soon
-        </Alert>
-      );
-    } else if (Error_message) {
-      return (
-        <div>
-          <button
-            className="signub_submit_button"
-            type="submit"
-            disabled={!fomik_object.isValid}
-            style={{ backgroundColor: !fomik_object.isValid ? "grey" : "" }}
-          >
-            {!fomik_object.isValid ? "Data not valid" : "Submit"}
-          </button>
-          <Alert color="danger" style={{ marginTop: "30px", color: "" }}>
-            something went wrong please try again later
-          </Alert>
-        </div>
-      );
-    } else if (formRef.current) {
-      return (
-        <button
-          className="signub_submit_button"
-          type="submit"
-          disabled={!fomik_object.isValid || fomik_object.isSubmitting}
-          style={{
-            backgroundColor:
-              !fomik_object.isValid || fomik_object.isSubmitting ? "grey" : "",
-          }}
-        >
-          {!fomik_object.isValid || fomik_object.isSubmitting
-            ? "Data not valid"
-            : "Submit"}
-        </button>
-      );
-    }
-  }
-
-  const validationSchema = Yup.object({
-    first_name: Yup.string().required("Required"),
-    last_name: Yup.string().required("Required"),
-    country: Yup.string().required("Required"),
-    email: Yup.string().email("Invalid email format").required("Required"),
-    cv: Yup.mixed("required").required("Required"),
-  });
-
-  const initialValues = {
-    first_name: "",
-    last_name: "",
-    country: "",
-    email: "",
-    cv: null,
-  };
-
-  const job_slug = props.match.params.job_slug;
-
-  const the_job = props.jobs.filter((job) => job.slug == job_slug)[0]; //leave this as two ==
-
   const handleChange = (file) => {
     formRef.current.setFieldValue("cv", file);
-    console.log("file", file);
+    formRef.current.setFieldTouched("cv", true);
+    formRef.current.setFieldError("cv", null);
   };
 
   return (
@@ -261,11 +267,10 @@ function SingleJobViewComponent(props) {
                           initialValues={formValues || initialValues}
                           validationSchema={validationSchema}
                           onSubmit={onSubmit}
-                          enableReinitialize
                           innerRef={formRef}
+                          enableReinitialize={true}
                         >
                           {(formik) => {
-                            console.log("Formik props", formik);
                             return (
                               <Form className="signUP_form">
                                 <Row className="formik-control">
@@ -432,16 +437,6 @@ function SingleJobViewComponent(props) {
                                           ? `${formik.values.cv.name}`
                                           : "no files uploaded yet"}
                                       </p>
-                                      <ErrorMessage
-                                        className="err_msg"
-                                        name="cv"
-                                      >
-                                        {(error) => (
-                                          <div className="formikerror">
-                                            {error}
-                                          </div>
-                                        )}
-                                      </ErrorMessage>
                                     </div>
                                   </Col>
                                 </Row>
