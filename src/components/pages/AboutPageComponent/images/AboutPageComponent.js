@@ -624,7 +624,7 @@ function AboutPageComponent() {
         </Container>
 
         <Container className="partition_separator board_separator" fluid>
-          <div className="panel__title">BOARD ADVISORY COMMITTEE</div>
+          <div className="panel__title">Ambassadors</div>
         </Container>
 
         <Container id="board_content_2">

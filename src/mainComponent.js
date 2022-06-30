@@ -20,7 +20,7 @@ import FaqPageComponent from "./components/pages/AboutPageComponent/FaqPageCompo
 import BoardPageComponent from "./components/pages/AboutPageComponent/StaffPagesComponents/BoardPageComponent/BoardPageComponent";
 import TeamPageComponent from "./components/pages/AboutPageComponent/StaffPagesComponents/TeamPageComponent/TeamPageComponent";
 
-import AdvisoryBoardPageComponent from "./components/pages/AboutPageComponent/StaffPagesComponents/AdvisoryBoardPageComponent/AdvisoryBoardPageComponent";
+import AmbassadorsPageComponent from "./components/pages/AboutPageComponent/StaffPagesComponents/AmbassadorsPageComponent/AmbassadorsPageComponent";
 import StaffMemberSingleViewPageComponent from "./components/pages/AboutPageComponent/StaffPagesComponents/StaffMemberSingleViewPageComponent/StaffMemberSingleViewPageComponent";
 
 import KnowledgeCenterComponent from "./components/pages/KnowledgeCenterComponent/KnowledgeCenterComponent";
@@ -193,8 +193,8 @@ export default function MainComponent() {
                 <BoardPageComponent staff={LoadedStaff_members} />
               </Route>
 
-              <Route exact path="/ABOUTUS/STAFF/ADVISORY">
-                <AdvisoryBoardPageComponent staff={LoadedStaff_members} />
+              <Route exact path="/ABOUTUS/STAFF/AMBASSADORS">
+                <AmbassadorsPageComponent staff={LoadedStaff_members} />
               </Route>
 
               <Route exact path="/ABOUTUS/STAFF/TEAM">

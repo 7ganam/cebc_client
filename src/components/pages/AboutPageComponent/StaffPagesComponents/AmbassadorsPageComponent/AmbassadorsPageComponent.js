@@ -1,5 +1,5 @@
 import React from "react";
-import "./AdvisoryBoardPageComponent.css";
+import "./AmbassadorsPageComponent.css";
 import {
   Col,
   Container,
@@ -20,7 +20,7 @@ function s3_map(str) {
   return str;
 }
 
-function AdvisoryBoardPageComponent(props) {
+function AmbassadorsPageComponent(props) {
   function create_staff_view(staff, position) {
     const staff_view_array = staff.map((member, index) => {
       if (member.position === position) {
@@ -138,7 +138,7 @@ function AdvisoryBoardPageComponent(props) {
           <Row className=" justify-content-center">
             <Col>
               <div class="sub_page_header">
-                <span class="sub_page_header_inner">ADVISORY BOARD</span>
+                <span class="sub_page_header_inner">Ambassadors</span>
                 <div className="sub_page_header_under"></div>
               </div>
             </Col>
@@ -147,7 +147,7 @@ function AdvisoryBoardPageComponent(props) {
 
         <Container id="board_content" style={{ marginTop: "70px" }}>
           <Row className=" justify-content-center align-items-stretch">
-            {create_staff_view(props.staff, "advisory_board_member")}
+            {create_staff_view(props.staff, "ambassador")}
           </Row>
         </Container>
       </div>
@@ -155,4 +155,4 @@ function AdvisoryBoardPageComponent(props) {
   }
 }
 
-export default AdvisoryBoardPageComponent;
+export default AmbassadorsPageComponent;
